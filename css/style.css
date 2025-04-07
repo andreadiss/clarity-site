@@ -1016,7 +1016,7 @@ section {
   .hero-container { flex-direction: column; padding: 0 10px; }
   .hero-left, .hero-animation { max-width: 100%; margin: 20px 0; text-align: center; }
   .hero-section { padding: 40px 0; min-height: 50vh; }
-  .hero-animation { font-size: 8px; line-height: 1; display: block; } /* Ridimensiono l'animazione ASCII */
+  .hero-animation {display: none; } /* Ridimensiono l'animazione ASCII */
   .hero-title { font-size: 2rem; }
   .hero-subtitle { font-size: 1rem; }
 
