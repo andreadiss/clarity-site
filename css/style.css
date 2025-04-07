@@ -314,10 +314,11 @@ section {
 .hero-subtitle .highlight {
   background: var(--white);
   color: var(--text-dark);
-  padding: 2px 4px;
+  padding: 0 2px;
   font-weight: 700;
   border-radius: 2px;
-  display: inline-block;
+  display: inline;
+  line-height: 1;
 }
 
 .hero-animation {
