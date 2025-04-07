@@ -368,6 +368,7 @@ section {
   max-width: 30%;
   font-size: 6px;
   line-height: 1;
+  display:none;
 
 }
 
@@ -375,7 +376,7 @@ section {
   .navbar { left: 0; }
   section { margin-left: 0; }
   .accent-section { text-align: center; align-items: center; }
-  #neural-center { width: 10%; left: 0%; transform: translate(-50%, -50%);}
+  #neural-center { width: 10%; left: 0%; transform: translate(-50%, -50%);display:none;}
   .offer-grid, .services-grid {
     grid-template-columns: 1fr;
   }
