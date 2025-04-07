@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ricerche su misura per aziende | Clarity</title>
+  <meta name="description" content="Offriamo ricerca quantitativa e sperimentale ad alta specializzazione per aiutare le aziende a prendere decisioni più efficaci, basate su dati affidabili e insight su misura.">
+  <meta name="keywords" content="ricerca per aziende, usabilità, A/B testing, UX research, ricerca utenti, insight clienti, strategie data-driven, decisioni basate sui dati, user research">
+  <meta name="author" content="Clarity Research">
+
+  <!-- css style -->
+  <link rel="stylesheet" href="../../css/business_landing-style.css">
+</head>
+<body class="aziende">
+  <!-- Link per passare alla versione inglese -->
+  <div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+    <a href="../../en/index.html" title="English">
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English" style="width:32px; height:32px; border-radius:50%;">
+    </a>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../../it/index.html" class="navbar-brand">Clarity</a>
+      <div class="nav-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#services" class="nav-link">Servizi</a>
+        <a href="#contact" class="nav-link">Contatti</a>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <div class="hero-section" id="home">
+    <h1 class="hero-title">Ricerche utenti evidence-based per decisioni più efficaci</h1>
+    <p class="hero-subtitle">Scopri cosa guida i tuoi clienti con dati solidi e insight su misura. Migliora l’esperienza e aumenta le performance del tuo business.</p>
+    <a href="#contact" class="button"><span class="button-text">Richiedi una consulenza gratuita</span></a>
+  </div>
+
+<section class="accent-section" id = "solutions">
+    <div class="accent-container">
+      <h2 class="accent-title" style="color: #000;"> A chi è rivolto</h2>
+      <p class="accent-text" style="color: #000;">Pensato per manager, product owner e team marketing che vogliono comprendere meglio il comportamento degli utenti, ottimizzare l’esperienza digitale e ottenere un ROI superiore con approcci scientifici e personalizzati.</p>
+    </div> 
+
+ <!-- animazione per l'accent section, da aggiungere nelle altre landing pages -->
+
+ <script>
+ document.addEventListener('DOMContentLoaded', () => {
+   const section = document.getElementById('solutions');
+   const title = section.querySelector('.accent-title');
+   const text = section.querySelector('.accent-text');
+  
+   const observer = new IntersectionObserver((entries) => {
+     entries.forEach(entry => {
+       if (entry.isIntersecting) {
+         title.style.animationPlayState = 'running';
+         text.style.animationPlayState = 'running';
+         observer.unobserve(section); // Opzionale: ferma l'osservazione dopo la prima attivazione
+       }
+     });
+   }, { 
+     threshold: 0.4 // L'animazione parte quando il 30% della sezione è visibile
+   });
+
+   observer.observe(section);
+ });
+ </script>
+
+  </section>
+
+ <section class="services-section" id="services">
+  <div class="section-subtitle">Cosa offriamo</div>
+  <h2 class="section-title">Servizi di ricerca su misura</h2>
+  <div class="services-grid">
+    <div class="service-item">
+      <div class="service-text-container service-animated">
+        <p class="service-overline">Analisi dell’esperienza</p>
+        <h3 class="service-subtitle">Migliora usabilità e interfacce digitali</h3>
+        <div class="service-description">
+          <ul>
+            <li><strong>Test di usabilità (remoti e in presenza):</strong> valutazioni delle interfacce digitali con protocolli su misura</li>
+            <li><strong>A/B testing e conjoint analysis:</strong> esperimenti per confrontare preferenze e ottimizzare le varianti</li>
+            <li><strong>Card sorting:</strong> organizzazione dell’informazione basata sulla logica degli utenti</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-image-container">
+        <img src="../../images/usability.png" alt="Valutazione dell’esperienza" class="service-image">
+      </div>
+    </div>
+    <div class="service-item service-item-reverse">
+      <div class="service-text-container service-animated">
+        <p class="service-overline">Ricerca generativa</p>
+        <h3 class="service-subtitle">Scopri preferenze e bisogni reali</h3>
+        <div class="service-description">
+          <ul>
+            <li><strong>Cluster e segmentazione:</strong> analisi avanzata dei dati per individuare target strategici</li>
+            <li><strong>Survey mirate:</strong> questionari personalizzati per scoprire nuove opportunità</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-image-container">
+        <img src="../../images/cluster.png" alt="Esplorazione di bisogni e preferenze" class="service-image">
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-text-container service-animated">
+        <p class="service-overline">Insight specialistici</p>
+        <h3 class="service-subtitle">Comprendi meglio clienti e brand</h3>
+        <div class="service-description">
+          <ul>
+            <li><strong>Sentiment analysis:</strong> analisi qualitativa di conversazioni e feedback</li>
+            <li><strong>Journey mapping:</strong> mappatura dei percorsi utente per strategie più efficaci</li>
+            <li><strong>Implicit association test (IAT):</strong> misurazioni delle percezioni inconsce legate al brand</li>
+            <li><strong>Salienza visiva:</strong> analisi della cattura automatica dell’attenzione</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-image-container">
+        <img src="../../images/sentiment.png" alt="Approfondimenti specialistici" class="service-image">
+      </div>
+    </div>
+    <div class="service-item service-item-reverse">
+      <div class="service-text-container service-animated">
+        <p class="service-overline">Fidelizzazione utenti</p>
+        <h3 class="service-subtitle">Misura la soddisfazione in modo efficace</h3>
+        <div class="service-description">
+          <ul>
+            <li><strong>CSAT, NPS e fidelizzazione:</strong> strumenti per misurare soddisfazione e fedeltà nel tempo</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-image-container">
+        <img src="../../images/csat.png" alt="Survey sull’esperienza utente" class="service-image">
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-text-container service-animated">
+        <p class="service-overline">Supporto metodologico</p>
+        <h3 class="service-subtitle">Prendi decisioni basate sui dati</h3>
+        <div class="service-description">
+          <ul>
+            <li><strong>Research design:</strong> supporto nella progettazione di ricerche allineate ai tuoi obiettivi</li>
+            <li><strong>Analisi e reporting:</strong> interpretazione dei dati con report chiari e operativi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-image-container">
+        <img src="../images/service-consulting.jpg" alt="Consulenza metodologica" class="service-image">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="offer-section">
+    <div class="section-subtitle">Perché scegliere Clarity</div>
+    <h2 class="section-title">Benefici per la tua azienda</h2>
+    <ul class="offer-grid">
+      <li class="offer-item">
+        <div class="offer-icon-wrapper">
+          <img src="../images/icon-conversion.svg" alt="Icona aumento conversioni" class="offer-icon">
+        </div>
+        <p class="offer-text">Più conversioni con soluzioni UX personalizzate</p>
+      </li>
+      <li class="offer-item">
+        <div class="offer-icon-wrapper">
+          <img src="../images/icon-data.svg" alt="Icona dati affidabili" class="offer-icon">
+        </div>
+        <p class="offer-text">Decisioni guidate da dati affidabili</p>
+      </li>
+      <li class="offer-item">
+        <div class="offer-icon-wrapper">
+          <img src="../images/icon-retention.svg" alt="Icona retention migliorata" class="offer-icon">
+        </div>
+        <p class="offer-text">Retention migliorata con ricerche evidence-based</p>
+      </li>
+      <li class="offer-item">
+        <div class="offer-icon-wrapper">
+          <img src="../images/icon-insight.svg" alt="Icona insight sui clienti" class="offer-icon">
+        </div>
+        <p class="offer-text">Vantaggio competitivo con insight sui tuoi clienti</p>
+      </li>
+    </ul>
+  </section>
+
+  <div class="footer-cta-section" id="contact">
+    <h2 class="footer-cta-title">Pronto a scoprire di più?</h2>
+    <p class="footer-cta-text">Scrivici a <a href="mailto:hello@clarity-research.com" class="footer-link">hello@clarity-research.com</a> — siamo qui per aiutarti a decidere con chiarezza.</p>
+    <a href="mailto:hello@clarity-research.com" class="button">
+      <span class="button-text">Contattaci ora</span>
+    </a>
+  </div>
+
+  <div class="minimal-footer">
+    <p>© 2025 Clarity. Tutti i diritti riservati.</p>
+    <p>Email: <a href="mailto:hello@clarity-research.com">hello@clarity-research.com</a></p>
+  </div>
+</body>
+</html>
