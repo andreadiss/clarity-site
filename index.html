@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting...</title>
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+    const lowerLang = lang.toLowerCase();
+    if (lowerLang.startsWith("it")) {
+      window.location.replace("it/index.html");
+    } else {
+      window.location.replace("en/index.html");
+    }
+  </script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body></body>
+</html>
