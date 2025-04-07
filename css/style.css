@@ -80,10 +80,10 @@ section {
 /* Sidebar verticale fissa */
 .sidebar {
   position: fixed;
-  left: 20px;
+  left: 0;
   top: 0;
   height: 100vh;
-  width: 60px;
+  width: 80px;
   background-color: #1a1a1a;
   display: flex;
   flex-direction: column;
@@ -362,151 +362,64 @@ section {
     padding: calc(var(--spacing-lg) * 1) 0;
     min-height: 30vh;
   }
-
-  .sidebar {
-    display: none;
+  .sidebar { display: none; }
+  .navbar { left: 0; }
+  section { margin-left: 0; }
+  .accent-section { text-align: center; align-items: center; }
+  #neural-center { width: 100%; left: 50%; transform: translate(-50%, -50%); }
+  .offer-grid, .services-grid {
+    grid-template-columns: 1fr;
   }
-
-  .navbar {
-    left: 0;
-  }
-
-  section {
-    margin-left: 0;
-    padding: 60px 0;
-  }
-
-  /* Simplified Mobile Styles */
-  .hero-animation {
-    display: none; /* Remove ASCII animation */
-  }
-
-  .hero-title {
-    font-size: 2.5em;
-    text-align: center;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .hero-section .button {
-    display: block;
-    margin: 20px auto;
-    width: 80%;
-    text-align: center;
-  }
-
-  /* Remove parallax and neural effects */
-  .hero-section, .accent-section {
-    background: var(--dark-gray) !important; /* No parallax or neural background */
-    animation: none !important;
-  }
-
-  #neural-center {
-    display: none; /* Remove neural center */
-  }
-
-  /* Simplify sections */
-  .accent-section, .offer-section, .how-it-works-section, .get-section, .services-section {
-    padding: 40px 15px;
-    text-align: center;
+  .steps-container {
+    flex-direction: column;
     align-items: center;
   }
 
-  .accent-title, .section-title, .section-title-dark {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .accent-text, .offer-item-text, .step-text, .get-text, .service-description {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  .offer-grid, .services-grid, .steps-container, .get-grid {
-    display: block;
-    padding: 0;
-    width: 100%;
-  }
-
-  .offer-item, .service-item, .step, .get-item {
-    margin-bottom: 20px;
-    width: 100%;
-    display: block;
-    text-align: center;
-  }
-
-  .offer-visual-wrapper, .step-number-wrapper, .get-visual-wrapper {
-    margin: 15px auto;
-    width: 80%;
-    height: auto;
-  }
-
-  .offer-item-image, .step-gif {
-    width: 100%;
-    height: auto;
-  }
 
   .get-item {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
   .get-content {
     text-align: center;
-    padding: 0;
+  }
+  .hero-animation {
+    font-size: 7px;
+    line-height: 7px;
   }
 
-  .get-title {
-    font-size: 2rem;
-    text-align: center;
+ .get-section {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll; /* Disabilita il parallax su dispositivi mobili */
   }
 
-  .title-line, .step-title-line {
-    display: none; /* Remove decorative lines */
-  }
 
-  .nav-menu {
-    display: none; /* Hide navbar menu on mobile */
-  }
+}
 
-  .navbar-brand {
-    margin: 0 auto;
-  }
+@media (max-width: 480px) {
+  .section-title { font-size: 2rem; }
+  .button { padding: 8px 16px; }
+  .hero-title, .accent-title { font-size: 2rem; }
 
-  .minimal-footer {
-    padding: 15px;
-    font-size: 10px;
-  }
-
-  .contact-form {
-    padding: 15px;
-  }
-
+  /* Ottimizzazione per elementi specifici */
   .language-toggle {
-    top: 10px;
+    top: 20px;
     right: 10px;
   }
-
-  /* Remove all animations */
-  @keyframes fadeInLeft, fadeInRight, slideInLeft, slideInRight, zoomIn {
-    from { opacity: 1; transform: none; }
-    to { opacity: 1; transform: none; }
+  .language-toggle label {
+    padding: 5px 10px;
   }
-
-  .hero-title, .hero-subtitle, .accent-title, .accent-text, .offer-item, .step, .get-item, .service-item {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
+  .language-toggle .flag {
+    width: 32px;
+    height: 32px;
   }
-
-  .button {
-    width: 80%;
-    margin: 15px auto;
-    display: block;
+  .contact-form-container {
+    padding: 0 10px;
+  }
+  .contact-form {
+    padding: var(--spacing-md);
   }
 }
 
@@ -957,7 +870,7 @@ section {
   min-height: var(--min-section-height);
   padding-left: var(--section-margin);
   padding-right: var(--section-margin);
-  z-index = 0;
+  z-index: 0;
 }
 
 .services-grid {
@@ -999,7 +912,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  clip-path: polygon(0% 0%, 0% 100%, 100% 50%); /* Triangolo con vertice a destra */
+  clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
 }
 
 .service-text-container {
@@ -1107,22 +1020,6 @@ section {
   color: white;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1036px) {
-  .navbar-container { padding: 0 var(--spacing-sm); }
-  .hero-section, .accent-section, .offer-section, .get-section, .services-section, .footer-cta-section, .minimal-footer {
-    padding: 50px 10px;
-  }
-  section { margin: 0 auto; max-width: calc(100% - (2 * calc(var(--section-margin) / 2))); margin-left: 0; }
-  .hero-title, .accent-title, .get-title { font-size: 2.8rem; }
-}
-
-@media (max-width: 480px) {
-  .section-title { font-size: 2rem; }
-  .button { padding: 8px 16px; }
-  .hero-title, .accent-title { font-size: 2rem; }
-}
-
 /* Toggle Switch con le bandiere */
 .language-toggle {
   position: fixed;
@@ -1182,4 +1079,45 @@ section {
 
 .language-toggle input[type="checkbox"]:checked + label .flag.it {
   opacity: 1;
+}
+
+/* Ulteriori ottimizzazioni per smartphone (max-width: 360px) */
+@media (max-width: 360px) {
+  body {
+    font-size: 9px;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .section-title, .section-title-dark {
+    font-size: 1.5rem;
+  }
+  .button {
+    padding: 4px 10px;
+    font-size: 8px;
+  }
+  .navbar-container {
+    flex-direction: column;
+    padding: 0 5px;
+  }
+  .language-toggle {
+    top: 5px;
+    right: 5px;
+  }
+  .language-toggle label {
+    padding: 3px 6px;
+  }
+  .language-toggle .flag {
+    width: 24px;
+    height: 24px;
+  }
+  .contact-form-container {
+    padding: 0 5px;
+  }
+  .contact-form {
+    padding: 10px;
+  }
 }
