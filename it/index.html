@@ -95,7 +95,7 @@
 
   <!-- ACCENT SECTION -->
   <section class="accent-section" id="solutions">
-    <h2 class="accent-title">Siamo la consulenza che dà voce ai tuoi dati:<br> per aziende, ricercatori e professionisti</h2>
+    <h2 class="accent-title">Diamo voce ai tuoi dati:<br> per aziende, ricercatori e professionisti</h2>
     <p class="accent-text">Per noi, la ricerca è un modo per dire alle persone <span class="highlight">#ticapiamodavvero</span>.</p>
     <canvas id="neural-center"></canvas>
   </section>
@@ -304,25 +304,38 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Animazione parallax per lo sfondo della get-section
-  const getSection = document.querySelector('.get-section');
-  if (getSection) {
-    window.addEventListener('scroll', () => {
-      const scrollPosition = window.scrollY;
-      const sectionTop = getSection.offsetTop;
-      const sectionHeight = getSection.offsetHeight;
-      const windowHeight = window.innerHeight;
+const getSection = document.querySelector('.get-section');
+if (getSection) {
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const sectionTop = getSection.offsetTop;
+    const sectionHeight = getSection.offsetHeight;
+    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
 
-      let parallax = (scrollPosition - sectionTop + windowHeight) * -0.5;
+    // Impostiamo una "sensibilità" del parallax in base alla larghezza della finestra
+    let parallaxIntensity = 0.4; // Intensità predefinita per schermi grandi
+    if (windowWidth < 1025) { // Schermi medi (es. tablet)
+      parallaxIntensity = 0.1; // Riduciamo l'intensità rispetto ai grandi schermi
+    } else if (windowWidth < 2000) { // Schermi medi (es. tablet)
+      parallaxIntensity = 0.3; // Riduciamo l'intensità rispetto ai grandi schermi
+    }
 
-      if (scrollPosition > sectionTop - windowHeight && scrollPosition < sectionTop + sectionHeight) {
-        getSection.style.backgroundPositionY = `${parallax}px`;
-      } else {
-        getSection.style.backgroundPositionY = 'center';
-      }
-    });
-  } else {
-    console.error("Elemento .get-section non trovato!");
-  }
+    // Calcoliamo il parallax
+    let parallax = (scrollPosition - sectionTop + windowHeight) * -parallaxIntensity;
+
+    // Cambiamo la posizione di background in base alla posizione del parallax
+    if (scrollPosition > sectionTop - windowHeight && scrollPosition < sectionTop + sectionHeight) {
+      getSection.style.backgroundPositionY = `${parallax}px`;
+    } else {
+      getSection.style.backgroundPositionY = 'center';
+    }
+  });
+} else {
+  console.error("Elemento .get-section non trovato!");
+}
+
+
 
   // Animazioni per la sezione get
   const getObserver = new IntersectionObserver((entries) => {
