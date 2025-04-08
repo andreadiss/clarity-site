@@ -1474,7 +1474,7 @@ background-image: url('../images/bg1.png');
 }
 
 
-/* smartphon (max-width: 600px) */
+/* smartphone (max-width: 600px) */
 @media (max-width: 600px) {
   .hero-title {
     font-size: 3rem; /* Mantieni come richiesto */
@@ -1488,7 +1488,7 @@ background-image: url('../images/bg1.png');
   }
 
   .hero-animation {
-    font-size: 0.3rem;         /* Riduce la dimensione del font per adattarsi allo schermo ridotto */
+    font-size: 0.5rem;         /* Riduce la dimensione del font per adattarsi allo schermo ridotto */
     padding: 1rem 1rem;           /* Aggiunge un padding orizzontale per evitare che il testo tocchi i bordi */
     margin-bottom: 0rem;       /* Spazio inferiore per separare visivamente dagli altri elementi */
   }
