@@ -1342,7 +1342,6 @@ section {
     display: none; /* Nascondi menu su tablet, usa hamburger se necessario */
   }
 
-  /* Offer section (senza parallax) */
   .offer-section {
     width: 100%;
     padding: 3.75rem 0.9375rem; /* 60px e 15px in rem */
@@ -1507,31 +1506,63 @@ background-image: url('../images/bg1.png');
     padding-right: 5%   
 }
 
+  #neural-center {
+    position: absolute;
+    top: 0%;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
 
-.offer-item-text {
-  font-size: 0.8rem;
-}
+  }
+.get-section {
+    padding: var(--spacing-lg) 0;
+    padding-left: 1rem;       /* Padding orizzontale ridotto */
+    padding-right: 1rem;
+    background-image: url('../images/bg2.png');
 
- .get-item{
-padding-left: 0%;
-padding-right: 0%;
-}
+    background-position: top center; /* Può risultare migliore su smartphone */
+  }
 
-.get-content{
-padding-left: 0%;
-padding-right: 0%;
-}
+  /* Adattamento della griglia */
+  .get-grid {
+    padding: 0 1rem;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-.title-line {
+  /* Impostazione degli item in colonna e centrati */
+  .get-item {
+    flex-direction: column;    /* Disposizione verticale */
+    align-items: center;
+    width: 100%;               /* Usa tutta la larghezza disponibile */
+    padding: var(--spacing-md);
+    padding-left: 0;           /* Rimuove il padding a sinistra */
+    gap: 1rem;                 /* Leggera riduzione del gap */
+  }
+
+  /* Forza l'orientamento verticale per entrambi i casi (odd e even) */
+  .get-item:nth-child(odd),
+  .get-item:nth-child(even) {
+    flex-direction: column;
+  }
+
+  /* Centrare il contenuto e regolare il padding interno */
+  .get-content {
+    text-align: center;
+    padding: var(--spacing-md) 1rem;
+    max-width: 100%;
+  }
+
+  /* Centrare titolo e descrizione */
+  .get-title-container {
+    justify-content: center;
+  }
+
+.title-line{
 display:none;
-}
-
-.get-title {
-  font-size: 2rem;
-}
-
-.get-text {
-  font-size: 1rem;
 }
 
 
