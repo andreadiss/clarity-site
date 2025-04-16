@@ -1,46 +1,102 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ricerche per la sanità | Clarity</title>
-  <meta name="description" content="Ricerca quantitativa e sperimentale per ospedali, cliniche e professionisti sanitari. Servizi personalizzati per migliorare esiti clinici e processi decisionali con dati evidence-based.">
-  <meta name="keywords" content="ricerca sanità, usabilità dispositivi medici, aderenza terapeutica, UX sanità, survey pazienti, analisi dati clinici, decisioni evidence-based">
-  <meta name="author" content="Clarity Research">
-  <link rel="stylesheet" href="../../css/landing-style.css">
+  <meta charset="utf-8"/>
+  <title>Clarity | Healthcare division</title>
+  <meta name="description" content="Ricerca quantitativa e sperimentale per ospedali, cliniche e professionisti sanitari. Servizi personalizzati per migliorare esiti clinici e processi decisionali con dati evidence-based."/>
+  <meta name="keywords" content="ricerca sanità, usabilità dispositivi medici, aderenza terapeutica, UX sanità, survey pazienti, analisi dati clinici, decisioni evidence-based"/>
+  <meta name="author" content="Clarity Research"/>
+
+  <!-- SEO -->
+  <link rel="alternate" hreflang="en" href="https://claritylab.cloud/en/healthcare/index.html"/>
+  <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/healthcare/index.html"/>
+
+  <!-- Font Awesome per icone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Stylesheet (stesso del modello Business) -->
+  <link rel="stylesheet" href="../../css/business_landing-style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Clarity",
+    "url": "https://claritylab.cloud",
+    "logo": "https://claritylab.cloud/images/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@clarity-research.com",
+      "contactType": "customer support"
+    },
+    "sameAs": ["https://www.linkedin.com/company/clarity-research"]
+  }
+  </script>
 </head>
 <body class="sanita">
-    <!-- Link per passare alla versione inglese -->
-  <div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+  <!-- Sidebar verticale (modificata per includere solo le sezioni presenti nel nuovo file) -->
+  <div class="sidebar">
+    <div class="section-labels">
+      <div class="label hidden" data-section="home">HOME</div>
+      <div class="label hidden" data-section="solutions">A CHI È RIVOLTO</div>
+      <div class="label hidden" data-section="services">SERVIZI</div>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/company/clarity-research" target="_blank" class="icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:hello@clarity-research.com" class="icon">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Language Switch -->
+  <div class="language-toggle">
     <a href="../../en/healthcare/index.html" title="English">
-      <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English" style="width:32px; height:32px; border-radius:50%;">
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English" class="flag" style="width:32px; height:32px; border-radius:50%;">
     </a>
   </div>
-  
-  <nav class="navbar">
+
+  <!-- NAVBAR (semplificato in linea con il file Healthcare originale) -->
+  <header class="navbar">
     <div class="navbar-container">
-      <a href="../../it/index.html" class="navbar-brand">Clarity</a>
-      <div class="nav-menu">
+      <a href="/" class="navbar-brand">Clarity</a>
+      <nav class="nav-menu">
         <a href="#home" class="nav-link">Home</a>
         <a href="#services" class="nav-link">Servizi</a>
         <a href="#contact" class="nav-link">Contatti</a>
-      </div>
+        <a href="#contact" class="button"><span class="button-text">Iniziamo</span></a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <div class="hero-section" id="home">
-    <h1 class="hero-title">Ricerche su misura per migliorare gli esiti clinici</h1>
-    <p class="hero-subtitle">Servizi evidence-based per ospedali e organizzazioni sanitarie: comprendiamo bisogni, testiamo soluzioni e guidiamo decisioni con dati rigorosi.</p>
-    <a href="#contact" class="button"><span class="button-text">Richiedi una consulenza gratuita</span></a>
-  </div>
-
-  <section class="accent-section">
-    <div class="accent-container">
-      <h2 class="accent-title" style="color: #000;">A chi è rivolto</h2>
-    <p class="accent-text" style="color: #000;"> Progettiamo ricerche per ospedali, IRCCS, aziende farmaceutiche e professionisti sanitari che vogliono valutare l'efficacia di interventi, ottimizzare strumenti digitali e raccogliere evidenze a supporto di pubblicazioni e finanziamenti.</p>
+  <!-- HERO SECTION (con contenuti Healthcare) -->
+  <section class="hero-section" id="home">
+    <div class="hero-container">
+      <div class="hero-left">
+        <h1 class="hero-title">Ricerche su misura per migliorare gli esiti clinici</h1>
+        <p class="hero-subtitle">
+          Servizi evidence-based per ospedali e organizzazioni sanitarie: comprendiamo bisogni, testiamo soluzioni e guidiamo decisioni con dati rigorosi.
+        </p>
+        <a href="#contact" class="button hero-button"><span class="button-text">Richiedi una consulenza gratuita</span></a>
+      </div>
+      <!-- Ho aggiornato l'immagine per rispecchiare la divisione Healthcare -->
+      <img id="gif-output" class="hero-animation" src="../../images/health_hero.gif" alt="Animazione">
     </div>
   </section>
 
+  <!-- ACCENT SECTION (con contenuti Healthcare) -->
+  <section class="accent-section" id="solutions">
+    <h2 class="accent-title">A chi è rivolto</h2>
+    <p class="accent-text">
+      Progettiamo ricerche per ospedali, IRCCS, aziende farmaceutiche e professionisti sanitari che vogliono valutare l'efficacia di interventi, ottimizzare strumenti digitali e raccogliere evidenze a supporto di pubblicazioni e finanziamenti.
+    </p>
+    <canvas id="neural-center"></canvas>
+  </section>
+
+  <!-- SERVICES SECTION (con contenuti Healthcare) -->
   <section class="services-section" id="services">
     <div class="section-subtitle">Cosa offriamo</div>
     <h2 class="section-title">Servizi di ricerca per la sanità</h2>
@@ -96,48 +152,151 @@
     </div>
   </section>
 
-<section class="offer-section">
-  <div class="section-subtitle">Perché scegliere Clarity</div>
-  <h2 class="section-title">Benefici per la tua organizzazione</h2>
-  <ul class="offer-grid">
-    <li class="offer-item">
-      <div class="offer-icon-wrapper">
-        <img src="../images/icon-satisfaction.svg" alt="Icona soddisfazione pazienti" class="offer-icon">
-      </div>
-      <p class="offer-text">Miglioramento della soddisfazione di pazienti e operatori</p>
-    </li>
-    <li class="offer-item">
-      <div class="offer-icon-wrapper">
-        <img src="../images/icon-aderenza.svg" alt="Icona aderenza terapeutica" class="offer-icon">
-      </div>
-      <p class="offer-text">Aumento dell'aderenza terapeutica grazie a ricerche mirate</p>
-    </li>
-    <li class="offer-item">
-      <div class="offer-icon-wrapper">
-        <img src="../images/icon-process.svg" alt="Icona ottimizzazione processi" class="offer-icon">
-      </div>
-      <p class="offer-text">Ottimizzazione dei processi clinici con dati evidence-based</p>
-    </li>
-    <li class="offer-item">
-      <div class="offer-icon-wrapper">
-        <img src="../images/icon-pubblicazioni.svg" alt="Icona supporto scientifico" class="offer-icon">
-      </div>
-      <p class="offer-text">Supporto scientifico per pubblicazioni, grant e bandi</p>
-    </li>
-  </ul>
-</section>
-
-  <section class="footer-cta-section" id="contact">
-    <h2 class="footer-cta-title">Hai bisogno di dati per migliorare le tue attività cliniche?</h2>
-    <p class="footer-cta-text">Contattaci per una consulenza gratuita o scrivi a <a href="mailto:hello@clarity-research.com" class="footer-link">hello@clarity-research.com</a></p>
-    <a href="mailto:hello@clarity-research.com" class="button">
-      <span class="button-text">Contattaci ora</span>
-    </a>
-  </section>
-
-  <div class="minimal-footer">
+  <!-- FOOTER (inserito seguendo la struttura del modello, con contenuti Healthcare nel contact form) -->
+  <footer class="minimal-footer" id="contact">
+    <div class="contact-form-container">
+      <form class="contact-form" action="YOUR_FORM_PROCESSING_ENDPOINT" method="POST">
+        <h3>Hai bisogno di dati per migliorare le tue attività cliniche?</h3>
+        <input type="text" name="name" placeholder="Il tuo nome" required>
+        <input type="email" name="email" placeholder="La tua email" required>
+        <textarea name="message" placeholder="Il tuo messaggio" required></textarea>
+        <button type="submit" class="button">
+          <span class="button-text">Richiedi una consulenza gratuita</span>
+        </button>
+      </form>
+    </div>
     <p>© 2025 Clarity. Tutti i diritti riservati.</p>
     <p>Email: <a href="mailto:hello@clarity-research.com">hello@clarity-research.com</a></p>
-  </div>
+  </footer>
+
+  <!-- SCRIPT ANIMAZIONE SERVICES -->
+
+  <!-- SCRIPT ANIMAZIONE SCROLL -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // HERO immediata
+    document.querySelectorAll('.hero-title, .hero-subtitle, .hero-section .button').forEach(el => {
+      el.classList.add('visible');
+    });
+
+    // ACCENT dopo scroll
+    const accentObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          accentObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.accent-title, .accent-text').forEach(el => {
+      accentObserver.observe(el);
+    });
+
+    // Animazione parallax per lo sfondo della get-section (se presente)
+    const getSection = document.querySelector('.get-section');
+    if (getSection) {
+      window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const sectionTop = getSection.offsetTop;
+        const sectionHeight = getSection.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const windowWidth = window.innerWidth;
+
+        let parallaxIntensity = 0.4;
+        if (windowWidth < 1025) {
+          parallaxIntensity = 0.1;
+        } else if (windowWidth < 2000) {
+          parallaxIntensity = 0.3;
+        }
+
+        let parallax = (scrollPosition - sectionTop + windowHeight) * -parallaxIntensity;
+
+        if (scrollPosition > sectionTop - windowHeight && scrollPosition < sectionTop + sectionHeight) {
+          getSection.style.backgroundPositionY = `${parallax}px`;
+        } else {
+          getSection.style.backgroundPositionY = 'center';
+        }
+      });
+    } else {
+      console.error("Elemento .get-section non trovato!");
+    }
+
+    // Animazioni per le sezioni get e service
+    const getObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const item = entry.target;
+          const rect = item.getBoundingClientRect();
+          const windowWidth = window.innerWidth;
+
+          if (rect.left < windowWidth / 2) {
+            item.classList.add('visible', 'left');
+          } else {
+            item.classList.add('visible', 'right');
+          }
+
+          getObserver.unobserve(item);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.get-item').forEach(item => {
+      getObserver.observe(item);
+    });
+
+    const getObserver2 = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const item = entry.target;
+          const rect = item.getBoundingClientRect();
+          const windowWidth = window.innerWidth;
+
+          if (rect.left < windowWidth / 2) {
+            item.classList.add('visible', 'left');
+          } else {
+            item.classList.add('visible', 'right');
+          }
+
+          getObserver.unobserve(item);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-item').forEach(item => {
+      getObserver2.observe(item);
+    });
+
+    // Mostra le etichette della sidebar quando le sezioni diventano visibili
+    const sectionLabels = document.querySelectorAll('.label');
+    const sections = document.querySelectorAll('section');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+          const sectionId = entry.target.getAttribute('id');
+          sectionLabels.forEach(label => {
+            label.classList.remove('visible');
+            label.classList.add('hidden');
+          });
+          const correspondingLabel = document.querySelector(`.label[data-section="${sectionId}"]`);
+          if (correspondingLabel) {
+            correspondingLabel.classList.remove('hidden');
+            correspondingLabel.classList.add('visible');
+          }
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => {
+      sectionObserver.observe(section);
+    });
+  });
+  </script>
+
+  <!-- JS -->
+  <script src="../../js/clarity-animations.js"></script>
+  <script src="../../js/offer-ascii-transition.js"></script>
+  <script src="../../js/ascii-steps-on-scroll.js"></script>
 </body>
 </html>
