@@ -1,174 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Research for Businesses | Clarity</title>
-  <meta name="description" content="We provide advanced quantitative and experimental research to help businesses make smarter decisions, based on reliable data and tailored insights.">
-  <meta name="keywords" content="business research, usability, A/B testing, UX research, user research, customer insights, data-driven strategies, evidence-based decisions">
-  <meta name="author" content="Clarity Research">
-  <link rel="stylesheet" href="../../css/landing-style.css">
+  <meta charset="utf-8"/>
+  <title>Clarity | Business Division</title>
+  <meta name="description" content="We offer high-level quantitative and experimental research to help businesses make better decisions based on reliable data and tailored insights."/>
+  <meta name="keywords" content="research for business, usability, A/B testing, UX research, user research, customer insights, data-driven strategies, evidence-based decisions"/>
+  <meta name="author" content="Clarity Research"/>
+
+  <!-- SEO -->
+  <link rel="alternate" hreflang="en" href="https://claritylab.cloud/en/business/index.html"/>
+  <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/business/index.html"/>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../../css/business_landing-style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Clarity",
+    "url": "https://claritylab.cloud",
+    "logo": "https://claritylab.cloud/images/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "andreadissegna@gmail.com",
+      "contactType": "customer support"
+    },
+    "sameAs": ["https://www.linkedin.com/company/clarity-research"]
+  }
+  </script>
 </head>
 <body class="aziende">
-  <!-- Toggle to Italian version -->
-  <div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+  <!-- Vertical Sidebar -->
+  <div class="sidebar">
+    <div class="section-labels">
+      <div class="label hidden" data-section="home">HOME</div>
+      <div class="label hidden" data-section="solutions">WHO IT'S FOR</div>
+      <div class="label hidden" data-section="offer-section">SPECIALIZATIONS</div>
+      <div class="label hidden" data-section="how-it-works-section">HOW IT WORKS</div>
+      <div class="label hidden" data-section="differentiators">APPROACH</div>
+      <div class="label hidden" data-section="services">SERVICES</div>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/company/clarity-research" target="_blank" class="icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:andreadissegna@gmail.com" class="icon">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Language Switch -->
+  <div class="language-toggle">
     <a href="../../it/business/index.html" title="Italiano">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg" alt="Italiano" style="width:32px; height:32px; border-radius:50%;">
+      <img src="../../images/ita.png" alt="Italian" class="flag">
     </a>
   </div>
 
-  <nav class="navbar">
+  <!-- NAVBAR -->
+  <header class="navbar">
     <div class="navbar-container">
-      <a href="../../en/index.html" class="navbar-brand">Clarity</a>
-      <div class="nav-menu">
+      <a href="/" class="navbar-brand">Clarity</a>
+      <nav class="nav-menu">
         <a href="#home" class="nav-link">Home</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <a href="#contact" class="button"><span class="button-text">Let’s Get Started</span></a>
-      </div>
+        <a href="../en/business/index.html" class="nav-link">Business</a>
+        <a href="../en/healthcare/index.html" class="nav-link">Healthcare</a>
+        <a href="../en/ngo/index.html" class="nav-link">Nonprofits</a>
+        <a href="#differentiators" class="nav-link">Why Us</a>
+        <a href="../en/faq.html" class="nav-link">FAQ</a>
+        <a href="#contact" class="button"><span class="button-text">Let’s Talk</span></a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <div class="hero-section" id="home" style="min-height: 40vh;">
-    <h1 class="hero-title">Evidence-based Research for Smarter Business Decisions</h1>
-    <p class="hero-subtitle">Discover what drives your customers with solid data and tailored insights. Improve user experience and boost business performance.</p>
-    <a href="#contact" class="button"><span class="button-text">Request a Free Consultation</span></a>
-  </div>
-
-  <section class="accent-section">
-    <div class="accent-container">
-      <h2 class="accent-title" style="color: #000;"> Who It’s For</h2>
-      <p class="accent-text" style="color: #000;"> Designed for managers, product owners, and marketing teams who want to understand user behavior, optimize digital experiences, and increase ROI through scientific and tailored approaches.</p>
-   </div>
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="home">
+    <div class="hero-container">
+      <div class="hero-left">
+        <h1 class="hero-title">Evidence-based user research for better business decisions</h1>
+        <p class="hero-subtitle">
+          Discover what drives your customers with solid data and tailored insights. Enhance the experience and boost your business performance.
+        </p>
+        <a href="#contact" class="button hero-button"><span class="button-text">Request a free consultation</span></a>
+      </div>
+      <img id="gif-output" class="hero-animation" src="../../images/business_hero.gif" alt="Animation">
+    </div>
   </section>
 
+  <!-- ACCENT SECTION -->
+  <section class="accent-section" id="solutions">
+    <h2 class="accent-title">Who it’s for</h2>
+    <p class="accent-text">Designed for managers, product owners, and marketing teams seeking to better understand user behavior, optimize digital experiences, and achieve superior ROI through scientific, personalized approaches.</p>
+    <canvas id="neural-center"></canvas>
+  </section>
 
+  <!-- DIFFERENTIATORS SECTION -->
+  <section class="get-section" id="differentiators">
+    <div class="get-grid">
+      <div class="get-item" id="get-ricerca-affidabile">
+        <div class="get-content">
+          <div class="get-title-container">
+            <h3 class="get-title"><span class="highlight">Reliable</span> research</h3>
+            <hr class="title-line">
+          </div>
+          <p class="get-text"><span class="highlight">We apply proven scientific methods to deliver accurate and repeatable results you can truly rely on.</span> Our team includes researchers from top universities and R&D departments. With years of experience in both quantitative and qualitative research, we ensure that every data point is solid and representative.</p>
+        </div>
+      </div>
+      <div class="get-item" id="get-approcci-innovativi">
+        <div class="get-content">
+          <div class="get-title-container">
+            <hr class="title-line">
+            <h3 class="get-title"><span class="highlight">Innovative</span> approaches</h3>
+          </div>
+          <p class="get-text"><span class="highlight">Research on human behavior and attitudes requires expertise in theoretical models, soft skills, and advanced technologies.</span> We use behavioral tasks, predictive analytics, and implicit measures to uncover what truly drives people. Statistical validation ensures that even the most ambitious goals are met.</p>
+        </div>
+      </div>
+      <div class="get-item" id="get-soluzioni-personalizzate">
+        <div class="get-content">
+          <div class="get-title-container">
+            <h3 class="get-title"><span class="highlight">Tailored</span> solutions</h3>
+            <hr class="title-line">
+          </div>
+          <p class="get-text"><span class="highlight">Each project is custom-designed around your goals: we listen to your context, analyze your audience, and guide you with clear data.</span> We don’t offer pre-packaged solutions; instead, we work with you to define key questions, select the best tools, and interpret results in a practical way. Our flexible approach adapts to your needs, maximizing research impact.</p>
+        </div>
+      </div>
+      <div class="get-item" id="get-risultati-comprensibili">
+        <div class="get-content">
+          <div class="get-title-container">
+            <hr class="title-line">
+            <h3 class="get-title"><span class="highlight">Accessible</span> results</h3>
+          </div>
+          <p class="get-text"><span class="highlight">Data shouldn’t be intimidating. We deliver results that are easy to understand and share across your team or organization.</span> We turn complex numbers into clear, actionable insights through visual reports and storytelling that make data accessible—even for non-technical stakeholders. This helps you communicate outcomes effectively, gain internal alignment, and take quick action.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
   <section class="services-section" id="services">
-    <div class="section-subtitle">What We Offer</div>
-    <h2 class="section-title">Tailored Research Services</h2>
+    <h2 class="section-title-dark">CLARITY LAB SERVICES</h2>
     <div class="services-grid">
       <div class="service-item">
-        <div class="service-text-container service-animated">
-          <p class="service-overline">Experience Analysis</p>
-          <h3 class="service-subtitle">Enhance Usability and Digital Interfaces</h3>
-          <div class="service-description">
-            <ul>
-              <li><strong>Usability testing (remote and in-person):</strong> customized evaluations of digital interfaces</li>
-              <li><strong>A/B testing and conjoint analysis:</strong> experiments to compare preferences and optimize variants</li>
-              <li><strong>Card sorting:</strong> information architecture based on user logic</li>
-            </ul>
-          </div>
+        <div class="service-text-container">
+          <h3 class="service-title">Usability and interface optimization</h3>
+          <p class="service-subtitle">Boost digital experiences and interface performance</p>
+          <p class="service-description">
+            <strong>Usability testing (remote and in-person):</strong> tailored protocols to evaluate your interfaces<br>
+            <strong>A/B testing and conjoint analysis:</strong> experiments to compare user preferences and optimize versions<br>
+            <strong>Card sorting:</strong> organizing content based on user logic
+          </p>
         </div>
         <div class="service-image-container">
-          <img src="../images/service-usability.jpg" alt="Experience Evaluation" class="service-image">
+          <img src="../../images/serv1.png" alt="Usability and Digital Interfaces" class="service-image">
         </div>
       </div>
-      <div class="service-item service-item-reverse">
-        <div class="service-text-container service-animated">
-          <p class="service-overline">Generative Research</p>
-          <h3 class="service-subtitle">Uncover Real Needs and Preferences</h3>
-          <div class="service-description">
-            <ul>
-              <li><strong>Clustering and segmentation:</strong> advanced data analysis to identify strategic targets</li>
-              <li><strong>Targeted surveys:</strong> custom questionnaires to explore new opportunities</li>
-            </ul>
-          </div>
+      <div class="service-item visible right">
+        <div class="service-text-container">
+          <h3 class="service-title">Generative research</h3>
+          <p class="service-subtitle">Discover real needs and preferences</p>
+          <p class="service-description">
+            <strong>Clustering and segmentation:</strong> advanced analysis to identify strategic user groups<br>
+            <strong>Targeted surveys:</strong> customized questionnaires to uncover new opportunities
+          </p>
         </div>
         <div class="service-image-container">
-          <img src="../images/service-preferences.jpg" alt="User Needs and Preferences" class="service-image">
+          <img src="../../images/serv2.png" alt="Generative Research" class="service-image">
         </div>
       </div>
       <div class="service-item">
-        <div class="service-text-container service-animated">
-          <p class="service-overline">Specialized Insights</p>
-          <h3 class="service-subtitle">Better Understand Your Customers and Brand</h3>
-          <div class="service-description">
-            <ul>
-              <li><strong>Sentiment analysis:</strong> qualitative analysis of conversations and feedback</li>
-              <li><strong>Journey mapping:</strong> mapping user journeys to inform strategy</li>
-              <li><strong>Implicit association test (IAT):</strong> measure unconscious brand perceptions</li>
-              <li><strong>Visual salience:</strong> analysis of automatic attention capture</li>
-            </ul>
-          </div>
+        <div class="service-text-container">
+          <h3 class="service-title">Specialized insights</h3>
+          <p class="service-subtitle">Understand your customers and brand</p>
+          <p class="service-description">
+            <strong>Sentiment analysis:</strong> qualitative analysis of conversations and feedback<br>
+            <strong>User journey mapping:</strong> visualizing user paths to refine your strategy<br>
+            <strong>Implicit Association Test (IAT):</strong> measuring unconscious brand associations<br>
+            <strong>Visual saliency:</strong> analyzing automatic attention capture
+          </p>
         </div>
         <div class="service-image-container">
-          <img src="../images/service-insights.jpg" alt="Specialized Insights" class="service-image">
+          <img src="../../images/serv3.png" alt="Specialized Insights" class="service-image">
         </div>
       </div>
-      <div class="service-item service-item-reverse">
-        <div class="service-text-container service-animated">
-          <p class="service-overline">User Retention</p>
-          <h3 class="service-subtitle">Effectively Measure Satisfaction</h3>
-          <div class="service-description">
-            <ul>
-              <li><strong>CSAT, NPS, and loyalty:</strong> tools to assess satisfaction and loyalty over time</li>
-            </ul>
-          </div>
+      <div class="service-item visible right">
+        <div class="service-text-container">
+          <h3 class="service-title">User loyalty</h3>
+          <p class="service-subtitle">Measure satisfaction effectively</p>
+          <p class="service-description">
+            <strong>CSAT, NPS and retention:</strong> tools to monitor satisfaction and loyalty over time
+          </p>
         </div>
         <div class="service-image-container">
-          <img src="../images/service-survey.jpg" alt="User Satisfaction Survey" class="service-image">
+          <img src="../../images/serv4.png" alt="User Loyalty" class="service-image">
         </div>
       </div>
       <div class="service-item">
-        <div class="service-text-container service-animated">
-          <p class="service-overline">Methodological Support</p>
-          <h3 class="service-subtitle">Make Data-Informed Decisions</h3>
-          <div class="service-description">
-            <ul>
-              <li><strong>Research design:</strong> support in designing studies aligned with your goals</li>
-              <li><strong>Data analysis and reporting:</strong> clear, actionable reporting and interpretation</li>
-            </ul>
-          </div>
+        <div class="service-text-container">
+          <h3 class="service-title">Methodological support</h3>
+          <p class="service-subtitle">Make confident, data-driven decisions</p>
+          <p class="service-description">
+            <strong>Research design:</strong> support in planning studies aligned with your business goals<br>
+            <strong>Analysis and reporting:</strong> interpreting data with clear, actionable reports
+          </p>
         </div>
         <div class="service-image-container">
-          <img src="../images/service-consulting.jpg" alt="Methodological Support" class="service-image">
+          <img src="../../images/serv5.png" alt="Methodological Support" class="service-image">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="offer-section">
-    <div class="section-subtitle">Why Clarity</div>
-    <h2 class="section-title">Benefits for Your Business</h2>
-    <ul class="offer-grid">
-      <li class="offer-item">
-        <div class="offer-icon-wrapper">
-          <img src="../images/icon-conversion.svg" alt="Conversion Increase Icon" class="offer-icon">
-        </div>
-        <p class="offer-text">Higher conversions with tailored UX solutions</p>
-      </li>
-      <li class="offer-item">
-        <div class="offer-icon-wrapper">
-          <img src="../images/icon-data.svg" alt="Reliable Data Icon" class="offer-icon">
-        </div>
-        <p class="offer-text">Decisions backed by reliable data</p>
-      </li>
-      <li class="offer-item">
-        <div class="offer-icon-wrapper">
-          <img src="../images/icon-retention.svg" alt="Improved Retention Icon" class="offer-icon">
-        </div>
-        <p class="offer-text">Improved retention through evidence-based research</p>
-      </li>
-      <li class="offer-item">
-        <div class="offer-icon-wrapper">
-          <img src="../images/icon-insight.svg" alt="Customer Insight Icon" class="offer-icon">
-        </div>
-        <p class="offer-text">Competitive edge with deep customer insights</p>
-      </li>
-    </ul>
-  </section>
-
-  <div class="footer-cta-section" id="contact">
-    <h2 class="footer-cta-title">Ready to learn more?</h2>
-    <p class="footer-cta-text">Email us at <a href="mailto:hello@clarity-research.com" class="footer-link">hello@clarity-research.com</a> — we're here to help you make informed decisions.</p>
-    <a href="mailto:hello@clarity-research.com" class="button">
-      <span class="button-text">Contact Us</span>
-    </a>
-  </div>
-
-  <div class="minimal-footer">
+  <!-- FOOTER -->
+  <footer class="minimal-footer" id="contact">
+    <div class="contact-form-container">
+      <form class="contact-form" action="YOUR_FORM_PROCESSING_ENDPOINT" method="POST">
+        <h3>Contact us</h3>
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit" class="button">
+          <span class="button-text">Send</span>
+        </button>
+      </form>
+    </div>
     <p>© 2025 Clarity. All rights reserved.</p>
-    <p>Email: <a href="mailto:hello@clarity-research.com">hello@clarity-research.com</a></p>
-  </div>
+    <p>Email: <a href="mailto:andreadissegna@gmail.com">andreadissegna@gmail.com</a></p>
+  </footer>
+
+ <!-- SCRIPT ANIMAZIONE SERVICES -->
+
+  <!-- SCRIPT ANIMAZIONE SCROLL -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // HERO immediata
+    document.querySelectorAll('.hero-title, .hero-subtitle, .hero-section .button').forEach(el => {
+      el.classList.add('visible');
+    });
+
+    // ACCENT dopo scroll
+    const accentObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          accentObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.accent-title, .accent-text').forEach(el => {
+      accentObserver.observe(el);
+    });
+
+    // Animazione parallax per lo sfondo della get-section
+    const getSection = document.querySelector('.get-section');
+    if (getSection) {
+      window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const sectionTop = getSection.offsetTop;
+        const sectionHeight = getSection.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const windowWidth = window.innerWidth;
+
+        let parallaxIntensity = 0.4;
+        if (windowWidth < 1025) {
+          parallaxIntensity = 0.1;
+        } else if (windowWidth < 2000) {
+          parallaxIntensity = 0.3;
+        }
+
+        let parallax = (scrollPosition - sectionTop + windowHeight) * -parallaxIntensity;
+
+        if (scrollPosition > sectionTop - windowHeight && scrollPosition < sectionTop + sectionHeight) {
+          getSection.style.backgroundPositionY = `${parallax}px`;
+        } else {
+          getSection.style.backgroundPositionY = 'center';
+        }
+      });
+    } else {
+      console.error("Elemento .get-section non trovato!");
+    }
+
+    // Animazioni per la sezione get
+    const getObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const item = entry.target;
+          const rect = item.getBoundingClientRect();
+          const windowWidth = window.innerWidth;
+
+          if (rect.left < windowWidth / 2) {
+            item.classList.add('visible', 'left');
+          } else {
+            item.classList.add('visible', 'right');
+          }
+
+          getObserver.unobserve(item);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.get-item').forEach(item => {
+      getObserver.observe(item);
+    });
+
+   // Animazioni per la sezione service
+    const getObserver2 = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const item = entry.target;
+          const rect = item.getBoundingClientRect();
+          const windowWidth = window.innerWidth;
+
+          if (rect.left < windowWidth / 2) {
+            item.classList.add('visible', 'left');
+          } else {
+            item.classList.add('visible', 'right');
+          }
+
+          getObserver.unobserve(item);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-item').forEach(item => {
+      getObserver2.observe(item);
+    });
+
+
+    // Mostra le etichette della sidebar quando le sezioni diventano visibili al 30%
+    const sectionLabels = document.querySelectorAll('.label');
+    const sections = document.querySelectorAll('section');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+          const sectionId = entry.target.getAttribute('id');
+          sectionLabels.forEach(label => {
+            label.classList.remove('visible');
+            label.classList.add('hidden');
+          });
+          const correspondingLabel = document.querySelector(`.label[data-section="${sectionId}"]`);
+          if (correspondingLabel) {
+            correspondingLabel.classList.remove('hidden');
+            correspondingLabel.classList.add('visible');
+          }
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => {
+      sectionObserver.observe(section);
+    });
+  });
+  </script>
+
+
+  <!-- JavaScript -->
+  <script src="../../js/clarity-animations.js"></script>
+  <script src="../../js/offer-ascii-transition.js"></script>
+  <script src="../../js/ascii-steps-on-scroll.js"></script>
 </body>
 </html>
