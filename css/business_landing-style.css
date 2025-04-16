@@ -861,19 +861,18 @@ section {
 
 /* MEDIA QUERIES (unchanged, but adjusted for new styles) */
 
-@media (max-width: 1400px){
-.services-grid{
-  padding-right: 0%;
-  padding-left: 15%;
-  width: 100%;
-  margin: 0% 0%;
-}
+@media (max-width: 1400px) {
+  .services-grid {
+    padding-right: 0%;
+    padding-left: 15%;
+    width: 100%;
+    margin: 0;
+  }
 
-.navbar-container {
-  padding-right: 20%;
+  .navbar-container {
+    padding-right: 20%;
+  }
 }
-}
-
 
 @media (max-width: 1024px) {
   /* Nascondi la sidebar */
@@ -901,39 +900,37 @@ section {
   }
 
   .hero-title {
-    font-size: 5rem; /* Mantieni come richiesto */
+    font-size: 5rem;
     text-align: left;
   }
 
   .hero-subtitle {
     font-size: 2rem;
     text-align: left;
-    margin: 0 0 0.9375rem 0; /* 15px in rem */
+    margin: 0 0 0.9375rem 0;
   }
 
   .hero-animation {
     padding-top: 10%;
-    display: block;            /* Assicura che l'animazione sia visibile */
-    order: 0;                  /* Rimuove eventuali ordinamenti che la portavano in fondo */
-    max-width: 100%;           /* Usa tutta la larghezza disponibile */
+    display: block;
+    order: 0;
+    max-width: 100%;
     width: 100%;
-
   }
 
-  
-  .accent-section{
-   height: 100vh;
-}
+  .accent-section {
+    height: 100vh;
+  }
+
   .accent-title {
-    font-size: 5rem; /* Mantieni come richiesto */
-    padding-right: 5%
-   }
-.accent-text {
-    font-size: 2rem; /* Mantieni come richiesto */
-    padding-right: 5%   
-}
+    font-size: 5rem;
+    padding-right: 5%;
+  }
 
-
+  .accent-text {
+    font-size: 2rem;
+    padding-right: 5%;
+  }
 
   /* Neural animation */
   #neural-center {
@@ -957,87 +954,95 @@ section {
   }
 
   .nav-menu {
-    display: none; /* Nascondi menu su tablet, usa hamburger se necessario */
+    display: none;
   }
 
+  .get-section {
+    background-image: url('../images/bg1.png');
+  }
 
+  .services-grid {
+    padding-right: 5%;
+    padding-left: 10%;
+    width: 100%;
+    margin: 0;
+  }
 
- .get-section{
-background-image: url('../images/bg1.png');
+  .service-image-container {
+    width: 40%;
+  }
 }
-
-
-.services-grid{
-padding-right: 5%;
-padding-left: 10%;
-  width: 100%;
-  margin: 0% 0%;
-}
-
-.service-image-container {
- width: 40%;
-}
-
 
 @media (max-width: 900px) {
-
   .hero-title {
-    font-size: 4rem; /* Mantieni come richiesto */
+    font-size: 4rem;
     text-align: left;
   }
 
   .hero-subtitle {
     font-size: 2rem;
     text-align: left;
-    margin: 0 0 0.9375rem 0; /* 15px in rem */
+    margin: 0 0 0.9375rem 0;
   }
-}
 
-.services-grid{
+
+/* Fallback or global override */
+.services-grid {
   padding-right: 5%;
   padding-left: 5%;
   width: 100%;
-  margin: 0% 0%;
+  margin: 0;
 }
 
 
+.service-description {
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+}
 
 /* smartphone (max-width: 600px) */
 @media (max-width: 600px) {
   .hero-title {
-    font-size: 3rem; /* Mantieni come richiesto */
+    font-size: 3rem;
     text-align: left;
   }
 
   .hero-subtitle {
     font-size: 1rem;
     text-align: left;
-    margin: 0 0 0.9375rem 0; /* 15px in rem */
+    margin: 0 0 0.9375rem 0;
   }
 
-
-.hero-animation {
+  .hero-animation {
     padding-top: 20%;
-    display: block;            /* Assicura che l'animazione sia visibile */
-    order: 0;                  /* Rimuove eventuali ordinamenti che la portavano in fondo */
-    max-width: 100%;           /* Usa tutta la larghezza disponibile */
+    display: block;
+    order: 0;
+    max-width: 100%;
     width: 100%;
-
   }
 
+  #gif-output {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: none;
+  }
 
-  .accent-section{
-   height: 30vh;
-}
+  .accent-section {
+    height: 30vh;
+  }
+
   .accent-title {
-    font-size: 2rem; /* Mantieni come richiesto */
-    padding-right: 5%
-   }
+    font-size: 2rem;
+    padding-right: 5%;
+  }
 
-.accent-text {
-    font-size: 1rem; /* Mantieni come richiesto */
-    padding-right: 5%   
-}
+  .accent-text {
+    font-size: 1rem;
+    padding-right: 5%;
+  }
 
   #neural-center {
     position: absolute;
@@ -1047,19 +1052,16 @@ padding-left: 10%;
     width: 100%;
     height: 100%;
     opacity: 0.4;
-
   }
 
-.get-section {
+  .get-section {
     padding: var(--spacing-lg) 0;
-    padding-left: 1rem;       /* Padding orizzontale ridotto */
+    padding-left: 1rem;
     padding-right: 1rem;
     background-image: url('../images/bg2.png');
-
-    background-position: top center; /* Può risultare migliore su smartphone */
+    background-position: top center;
   }
 
-  /* Adattamento della griglia */
   .get-grid {
     padding: 0 1rem;
     max-width: 100%;
@@ -1067,37 +1069,31 @@ padding-left: 10%;
     margin: 0 auto;
   }
 
-  /* Impostazione degli item in colonna e centrati */
   .get-item {
-    flex-direction: column;    /* Disposizione verticale */
+    flex-direction: column;
     align-items: center;
-    width: 100%;               /* Usa tutta la larghezza disponibile */
+    width: 100%;
     padding: var(--spacing-md);
-    padding-left: 0;           /* Rimuove il padding a sinistra */
-    gap: 1rem;                 /* Leggera riduzione del gap */
+    padding-left: 0;
+    gap: 1rem;
   }
 
-  /* Forza l'orientamento verticale per entrambi i casi (odd e even) */
   .get-item:nth-child(odd),
   .get-item:nth-child(even) {
     flex-direction: column;
   }
 
-  /* Centrare il contenuto e regolare il padding interno */
   .get-content {
     text-align: center;
     padding: var(--spacing-md) 1rem;
     max-width: 100%;
   }
 
-  /* Centrare titolo e descrizione */
   .get-title-container {
     justify-content: center;
   }
 
-.title-line{
-display:none;
-}
-
-
+  .title-line {
+    display: none;
+  }
 }

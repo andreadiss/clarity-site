@@ -265,7 +265,7 @@ section {
 }
 
 .button-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Mulish', sans-serif;
   text-transform: uppercase;
 }
 
@@ -309,7 +309,7 @@ padding-bottom: 20%;
 .hero-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: clamp(2rem, 5vw, 5rem); /* Tipografia fluida */
+  font-size: 5rem; /* Tipografia fluida */
   text-transform: uppercase;
   line-height: 1.17;
   margin-bottom: var(--spacing-sm);
@@ -319,7 +319,7 @@ padding-bottom: 20%;
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: 2rem;
   line-height: 1.7;
   max-width: 800px;
   text-align: left;
@@ -543,7 +543,7 @@ padding-bottom: 20%;
 }
 
 .offer-item-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--text-dark);
   line-height: 1.5;
   text-align: center;
@@ -654,7 +654,7 @@ padding-bottom: 20%;
 }
 
 .step-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.5;
   max-width: 15.625rem;
@@ -776,7 +776,7 @@ padding-bottom: 20%;
 }
 
 .get-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #333;
   line-height: 1.5;
   margin-top: 1.25rem;
