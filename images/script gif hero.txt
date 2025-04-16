@@ -1,0 +1,33 @@
+# Update the stream color to white
+stream_color_white = (255, 255, 255)  # White
+
+# Create new frames with white binary digits
+frames_white = []
+for frame_index in range(num_frames):
+    frame = base_img.copy()
+    draw = ImageDraw.Draw(frame)
+    
+    for i in range(num_streams):
+        x = stream_positions[i]
+        start_y = start_ys[i] + frame_index * stream_speed
+        y = start_y
+
+        while y < height:
+            binary_digit = random.choice(['0', '1'])
+            draw.text((x, y), binary_digit, font=font, fill=stream_color_white)
+            y += font_size
+
+    frames_white.append(frame)
+
+# Save the updated GIF with white numbers
+gif_path_white = "/mnt/data/binary_overlay_animation_white_streams.gif"
+frames_white[0].save(
+    gif_path_white,
+    save_all=True,
+    append_images=frames_white[1:],
+    duration=100,
+    loop=0,
+    disposal=2
+)
+
+gif_path_white
