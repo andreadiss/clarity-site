@@ -22,6 +22,12 @@
   --sidebar-width: 80px;
 }
 
+/* SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* FONT FACES */
 @font-face {
   font-family: 'Roboto';
