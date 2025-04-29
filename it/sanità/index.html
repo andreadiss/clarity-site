@@ -9,7 +9,7 @@
 
   <!-- SEO -->
   <link rel="alternate" hreflang="en" href="https://claritylab.cloud/en/healthcare/index.html"/>
-  <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/healthcare/index.html"/>
+  <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/sanità/index.html"/>
 
   <!-- Font Awesome per icone -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -18,21 +18,53 @@
   <link rel="stylesheet" href="../../css/healthcare_landing-style.css">
 
   <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Clarity",
-    "url": "https://claritylab.cloud",
-    "logo": "https://claritylab.cloud/images/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "claritylabresearch@gmail.com",
-      "contactType": "customer support"
-    },
-    "sameAs": ["https://www.linkedin.com/company/clarity-research"]
-  }
-  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Clarity",
+  "description": "Ricerca clinica Trieste: ricerca quantitativa e qualitativa",
+  "url": "https://claritylab.cloud/it/sanità/",
+  "logo": "https://claritylab.cloud/images/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "claritylabresearch@gmail.com",
+    "contactType": "customer support"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/claritylab"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trieste",
+    "addressRegion": "Friuli-Venezia Giulia",
+    "postalCode": "34100",
+    "addressCountry": "IT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 45.6495,
+    "longitude": 13.7768
+  },
+  "hasMap": "https://maps.google.com/?q=45.6495,13.7768",
+  "areaServed": {
+    "@type": "City",
+    "name": "Trieste"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday","Tuesday","Wednesday","Thursday","Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ]
+}
+</script>
+
+
 </head>
 <body class="sanita">
    <!-- Sidebar verticale -->
