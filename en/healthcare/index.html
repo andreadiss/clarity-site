@@ -1,142 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthcare Research Services | Clarity</title>
-  <meta name="description" content="Quantitative and experimental research for hospitals, clinics, and healthcare professionals. Evidence-based services tailored to improve clinical outcomes and support data-driven decisions.">
-  <meta name="keywords" content="healthcare research, medical UX, treatment adherence, patient surveys, clinical data analysis, evidence-based decisions, healthcare usability">
-  <meta name="author" content="Clarity Research">
-  <link rel="stylesheet" href="../../css/landing-style.css">
+  <meta charset="utf-8"/>
+  <title>Clarity | Healthcare Division</title>
+  <meta name="description" content="Quantitative and experimental research for hospitals, clinics, and healthcare professionals. Customized services to improve clinical outcomes and decision-making with evidence-based data."/>
+  <meta name="keywords" content="healthcare research, medical device usability, treatment adherence, healthcare UX, patient surveys, clinical data analysis, evidence-based decisions"/>
+  <meta name="author" content="Clarity Research"/>
+
+  <!-- SEO -->
+  <link rel="alternate" hreflang="en" href="https://claritylab.cloud/en/healthcare/index.html"/>
+  <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/healthcare/index.html"/>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Stylesheet (same as Business template) -->
+  <link rel="stylesheet" href="../../css/healthcare_landing-style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Clarity",
+    "url": "https://claritylab.cloud",
+    "logo": "https://claritylab.cloud/images/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@clarity-research.com",
+      "contactType": "customer support"
+    },
+    "sameAs": ["https://www.linkedin.com/company/clarity-research"]
+  }
+  </script>
 </head>
-<body class="sanita">
-  <div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
-    <a href="../../it/sanità/index.html" title="Italiano">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg" alt="Italiano" style="width:32px; height:32px; border-radius:50%;">
-    </a>
-  </div>
-
-  <nav class="navbar">
-    <div class="navbar-container">
-      <a href="../../en/index.html" class="navbar-brand">Clarity</a>
-      <div class="nav-menu">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </div>
+<body class="healthcare">
+  <!-- Vertical sidebar -->
+  <div class="sidebar">
+    <div class="section-labels">
+      <div class="label hidden" data-section="home">HOME</div>
+      <div class="label hidden" data-section="solutions">HOME</div>
+      <div class="label hidden" data-section="offer-section">SPECIALIZATIONS</div>
+      <div class="label hidden" data-section="how-it-works-section">HOW IT WORKS</div>
+      <div class="label hidden" data-section="differentiators">APPROACH</div>
+      <div class="label hidden" data-section="services">SERVICES</div>
     </div>
-  </nav>
-
-  <div class="hero-section" id="home">
-    <h1 class="hero-title">Tailored Research to Improve Clinical Outcomes</h1>
-    <p class="hero-subtitle">Evidence-based services for hospitals and healthcare organizations. We understand needs, test solutions, and guide decisions with solid data.</p>
-    <a href="#contact" class="button"><span class="button-text">Request a free consultation</span></a>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/company/clarity-research" target="_blank" class="icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:andreadissegna@gmail.com" class="icon">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
   </div>
 
- <section class="accent-section">
-    <div class="accent-container">
-       <h2 class="accent-title" style="color: #000;"> Who It's For</h2>
-       <p class="accent-text" style="color: #000;"> We design research for hospitals, clinics, pharma companies, and healthcare professionals aiming to assess intervention effectiveness, optimize digital tools, and gather evidence for publications and funding.</p>
-    </div>	
+<!-- Language Switch -->
+<div class="language-toggle">
+  <a href="../../it/sanità/index.html" title="Italiano">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg"
+         alt="Italiano" class="flag">
+  </a>
+</div>
+
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="/" class="navbar-brand">Clarity</a>
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="../business/index.html" class="nav-link">Companies</a>
+        <a href="../ngo/index.html" class="nav-link">NGO</a>
+        <a href="#differentiators" class="nav-link">Why Us</a>
+        <a href="../faq.html" class="nav-link">FAQ</a>
+        <a href="#contact" class="button"><span class="button-text">Get Started</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="home">
+    <div class="hero-container">
+      <div class="hero-left">
+        <h1 class="hero-title">Tailored research to improve clinical outcomes</h1>
+        <p class="hero-subtitle">
+          Evidence-based services for hospitals and healthcare organizations: we identify needs, test solutions, and guide decisions with rigorous data.
+        </p>
+        <a href="#contact" class="button hero-button"><span class="button-text">Request a free consultation</span></a>
+      </div>
+      <img id="gif-output" class="hero-animation" src="../../images/health_hero.gif" alt="Healthcare animation">
+    </div>
   </section>
 
+  <!-- ACCENT SECTION -->
+  <section class="accent-section" id="solutions">
+    <h2 class="accent-title">Who it's for</h2>
+    <p class="accent-text">
+      We design research for hospitals, IRCCS, pharmaceutical companies, and healthcare professionals seeking to evaluate intervention effectiveness, optimize digital tools, and gather evidence for publications and funding.
+    </p>
+    <canvas id="neural-center"></canvas>
+  </section>
+
+  <!-- DIFFERENTIATORS SECTION -->
+  <section class="get-section" id="differentiators">
+    <div class="get-grid">
+      <div class="get-item" id="get-reliable-research">
+        <div class="get-content">
+          <div class="get-title-container">
+            <h3 class="get-title">Reliable <span class="highlight">Research</span></h3>
+            <hr class="title-line">
+          </div>
+          <p class="get-text"><span class="highlight">We apply established scientific methods to deliver accurate and repeatable results you can rely on.</span> Our team includes researchers from top universities and R&amp;D. Years of experience in quantitative and qualitative research ensure every data point is robust and representative.</p>
+        </div>
+      </div>
+      <div class="get-item" id="get-innovative-approaches">
+        <div class="get-content">
+          <div class="get-title-container">
+            <hr class="title-line">
+            <h3 class="get-title">Innovative <span class="highlight">Approaches</span></h3>
+          </div>
+          <p class="get-text"><span class="highlight">Studying behavior and attitudes requires deep expertise in theory, soft skills, and cutting-edge technology.</span> We use behavioral tasks, predictive analytics, and implicit measures to reveal what truly drives people. Statistical validation allows us to meet the most rigorous standards.</p>
+        </div>
+      </div>
+      <div class="get-item" id="get-tailored-solutions">
+        <div class="get-content">
+          <div class="get-title-container">
+            <h3 class="get-title">Tailored <span class="highlight">Solutions</span></h3>
+            <hr class="title-line">
+          </div>
+          <p class="get-text"><span class="highlight">Every project is custom-designed for your goals: we listen to your context, analyze your audience, and guide you with clear data.</span> We don’t offer one-size-fits-all packages; we collaborate to define key questions, choose the right tools, and interpret results practically. Our flexible approach maximizes research impact.</p>
+        </div>
+      </div>
+      <div class="get-item" id="get-understandable-results">
+        <div class="get-content">
+          <div class="get-title-container">
+            <hr class="title-line">
+            <h3 class="get-title">Understandable <span class="highlight">Results</span></h3>
+          </div>
+          <p class="get-text"><span class="highlight">Data shouldn’t be intimidating. We deliver results that are easy to understand and share with your team.</span> We translate complex numbers into clear, actionable insights, with visual reports and narratives accessible to all, even non-technical stakeholders. This helps you communicate effectively, build consensus, and act swiftly on solid evidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
   <section class="services-section" id="services">
-    <div class="section-subtitle">What We Offer</div>
-    <h2 class="section-title">Research Services for Healthcare</h2>
+    <h2 class="section-title-dark">CLARITY LAB SERVICES</h2>
     <div class="services-grid">
       <div class="service-item">
         <div class="service-text-container">
-          <p class="service-overline">Usability Evaluation</p>
-          <p class="service-subtitle">We analyze user and operator experience on portals and medical devices</p>
-          <div class="service-description">
-            <ul>
-              <li><strong>Usability testing:</strong> assessments on medical interfaces in real or simulated settings</li>
-              <li><strong>Interviews and contextual inquiry:</strong> direct data collection on barriers and needs</li>
-            </ul>
-          </div>
+          <h3 class="service-title">Improve usability and digital interfaces</h3>
+          <p class="service-subtitle">We analyze patient and provider experience on medical platforms and devices</p>
+          <p class="service-description">
+            <strong>Usability testing (remote &amp; in-person):</strong> evaluations of medical interfaces in real or simulated contexts<br>
+            <strong>Interviews &amp; contextual inquiry:</strong> direct data gathering on obstacles and needs<br>
+          </p>
         </div>
         <div class="service-image-container">
-          <img src="../images/service-usability.jpg" alt="Healthcare usability testing" class="service-image">
+          <img src="../../images/serv1.png" alt="Usability and Digital Interfaces" class="service-image">
         </div>
       </div>
-
-      <div class="service-item service-item-reverse">
+      <div class="service-item visible right">
         <div class="service-text-container">
-          <p class="service-overline">Behavior and Adherence</p>
-          <p class="service-subtitle">We measure engagement, adherence, and satisfaction to improve interventions</p>
-          <div class="service-description">
-            <ul>
-              <li><strong>Adherence and compliance studies:</strong> pre/post intervention behavioral monitoring</li>
-              <li><strong>Targeted surveys and validated scales:</strong> tools tailored to your clinical context</li>
-            </ul>
-          </div>
+          <h3 class="service-title">Generative Research</h3>
+          <p class="service-subtitle">Discover new insights about your patients</p>
+          <p class="service-description">
+            <strong>Experimental research:</strong> validated behavioral paradigms and computerized tests to probe cognitive processes<br>
+            <strong>Correlational research:</strong> validated questionnaires to measure wellbeing, personality traits, and psychopathology to uncover hidden correlations<br>
+          </p>
         </div>
         <div class="service-image-container">
-          <img src="../images/service-survey.jpg" alt="Treatment adherence" class="service-image">
+          <img src="../../images/serv3.png" alt="Generative Research" class="service-image">
         </div>
       </div>
-
+      <div class="service-item visible right">
+        <div class="service-text-container">
+          <h3 class="service-title">Evaluative Research</h3>
+          <p class="service-subtitle">Validate your treatment protocols</p>
+          <p class="service-description">
+            <strong>Longitudinal studies:</strong> pre-post intervention designs to validate your protocol<br>
+            <strong>Predictive research:</strong> identifying predictors of skill development, therapeutic success, or follow-up outcomes<br>
+            <strong>Feasibility studies:</strong> measuring clinical feasibility outcomes<br>
+          </p>
+        </div>
+        <div class="service-image-container">
+          <img src="../../images/serv3.png" alt="Evaluative Research" class="service-image">
+        </div>
+      </div>
+      <div class="service-item visible right">
+        <div class="service-text-container">
+          <h3 class="service-title">Behavior &amp; Adherence</h3>
+          <p class="service-subtitle">Measure engagement, adherence, and satisfaction to improve interventions</p>
+          <p class="service-description">
+            <strong>Adherence &amp; compliance studies:</strong> behavioral monitoring pre/post intervention<br>
+            <strong>Validated surveys &amp; scales:</strong> custom questionnaires for your clinical context<br>
+          </p>
+        </div>
+        <div class="service-image-container">
+          <img src="../../images/serv4.png" alt="Behavior and Adherence" class="service-image">
+        </div>
+      </div>
       <div class="service-item">
         <div class="service-text-container">
-          <p class="service-overline">Scientific Support</p>
+          <h3 class="service-title">Scientific Support</h3>
           <p class="service-subtitle">We design studies and interpret data with methodological rigor</p>
-          <div class="service-description">
-            <ul>
-              <li><strong>Sampling and power analysis:</strong> robust studies for reliable evidence</li>
-              <li><strong>Pre/post or quasi-experimental analyses:</strong> statistical assessment of effectiveness</li>
-              <li><strong>Tailored training:</strong> workshops and mentoring for internal teams</li>
-            </ul>
-          </div>
+          <p class="service-description">
+            <strong>Sampling &amp; power analysis:</strong> robust designs for reliable evidence<br>
+            <strong>Statistical analysis:</strong> data analysis and support in report writing<br>
+            <strong>Custom training:</strong> workshops and coaching for internal clinical research teams<br>
+          </p>
         </div>
         <div class="service-image-container">
-          <img src="../images/service-consulting.jpg" alt="Research support" class="service-image">
+          <img src="../../images/serv5.png" alt="Scientific Support" class="service-image">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="offer-section">
-    <div class="section-subtitle">Why Choose Clarity</div>
-    <h2 class="section-title">Benefits for Your Organization</h2>
-    <ul class="offer-grid">
-      <li class="offer-item">
-        <div class="offer-icon-wrapper">
-          <img src="../images/icon-satisfaction.svg" alt="Patient satisfaction icon" class="offer-icon">
-        </div>
-        <p class="offer-text">Improved satisfaction for patients and healthcare professionals</p>
-      </li>
-      <li class="offer-item">
-        <div class="offer-icon-wrapper">
-          <img src="../images/icon-aderenza.svg" alt="Adherence icon" class="offer-icon">
-        </div>
-        <p class="offer-text">Increased treatment adherence through targeted research</p>
-      </li>
-      <li class="offer-item">
-        <div class="offer-icon-wrapper">
-          <img src="../images/icon-process.svg" alt="Process optimization icon" class="offer-icon">
-        </div>
-        <p class="offer-text">Clinical process optimization with evidence-based data</p>
-      </li>
-      <li class="offer-item">
-        <div class="offer-icon-wrapper">
-          <img src="../images/icon-pubblicazioni.svg" alt="Scientific support icon" class="offer-icon">
-        </div>
-        <p class="offer-text">Scientific support for publications, grants, and calls</p>
-      </li>
-    </ul>
-  </section>
-
-  <section class="footer-cta-section" id="contact">
-    <h2 class="footer-cta-title">Need data to improve your clinical activities?</h2>
-    <p class="footer-cta-text">Contact us for a free consultation or write to <a href="mailto:hello@clarity-research.com" class="footer-link">hello@clarity-research.com</a></p>
-    <a href="mailto:hello@clarity-research.com" class="button">
-      <span class="button-text">Contact us now</span>
-    </a>
-  </section>
-
-  <div class="minimal-footer">
+  <!-- FOOTER / CONTACT FORM -->
+  <footer class="minimal-footer" id="contact">
+    <div class="contact-form-container">
+      <form class="contact-form" action="YOUR_FORM_PROCESSING_ENDPOINT" method="POST">
+        <h3>Need data to improve your clinical activities?</h3>
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit" class="button">
+          <span class="button-text">Request a free consultation</span>
+        </button>
+      </form>
+    </div>
     <p>© 2025 Clarity. All rights reserved.</p>
     <p>Email: <a href="mailto:hello@clarity-research.com">hello@clarity-research.com</a></p>
-  </div>
+  </footer>
+
+  <!-- Scroll & reveal animations -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.hero-title, .hero-subtitle, .hero-section .button')
+      .forEach(el => el.classList.add('visible'));
+
+    const accentObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          accentObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.accent-title, .accent-text')
+      .forEach(el => accentObserver.observe(el));
+
+    const getSection = document.querySelector('.get-section');
+    if (getSection) {
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const top = getSection.offsetTop;
+        const height = getSection.offsetHeight;
+        const winH = window.innerHeight;
+        const winW = window.innerWidth;
+        let intensity = winW < 1025 ? 0.1 : winW < 2000 ? 0.3 : 0.4;
+        const pos = (scrollY - top + winH) * -intensity;
+        getSection.style.backgroundPositionY = (scrollY > top - winH && scrollY < top + height) ? `${pos}px` : 'center';
+      });
+    }
+
+    const reveal = (selector) => {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const rect = el.getBoundingClientRect();
+            el.classList.add('visible', rect.left < window.innerWidth/2 ? 'left' : 'right');
+            obs.unobserve(el);
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll(selector).forEach(el => obs.observe(el));
+    };
+    reveal('.get-item');
+    reveal('.service-item');
+
+    const labels = document.querySelectorAll('.label');
+    const sections = document.querySelectorAll('section');
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+          labels.forEach(l => l.classList.replace('visible','hidden'));
+          const lbl = document.querySelector(`.label[data-section="${entry.target.id}"]`);
+          if (lbl) lbl.classList.replace('hidden','visible');
+        }
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(s => sectionObserver.observe(s));
+  });
+  </script>
+
+  <script src="../../js/clarity-animations.js"></script>
+  <script src="../../js/offer-ascii-transition.js"></script>
+  <script src="../../js/ascii-steps-on-scroll.js"></script>
 </body>
 </html>

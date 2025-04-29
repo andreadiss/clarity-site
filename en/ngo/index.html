@@ -1,142 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Impact Research | Clarity</title>
-  <meta name="description" content="Tailored research services for NGOs, associations, and social projects. Optimize your impact with evidence-based data, targeted surveys, and behavioral assessments.">
-  <meta name="keywords" content="NGO research, social impact, donor surveys, behavioral evaluation, social initiatives, user research, evidence-based insights">
-  <meta name="author" content="Clarity Research">
-  <link rel="stylesheet" href="../../css/landing-style.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clarity | NGOs Division</title>
+  <meta name="description" content="Custom research services for NGOs, associations, and social projects. Maximize your initiatives' impact with evidence-based data, targeted surveys, and behavioral evaluations."/>
+  <meta name="keywords" content="NGO research, social impact, donor surveys, social engagement, qualitative research, project evaluation"/>
+  <meta name="author" content="Clarity Research"/>
+
+  <!-- SEO -->
+  <link rel="alternate" hreflang="en" href="https://claritylab.cloud/en/ngo/index.html"/>
+  <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/ngo/index.html"/>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+  <!-- Stylesheet (same template used for Business/Healthcare) -->
+  <link rel="stylesheet" href="../../css/ngo_landing-style.css"/>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Clarity",
+    "url": "https://claritylab.cloud",
+    "logo": "https://claritylab.cloud/images/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@clarity-research.com",
+      "contactType": "customer support"
+    },
+    "sameAs": ["https://www.linkedin.com/company/clarity-research"]
+  }
+  </script>
 </head>
 <body class="ong">
-  <!-- Toggle to Italian -->
-  <div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+
+  <!-- Vertical sidebar -->
+  <div class="sidebar">
+    <div class="section-labels">
+      <div class="label hidden" data-section="home">HOME</div>
+      <div class="label hidden" data-section="solutions">HOME</div>
+      <div class="label hidden" data-section="offer-section">SPECIALIZATIONS</div>
+      <div class="label hidden" data-section="how-it-works-section">HOW IT WORKS</div>
+      <div class="label hidden" data-section="differentiators">APPROACH</div>
+      <div class="label hidden" data-section="services">SERVICES</div>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/company/clarity-research" target="_blank" class="icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:andreadissegna@gmail.com" class="icon">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Language Switch -->
+  <div class="language-toggle">
     <a href="../../it/ngo/index.html" title="Italiano">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg" alt="Italiano" style="width:32px; height:32px; border-radius:50%;">
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italiano" class="flag" style="width:32px; height:32px; border-radius:50%;"/>
     </a>
   </div>
 
-  <nav class="navbar">
+  <!-- Navbar -->
+  <header class="navbar">
     <div class="navbar-container">
-      <a href="../../en/index.html" class="navbar-brand">Clarity</a>
-      <div class="nav-menu">
+      <a href="/" class="navbar-brand">Clarity</a>
+      <nav class="nav-menu">
         <a href="#home" class="nav-link">Home</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </div>
+        <a href="../business/index.html" class="nav-link">Business</a>
+        <a href="../healthcare/index.html" class="nav-link">Healthcare</a>
+        <a href="#differentiators" class="nav-link">Why Clarity</a>
+        <a href="../faq.html" class="nav-link">FAQ</a>
+        <a href="#contact" class="button"><span class="button-text">Get Started</span></a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <div class="hero-section" id="home">
-    <h1 class="hero-title">Maximize Social Impact with Evidence-Based Data</h1>
-    <p class="hero-subtitle">We support NGOs, associations, and social projects in making better decisions with tailored research, targeted surveys, and behavioral evaluations.</p>
-    <a href="#contact" class="button"><span class="button-text">Request a free consultation</span></a>
-  </div>
-
-  <section class="accent-section">
-    <div class="accent-container">
-      <h2 class="accent-title" style="color: #000;"> Who It's For</h2>
-      <p class="accent-text" style="color: #000;"> We design research for NGOs, associations, and third-sector organizations that want to understand stakeholder behavior, evaluate project effectiveness, and collect data to enhance their impact and funding potential.</p>
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="home">
+    <div class="hero-container">
+      <div class="hero-left">
+        <h1 class="hero-title">Maximize your social impact with evidence-based data</h1>
+        <p class="hero-subtitle">
+          We help NGOs, associations, and social projects make more effective decisions through tailored research, targeted surveys, and behavioral evaluations.
+        </p>
+        <a href="#contact" class="button hero-button"><span class="button-text">Request a free consultation</span></a>
+      </div>
+      <img id="gif-output" class="hero-animation" src="../../images/ngo_hero.gif" alt="Social impact animation"/>
     </div>
   </section>
 
+  <!-- ACCENT SECTION -->
+  <section class="accent-section" id="solutions">
+    <h2 class="accent-title">Who it's for</h2>
+    <p class="accent-text">
+      We design research for NGOs, associations, and third-sector organizations that want to understand stakeholder behavior, evaluate the effectiveness of their initiatives, and obtain data to enhance impact and secure funding.
+    </p>
+    <canvas id="neural-center"></canvas>
+  </section>
+
+  <!-- DIFFERENTIATORS SECTION -->
+  <section class="get-section" id="differentiators">
+    <div class="get-grid">
+      <div class="get-item">
+        <div class="get-content">
+          <div class="get-title-container">
+            <h3 class="get-title"><span class="highlight">Reliable</span> Research</h3>
+            <hr class="title-line"/>
+          </div>
+          <p class="get-text"><span class="highlight">We apply established scientific methods to deliver accurate, reproducible results you can trust.</span> Our team includes researchers from leading universities and R&amp;D departments. With extensive experience in quantitative and qualitative research, we ensure every data point is robust and representative.</p>
+        </div>
+      </div>
+      <div class="get-item">
+        <div class="get-content">
+          <div class="get-title-container">
+            <hr class="title-line"/>
+            <h3 class="get-title"><span class="highlight">Innovative</span> Approaches</h3>
+          </div>
+          <p class="get-text"><span class="highlight">Understanding human behavior and attitudes requires deep theoretical knowledge, soft skills, and advanced tools.</span> We leverage behavioral tasks, predictive analytics, and implicit measures to uncover what truly drives people. Rigorous statistical validation helps achieve the most demanding objectives.</p>
+        </div>
+      </div>
+      <div class="get-item">
+        <div class="get-content">
+          <div class="get-title-container">
+            <h3 class="get-title"><span class="highlight">Tailored</span> Solutions</h3>
+            <hr class="title-line"/>
+          </div>
+          <p class="get-text"><span class="highlight">Every project is custom-designed to meet your goals.</span> We listen to your context, analyze your audience, and guide you with clear data. Rather than off-the-shelf packages, we collaborate to define key questions, choose optimal tools, and translate findings into practical recommendations—maximizing research impact.</p>
+        </div>
+      </div>
+      <div class="get-item">
+        <div class="get-content">
+          <div class="get-title-container">
+            <hr class="title-line"/>
+            <h3 class="get-title"><span class="highlight">Clear</span> Results</h3>
+          </div>
+          <p class="get-text"><span class="highlight">Data shouldn’t be intimidating.</span> We deliver insights that are easy to understand and share with your team or community. Through visual reports and narrative storytelling, we make complex numbers accessible—enabling you to communicate effectively, build consensus, and act swiftly on solid evidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
   <section class="services-section" id="services">
-    <div class="section-subtitle">What We Offer</div>
-    <h2 class="section-title">Research Services for Social Impact</h2>
+    <h2 class="section-title-dark">SERVICES FOR SOCIAL IMPACT</h2>
     <div class="services-grid">
       <div class="service-item">
         <div class="service-text-container">
-          <p class="service-overline">Donor Analysis</p>
-          <p class="service-subtitle">Understand what drives people to support your cause</p>
-          <div class="service-description">
-            <ul>
-              <li><strong>Surveys and qualitative interviews:</strong> uncover donor motivations and needs</li>
-              <li><strong>Usability testing for inclusive tools:</strong> improve accessibility and engagement</li>
-            </ul>
-          </div>
+          <h3 class="service-title">Donor Analysis</h3>
+          <p class="service-subtitle">Discover what motivates supporters</p>
+          <p class="service-description">
+            <strong>Qualitative surveys & interviews:</strong> Explore donors’ needs, values, and emotional drivers<br/>
+            <strong>Usability testing for fundraising platforms:</strong> Optimize donation journeys and engagement<br/>
+          </p>
         </div>
         <div class="service-image-container">
-          <img src="../images/service-preferences.jpg" alt="Donor analysis" class="service-image">
+          <img src="../images/serv1.jpg" alt="Donor Analysis" class="service-image"/>
         </div>
       </div>
 
-      <div class="service-item service-item-reverse">
+      <div class="service-item visible right">
         <div class="service-text-container">
-          <p class="service-overline">User Behavior</p>
-          <p class="service-subtitle">Measure your project's impact on communities and beneficiaries</p>
-          <div class="service-description">
-            <ul>
-              <li><strong>Pre/post monitoring:</strong> behavioral and perceptual changes</li>
-              <li><strong>Psychometric tools:</strong> custom surveys and validated scales</li>
-            </ul>
-          </div>
+          <h3 class="service-title">Exploratory Research</h3>
+          <p class="service-subtitle">Identify beneficiary & stakeholder needs</p>
+          <p class="service-description">
+            <strong>Focus groups & workshops:</strong> Gather deep insights on expectations and pain points<br/>
+            <strong>Qualitative feedback analysis:</strong> Map emerging themes and narratives to guide strategy<br/>
+          </p>
         </div>
         <div class="service-image-container">
-          <img src="../images/service-survey.jpg" alt="User behavior in social settings" class="service-image">
+          <img src="../../images/serv3.png" alt="Exploratory Research" class="service-image"/>
+        </div>
+      </div>
+
+      <div class="service-item visible right">
+        <div class="service-text-container">
+          <h3 class="service-title">Impact Evaluation</h3>
+          <p class="service-subtitle">Measure the outcomes of your social initiatives</p>
+          <p class="service-description">
+            <strong>Longitudinal studies:</strong> Pre/post project monitoring to assess change<br/>
+            <strong>Outcome indicators:</strong> Define and measure social and sustainability KPIs<br/>
+            <strong>Socio-economic cost–benefit analysis:</strong> Quantify the economic-social effectiveness of activities<br/>
+          </p>
+        </div>
+        <div class="service-image-container">
+          <img src="../../images/serv3.png" alt="Impact Evaluation" class="service-image"/>
+        </div>
+      </div>
+
+      <div class="service-item visible right">
+        <div class="service-text-container">
+          <h3 class="service-title">Engagement & Retention</h3>
+          <p class="service-subtitle">Boost volunteer and supporter engagement</p>
+          <p class="service-description">
+            <strong>Participatory monitoring:</strong> Analyze volunteer activities and loyalty<br/>
+            <strong>Satisfaction surveys:</strong> Develop questionnaires to gauge commitment and motivation<br/>
+          </p>
+        </div>
+        <div class="service-image-container">
+          <img src="../../images/serv4.png" alt="Engagement & Retention" class="service-image"/>
         </div>
       </div>
 
       <div class="service-item">
         <div class="service-text-container">
-          <p class="service-overline">Strategic Support</p>
-          <p class="service-subtitle">Build initiatives backed by reliable data</p>
-          <div class="service-description">
-            <ul>
-              <li><strong>Grant-focused research:</strong> design and validate studies for funding applications</li>
-              <li><strong>Team training:</strong> empower your team with research capabilities</li>
-            </ul>
-          </div>
+          <h3 class="service-title">Methodological Support</h3>
+          <p class="service-subtitle">We design studies and interpret data with rigor</p>
+          <p class="service-description">
+            <strong>Sampling & power analysis:</strong> Ensure statistical robustness for your reports<br/>
+            <strong>Advanced data analysis:</strong> Quantitative and qualitative techniques for solid evidence<br/>
+            <strong>Custom training:</strong> Workshops on research methods and reporting for your team<br/>
+          </p>
         </div>
         <div class="service-image-container">
-          <img src="../images/service-consulting.jpg" alt="Strategic support for NGOs" class="service-image">
+          <img src="../../images/serv5.png" alt="Methodological Support" class="service-image"/>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- OFFER SECTION -->
   <section class="offer-section">
-    <div class="section-subtitle">Why Clarity</div>
+    <div class="section-subtitle">Why Choose Clarity</div>
     <h2 class="section-title">Benefits for Your NGO</h2>
     <ul class="offer-grid">
       <li class="offer-item">
         <div class="offer-icon-wrapper">
-          <img src="../images/icon-donazioni.svg" alt="Donation increase icon" class="offer-icon">
+          <img src="../images/icon-donations.svg" alt="Increased donations icon" class="offer-icon"/>
         </div>
-        <p class="offer-text">More donations through data-driven strategies</p>
+        <p class="offer-text">Higher donations through data-driven strategies</p>
       </li>
       <li class="offer-item">
         <div class="offer-icon-wrapper">
-          <img src="../images/icon-efficacia.svg" alt="Initiative effectiveness icon" class="offer-icon">
+          <img src="../images/icon-effectiveness.svg" alt="Program effectiveness icon" class="offer-icon"/>
         </div>
-        <p class="offer-text">Increased effectiveness through tailored research</p>
+        <p class="offer-text">Enhanced effectiveness with custom research</p>
       </li>
       <li class="offer-item">
         <div class="offer-icon-wrapper">
-          <img src="../images/icon-grant.svg" alt="Grant and funding icon" class="offer-icon">
+          <img src="../images/icon-grants.svg" alt="Grants credibility icon" class="offer-icon"/>
         </div>
-        <p class="offer-text">Greater credibility for grants, funds, and proposals</p>
+        <p class="offer-text">Greater credibility for grants and funding</p>
       </li>
       <li class="offer-item">
         <div class="offer-icon-wrapper">
-          <img src="../images/icon-accessibilita.svg" alt="Accessible tools icon" class="offer-icon">
+          <img src="../images/icon-accessibility.svg" alt="Accessible tools icon" class="offer-icon"/>
         </div>
-        <p class="offer-text">More inclusive and accessible digital tools</p>
+        <p class="offer-text">More accessible and inclusive digital tools</p>
       </li>
     </ul>
   </section>
 
-  <section class="footer-cta-section" id="contact">
-    <h2 class="footer-cta-title">Need reliable data to improve your social initiatives?</h2>
-    <p class="footer-cta-text">Reach out for a free consultation or write to <a href="mailto:hello@clarity-research.com" class="footer-link">hello@clarity-research.com</a></p>
-    <a href="mailto:hello@clarity-research.com" class="button">
-      <span class="button-text">Contact us now</span>
-    </a>
-  </section>
-
-  <div class="minimal-footer">
+  <!-- FOOTER / CONTACT FORM -->
+  <footer class="minimal-footer" id="contact">
+    <div class="contact-form-container">
+      <form class="contact-form" action="YOUR_FORM_PROCESSING_ENDPOINT" method="POST">
+        <h3>Need data to improve your social initiatives?</h3>
+        <input type="text" name="name" placeholder="Your name" required/>
+        <input type="email" name="email" placeholder="Your email" required/>
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit" class="button">
+          <span class="button-text">Contact us now</span>
+        </button>
+      </form>
+    </div>
     <p>© 2025 Clarity. All rights reserved.</p>
     <p>Email: <a href="mailto:hello@clarity-research.com">hello@clarity-research.com</a></p>
-  </div>
+  </footer>
+
+  <!-- SCRIPT ANIMAZIONE SCROLL -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // HERO immediata
+    document.querySelectorAll('.hero-title, .hero-subtitle, .hero-section .button').forEach(el => {
+      el.classList.add('visible');
+    });
+
+    // ACCENT dopo scroll
+    const accentObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          accentObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.accent-title, .accent-text').forEach(el => {
+      accentObserver.observe(el);
+    });
+
+    // Animazione parallax per lo sfondo della get-section (se presente)
+    const getSection = document.querySelector('.get-section');
+    if (getSection) {
+      window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const sectionTop = getSection.offsetTop;
+        const sectionHeight = getSection.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const windowWidth = window.innerWidth;
+
+        let parallaxIntensity = 0.4;
+        if (windowWidth < 1025) {
+          parallaxIntensity = 0.1;
+        } else if (windowWidth < 2000) {
+          parallaxIntensity = 0.3;
+        }
+
+        let parallax = (scrollPosition - sectionTop + windowHeight) * -parallaxIntensity;
+
+        if (scrollPosition > sectionTop - windowHeight && scrollPosition < sectionTop + sectionHeight) {
+          getSection.style.backgroundPositionY = `${parallax}px`;
+        } else {
+          getSection.style.backgroundPositionY = 'center';
+        }
+      });
+    } else {
+      console.error("Elemento .get-section non trovato!");
+    }
+
+    // Animazioni per le sezioni get e service
+    const getObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const item = entry.target;
+          const rect = item.getBoundingClientRect();
+          const windowWidth = window.innerWidth;
+
+          if (rect.left < windowWidth / 2) {
+            item.classList.add('visible', 'left');
+          } else {
+            item.classList.add('visible', 'right');
+          }
+
+          getObserver.unobserve(item);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.get-item').forEach(item => {
+      getObserver.observe(item);
+    });
+
+    const getObserver2 = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const item = entry.target;
+          const rect = item.getBoundingClientRect();
+          const windowWidth = window.innerWidth;
+
+          if (rect.left < windowWidth / 2) {
+            item.classList.add('visible', 'left');
+          } else {
+            item.classList.add('visible', 'right');
+          }
+
+          getObserver.unobserve(item);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-item').forEach(item => {
+      getObserver2.observe(item);
+    });
+
+    // Mostra le etichette della sidebar quando le sezioni diventano visibili
+    const sectionLabels = document.querySelectorAll('.label');
+    const sections = document.querySelectorAll('section');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+          const sectionId = entry.target.getAttribute('id');
+          sectionLabels.forEach(label => {
+            label.classList.remove('visible');
+            label.classList.add('hidden');
+          });
+          const correspondingLabel = document.querySelector(`.label[data-section="${sectionId}"]`);
+          if (correspondingLabel) {
+            correspondingLabel.classList.remove('hidden');
+            correspondingLabel.classList.add('visible');
+          }
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => {
+      sectionObserver.observe(section);
+    });
+  });
+  </script>
+
+  <!-- JS -->
+  <script src="../../js/clarity-animations.js"></script>
+  <script src="../../js/offer-ascii-transition.js"></script>
+  <script src="../../js/ascii-steps-on-scroll.js"></script>
 </body>
 </html>

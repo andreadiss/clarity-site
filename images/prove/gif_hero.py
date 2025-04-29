@@ -36,7 +36,7 @@ for frame_index in range(num_frames):
 
     frames.append(frame)
 
-gif_path_doubled = "C:/Users/andre/Desktop/binary_overlay_animation_doubled_streams.gif"
+gif_path_doubled = "C:/Users/andre/Desktop/website/images/ngo_hero.gif"
 frames[0].save(
     gif_path_doubled,
     save_all=True,

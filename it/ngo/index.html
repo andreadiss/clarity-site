@@ -1,141 +1,372 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ricerche per il Terzo Settore | Clarity</title>
-  <meta name="description" content="Servizi di ricerca personalizzata per ONG, associazioni e progetti sociali. Ottimizza l'impatto delle tue iniziative con dati evidence-based, survey mirate e valutazioni comportamentali.">
-  <meta name="keywords" content="ricerca terzo settore, ONG, impatto sociale, survey donatori, aderenza sociale, ricerca qualitativa, valutazione progetti sociali">
-  <meta name="author" content="Clarity Research">
-  <link rel="stylesheet" href="../../css/landing-style.css">
+  <meta charset="utf-8"/>
+  <title>Clarity | NGOs division</title>
+  <meta name="description" content="Servizi di ricerca personalizzata per ONG, associazioni e progetti sociali. Ottimizza l'impatto delle tue iniziative con dati evidence-based, survey mirate e valutazioni comportamentali."/>
+  <meta name="keywords" content="ricerca terzo settore, ONG, impatto sociale, survey donatori, aderenza sociale, ricerca qualitativa, valutazione progetti sociali"/>
+  <meta name="author" content="Clarity Research"/>
+
+  <!-- SEO -->
+  <link rel="alternate" hreflang="en" href="https://claritylab.cloud/en/ngo/index.html"/>
+  <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/ngo/index.html"/>
+
+  <!-- Font Awesome per icone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Stylesheet (stesso modello Business/Healthcare) -->
+  <link rel="stylesheet" href="../../css/ngo_landing-style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Clarity",
+    "url": "https://claritylab.cloud",
+    "logo": "https://claritylab.cloud/images/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@clarity-research.com",
+      "contactType": "customer support"
+    },
+    "sameAs": ["https://www.linkedin.com/company/clarity-research"]
+  }
+  </script>
 </head>
 <body class="ong">
-  <div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+  <!-- Sidebar verticale -->
+  <div class="sidebar">
+    <div class="section-labels">
+      <div class="label hidden" data-section="home">HOME</div>
+      <div class="label hidden" data-section="solutions">HOME</div>
+      <div class="label hidden" data-section="offer-section">SPECIALIZATIONS</div>
+      <div class="label hidden" data-section="how-it-works-section">HOW IT WORKS</div>
+      <div class="label hidden" data-section="differentiators">APPROACH</div>
+      <div class="label hidden" data-section="services">SERVICES</div>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/company/clarity-research" target="_blank" class="icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:andreadissegna@gmail.com" class="icon">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Language Switch -->
+  <div class="language-toggle">
     <a href="../../en/ngo/index.html" title="English">
-      <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English" style="width:32px; height:32px; border-radius:50%;">
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+           alt="English" class="flag">
     </a>
   </div>
 
-  <nav class="navbar">
+  <header class="navbar">
     <div class="navbar-container">
-      <a href="../../it/index.html" class="navbar-brand">Clarity</a>
-      <div class="nav-menu">
+      <a href="/" class="navbar-brand">Clarity</a>
+      <nav class="nav-menu">
         <a href="#home" class="nav-link">Home</a>
-        <a href="#services" class="nav-link">Servizi</a>
-        <a href="#contact" class="nav-link">Contatti</a>
+        <a href="../business/index.html" class="nav-link">Aziende</a>
+        <a href="../sanità/index.html" class="nav-link">Sanità</a>
+        <a href="#differentiators" class="nav-link">Perché Noi</a>
+        <a href="../faq.html" class="nav-link">FAQ</a>
+        <a href="#contact" class="button"><span class="button-text">Iniziamo</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="home">
+    <div class="hero-container">
+      <div class="hero-left">
+        <h1 class="hero-title">Massimizza l'impatto sociale con dati evidence-based</h1>
+        <p class="hero-subtitle">
+          Aiutiamo ONG, associazioni e progetti sociali a prendere decisioni più efficaci con ricerche su misura, survey mirate e valutazioni comportamentali.
+        </p>
+        <a href="#contact" class="button hero-button"><span class="button-text">Richiedi una consulenza gratuita</span></a>
+      </div>
+      <img id="gif-output" class="hero-animation" src="../../images/ngo_hero.gif" alt="Animazione sociale">
+    </div>
+  </section>
+
+  <!-- ACCENT SECTION -->
+  <section class="accent-section" id="solutions">
+    <h2 class="accent-title">A chi è rivolto</h2>
+    <p class="accent-text">
+      Progettiamo ricerche per ONG, associazioni e enti del terzo settore che desiderano comprendere il comportamento dei loro stakeholder, valutare l'efficacia delle proprie azioni e ottenere dati per migliorare impatto e finanziamenti.
+    </p>
+    <canvas id="neural-center"></canvas>
+  </section>
+
+  <!-- DIFFERENTIATORS SECTION -->
+  <section class="get-section" id="differentiators">
+    <div class="get-grid">
+      <div class="get-item" id="get-ricerca-affidabile">
+        <div class="get-content">
+          <div class="get-title-container">
+            <h3 class="get-title">Ricerca <span class="highlight">affidabile</span></h3>
+            <hr class="title-line">
+          </div>
+          <p class="get-text"><span class="highlight">Applichiamo metodologie scientifiche consolidate per offrirti risultati precisi e ripetibili, su cui puoi davvero contare.</span> Il nostro team comprende ricercatori provenienti dalle migliori università e R&D. La nostra esperienza si basa su anni di pratica nel campo della ricerca quantitativa e qualitativa, garantendo che ogni dato raccolto sia robusto e rappresentativo.</p>
+        </div>
+      </div>
+      <div class="get-item" id="get-approcci-innovativi">
+        <div class="get-content">
+          <div class="get-title-container">
+            <hr class="title-line">
+            <h3 class="get-title">Approcci <span class="highlight">innovativi</span></h3>
+          </div>
+          <p class="get-text"><span class="highlight">La ricerca che coinvolge comportamenti e atteggimenti delle persone richiede una profonda competenza in modelli teorici, soft skills e tecnologie all’avanguardia.</span> Utilizziamo strumenti come task comportamentali, analisi predittive e misure implicite per rivelare ciò che davvero guida le persone. La validazione statistica consente di raggiungere anche gli obiettivi più rigorosi.</p>
+        </div>
+      </div>
+      <div class="get-item" id="get-soluzioni-personalizzate">
+        <div class="get-content">
+          <div class="get-title-container">
+            <h3 class="get-title">Soluzioni <span class="highlight">personalizzate</span></h3>
+            <hr class="title-line">
+          </div>
+          <p class="get-text"><span class="highlight">Ogni progetto è disegnato su misura per i tuoi obiettivi: ascoltiamo il tuo contesto, analizziamo la tua audience, ti guidiamo con dati chiari.</span> Non offriamo soluzioni preconfezionate; collaboriamo con te per definire domande chiave, scegliere gli strumenti più adatti e interpretare i risultati in modo pratico. Il nostro approccio flessibile si adatta alle tue esigenze specifiche, massimizzando l’impatto della ricerca.</p>
+        </div>
+      </div>
+      <div class="get-item" id="get-risultati-comprensibili">
+        <div class="get-content">
+          <div class="get-title-container">
+            <hr class="title-line">
+            <h3 class="get-title">Risultati <span class="highlight">comprensibili</span></h3>
+          </div>
+          <p class="get-text"><span class="highlight">I dati non devono spaventarti. Ti consegniamo risultati semplici da capire e facili da condividere nel tuo team o con la tua comunità.</span> Traduciamo numeri complessi in insight chiari e actionable, con report visivi e narrazioni che rendono i dati accessibili a tutti, anche senza competenze tecniche. Questo ti permette di comunicare efficacemente i risultati, ottenere consenso interno e agire rapidamente sulla base di informazioni solide.</p>
+        </div>
       </div>
     </div>
-  </nav>
+  </section>
 
-  <div class="hero-section" id="home">
-    <h1 class="hero-title">Massimizza l'impatto sociale con dati evidence-based</h1>
-    <p class="hero-subtitle">Aiutiamo ONG, associazioni e progetti sociali a prendere decisioni più efficaci con ricerche su misura, survey mirate e valutazioni comportamentali.</p>
-    <a href="#contact" class="button"><span class="button-text">Richiedi una consulenza gratuita</span></a>
+
+  <!-- SERVICES SECTION -->
+<section class="services-section" id="services">
+  <h2 class="section-title-dark">CLARITY LAB SERVICES</h2>
+  <div class="services-grid">
+
+    <div class="service-item">
+      <div class="service-text-container">
+        <h3 class="service-title">Analisi dei donatori</h3>
+        <p class="service-subtitle">Scopri cosa motiva chi sostiene la tua causa</p>
+        <p class="service-description">
+          <strong>Survey e interviste qualitative:</strong> esplora bisogni, valori e leve emotive dei donatori<br>
+          <strong>Test di usabilità per piattaforme di fundraising:</strong> ottimizza percorsi di donazione e coinvolgimento<br>
+        </p>
+      </div>
+      <div class="service-image-container">
+        <img src="../images/serv1.jpg" alt="Analisi dei donatori" class="service-image">
+      </div>
+    </div>
+
+    <div class="service-item visible right">
+      <div class="service-text-container">
+        <h3 class="service-title">Ricerca esplorativa</h3>
+        <p class="service-subtitle">Individua bisogni e percezioni di beneficiari e stakeholder</p>
+        <p class="service-description">
+          <strong>Focus group e workshop:</strong> raccolta di insight profondi su aspettative e criticità<br>
+          <strong>Analisi qualitativa dei feedback:</strong> mappatura di temi emergenti e narrativi per guidare le strategie<br>
+        </p>
+      </div>
+      <div class="service-image-container">
+        <img src="../../images/serv3.png" alt="Ricerca esplorativa" class="service-image">
+      </div>
+    </div>
+
+    <div class="service-item visible right">
+      <div class="service-text-container">
+        <h3 class="service-title">Valutazione d’impatto</h3>
+        <p class="service-subtitle">Misura i risultati delle tue iniziative sociali</p>
+        <p class="service-description">
+          <strong>Studi longitudinali:</strong> monitoraggio pre/post progetto per valutare cambiamenti<br>
+          <strong>Indicatori di outcome:</strong> definizione e misurazione di KPI sociali e di sostenibilità<br>
+          <strong>Analisi costi-benefici sociali:</strong> quantificazione dell’efficacia economico-sociale delle attività<br>
+        </p>
+      </div>
+      <div class="service-image-container">
+        <img src="../../images/serv3.png" alt="Valutazione d’impatto" class="service-image">
+      </div>
+    </div>
+
+    <div class="service-item visible right">
+      <div class="service-text-container">
+        <h3 class="service-title">Engagement & retention</h3>
+        <p class="service-subtitle">Potenzia il coinvolgimento di volontari e sostenitori</p>
+        <p class="service-description">
+          <strong>Monitoraggio partecipativo:</strong> analisi delle attività di volontariato e fidelizzazione<br>
+          <strong>Survey di soddisfazione:</strong> sviluppo di questionari per misurare impegno e motivazione<br>
+        </p>
+      </div>
+      <div class="service-image-container">
+        <img src="../../images/serv4.png" alt="Engagement e retention" class="service-image">
+      </div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-text-container">
+        <h3 class="service-title">Supporto metodologico</h3>
+        <p class="service-subtitle">Progettiamo studi e interpretiamo i dati con rigore</p>
+        <p class="service-description">
+          <strong>Campionamento e power analysis:</strong> garantiamo robustezza statistica per i tuoi report<br>
+          <strong>Analisi dati avanzata:</strong> tecniche quantitative e qualitative per evidenze solide<br>
+          <strong>Formazione su misura:</strong> workshop per il tuo team su metodi di ricerca e rendicontazione<br>
+        </p>
+      </div>
+      <div class="service-image-container">
+        <img src="../../images/serv5.png" alt="Supporto metodologico" class="service-image">
+      </div>
+    </div>
+
   </div>
+</section>
 
-  <section class="accent-section">
-    <div class="accent-container">
-      <h2 class="accent-title" style="color: #000;">A chi è rivolto</h2>
-      <p class="accent-text" style="color: #000;"> Progettiamo ricerche per ONG, associazioni e enti del terzo settore che desiderano comprendere il comportamento dei loro stakeholder, valutare l'efficacia delle proprie azioni e ottenere dati per migliorare impatto e finanziamenti.</p>
-   </div>
-  </section>
 
-  <section class="services-section" id="services">
-    <div class="section-subtitle">Cosa offriamo</div>
-    <h2 class="section-title">Servizi di ricerca per il sociale</h2>
-    <div class="services-grid">
-      <div class="service-item">
-        <div class="service-text-container">
-          <p class="service-overline">Analisi dei donatori</p>
-          <p class="service-subtitle">Scopri cosa spinge le persone a supportare la tua causa</p>
-          <div class="service-description">
-            <ul>
-              <li><strong>Survey e interviste qualitative:</strong> comprendere motivazioni e bisogni dei donatori</li>
-              <li><strong>Test di usabilità per strumenti inclusivi:</strong> migliorare accessibilità e interazione</li>
-            </ul>
-          </div>
-        </div>
-        <div class="service-image-container">
-          <img src="../images/service-preferences.jpg" alt="Analisi dei donatori" class="service-image">
-        </div>
-      </div>
-
-      <div class="service-item service-item-reverse">
-        <div class="service-text-container">
-          <p class="service-overline">Comportamento degli utenti</p>
-          <p class="service-subtitle">Valuta l'impatto dei tuoi progetti su comunità e beneficiari</p>
-          <div class="service-description">
-            <ul>
-              <li><strong>Monitoraggio pre/post:</strong> cambiamenti comportamentali e percezioni</li>
-              <li><strong>Strumenti psicometrici:</strong> questionari su misura e scale validate</li>
-            </ul>
-          </div>
-        </div>
-        <div class="service-image-container">
-          <img src="../images/service-survey.jpg" alt="Comportamento utenti nel sociale" class="service-image">
-        </div>
-      </div>
-
-      <div class="service-item">
-        <div class="service-text-container">
-          <p class="service-overline">Supporto alla strategia</p>
-          <p class="service-subtitle">Sviluppa iniziative fondate su dati affidabili</p>
-          <div class="service-description">
-            <ul>
-              <li><strong>Ricerca per bandi:</strong> progettazione e validazione di studi per grant</li>
-              <li><strong>Formazione interna:</strong> potenzia le competenze di ricerca del tuo team</li>
-            </ul>
-          </div>
-        </div>
-        <div class="service-image-container">
-          <img src="../images/service-consulting.jpg" alt="Supporto alla strategia per ONG" class="service-image">
-        </div>
-      </div>
+  <!-- FOOTER / CONTACT FORM -->
+  <footer class="minimal-footer" id="contact">
+    <div class="contact-form-container">
+      <form class="contact-form" action="YOUR_FORM_PROCESSING_ENDPOINT" method="POST">
+        <h3>Hai bisogno di dati per migliorare le tue attività sociali?</h3>
+        <input type="text" name="name" placeholder="Il tuo nome" required>
+        <input type="email" name="email" placeholder="La tua email" required>
+        <textarea name="message" placeholder="Il tuo messaggio" required></textarea>
+        <button type="submit" class="button">
+          <span class="button-text">Contattaci ora</span>
+        </button>
+      </form>
     </div>
-  </section>
-
-  <section class="offer-section">
-    <div class="section-subtitle">Perché scegliere Clarity</div>
-    <h2 class="section-title">Benefici per la tua ONG</h2>
-    <ul class="offer-grid">
-      <li class="offer-item">
-        <div class="offer-icon-wrapper">
-          <img src="../images/icon-donazioni.svg" alt="Icona donazioni aumentate" class="offer-icon">
-        </div>
-        <p class="offer-text">Più donazioni grazie a strategie fondate sui dati</p>
-      </li>
-      <li class="offer-item">
-        <div class="offer-icon-wrapper">
-          <img src="../images/icon-efficacia.svg" alt="Icona efficacia iniziative" class="offer-icon">
-        </div>
-        <p class="offer-text">Miglioramento dell'efficacia con ricerche su misura</p>
-      </li>
-      <li class="offer-item">
-        <div class="offer-icon-wrapper">
-          <img src="../images/icon-grant.svg" alt="Icona grant e bandi" class="offer-icon">
-        </div>
-        <p class="offer-text">Maggior credibilità per grant, fondi e bandi</p>
-      </li>
-      <li class="offer-item">
-        <div class="offer-icon-wrapper">
-          <img src="../images/icon-accessibilita.svg" alt="Icona strumenti accessibili" class="offer-icon">
-        </div>
-        <p class="offer-text">Strumenti digitali più accessibili e inclusivi</p>
-      </li>
-    </ul>
-  </section>
-
-  <section class="footer-cta-section" id="contact">
-    <h2 class="footer-cta-title">Hai bisogno di dati per migliorare le tue attività sociali?</h2>
-    <p class="footer-cta-text">Contattaci per una consulenza gratuita o scrivi a <a href="mailto:hello@clarity-research.com" class="footer-link">hello@clarity-research.com</a></p>
-    <a href="mailto:hello@clarity-research.com" class="button">
-      <span class="button-text">Contattaci ora</span>
-    </a>
-  </section>
-
-  <div class="minimal-footer">
     <p>© 2025 Clarity. Tutti i diritti riservati.</p>
     <p>Email: <a href="mailto:hello@clarity-research.com">hello@clarity-research.com</a></p>
-  </div>
+  </footer>
+
+  <!-- SCRIPT ANIMAZIONE SCROLL -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // HERO immediata
+    document.querySelectorAll('.hero-title, .hero-subtitle, .hero-section .button').forEach(el => {
+      el.classList.add('visible');
+    });
+
+    // ACCENT dopo scroll
+    const accentObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          accentObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.accent-title, .accent-text').forEach(el => {
+      accentObserver.observe(el);
+    });
+
+    // Animazione parallax per lo sfondo della get-section (se presente)
+    const getSection = document.querySelector('.get-section');
+    if (getSection) {
+      window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const sectionTop = getSection.offsetTop;
+        const sectionHeight = getSection.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const windowWidth = window.innerWidth;
+
+        let parallaxIntensity = 0.4;
+        if (windowWidth < 1025) {
+          parallaxIntensity = 0.1;
+        } else if (windowWidth < 2000) {
+          parallaxIntensity = 0.3;
+        }
+
+        let parallax = (scrollPosition - sectionTop + windowHeight) * -parallaxIntensity;
+
+        if (scrollPosition > sectionTop - windowHeight && scrollPosition < sectionTop + sectionHeight) {
+          getSection.style.backgroundPositionY = `${parallax}px`;
+        } else {
+          getSection.style.backgroundPositionY = 'center';
+        }
+      });
+    } else {
+      console.error("Elemento .get-section non trovato!");
+    }
+
+    // Animazioni per le sezioni get e service
+    const getObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const item = entry.target;
+          const rect = item.getBoundingClientRect();
+          const windowWidth = window.innerWidth;
+
+          if (rect.left < windowWidth / 2) {
+            item.classList.add('visible', 'left');
+          } else {
+            item.classList.add('visible', 'right');
+          }
+
+          getObserver.unobserve(item);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.get-item').forEach(item => {
+      getObserver.observe(item);
+    });
+
+    const getObserver2 = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const item = entry.target;
+          const rect = item.getBoundingClientRect();
+          const windowWidth = window.innerWidth;
+
+          if (rect.left < windowWidth / 2) {
+            item.classList.add('visible', 'left');
+          } else {
+            item.classList.add('visible', 'right');
+          }
+
+          getObserver.unobserve(item);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-item').forEach(item => {
+      getObserver2.observe(item);
+    });
+
+    // Mostra le etichette della sidebar quando le sezioni diventano visibili
+    const sectionLabels = document.querySelectorAll('.label');
+    const sections = document.querySelectorAll('section');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+          const sectionId = entry.target.getAttribute('id');
+          sectionLabels.forEach(label => {
+            label.classList.remove('visible');
+            label.classList.add('hidden');
+          });
+          const correspondingLabel = document.querySelector(`.label[data-section="${sectionId}"]`);
+          if (correspondingLabel) {
+            correspondingLabel.classList.remove('hidden');
+            correspondingLabel.classList.add('visible');
+          }
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => {
+      sectionObserver.observe(section);
+    });
+  });
+  </script>
+
+  <!-- JS -->
+  <script src="../../js/clarity-animations.js"></script>
+  <script src="../../js/offer-ascii-transition.js"></script>
+  <script src="../../js/ascii-steps-on-scroll.js"></script>
 </body>
 </html>
