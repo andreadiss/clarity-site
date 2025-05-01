@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clarity | Healthcare Division</title>
   <meta name="description" content="Quantitative and experimental research for hospitals, clinics, and healthcare professionals. Customized services to improve clinical outcomes and decision-making with evidence-based data."/>
   <meta name="keywords" content="healthcare research, medical device usability, treatment adherence, healthcare UX, patient surveys, clinical data analysis, evidence-based decisions"/>
@@ -315,13 +316,13 @@
     const sections = document.querySelectorAll('section');
     const sectionObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
           labels.forEach(l => l.classList.replace('visible','hidden'));
           const lbl = document.querySelector(`.label[data-section="${entry.target.id}"]`);
           if (lbl) lbl.classList.replace('hidden','visible');
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
     sections.forEach(s => sectionObserver.observe(s));
   });
   </script>

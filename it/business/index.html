@@ -2,6 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clarity | Business division </title>
   <meta name="description" content="Offriamo ricerca quantitativa e sperimentale ad alta specializzazione per aiutare le aziende a prendere decisioni più efficaci, basate su dati affidabili e insight su misura."/>
   <meta name="keywords" content="ricerca per aziende, usabilità, A/B testing, UX research, ricerca utenti, insight clienti, strategie data-driven, decisioni basate sui dati, user research"/>
@@ -366,13 +367,13 @@
     });
 
 
-    // Mostra le etichette della sidebar quando le sezioni diventano visibili al 30%
+    // Mostra le etichette della sidebar quando le sezioni diventano visibili al 20%
     const sectionLabels = document.querySelectorAll('.label');
     const sections = document.querySelectorAll('section');
 
     const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
           const sectionId = entry.target.getAttribute('id');
           sectionLabels.forEach(label => {
             label.classList.remove('visible');
@@ -385,7 +386,7 @@
           }
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
     sections.forEach(section => {
       sectionObserver.observe(section);

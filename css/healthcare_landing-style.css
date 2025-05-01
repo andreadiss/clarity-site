@@ -22,6 +22,11 @@
   --sidebar-width: 80px;
 }
 
+/* SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
 /* FONT FACES (unchanged) */
 @font-face {
   font-family: 'Roboto';
@@ -859,80 +864,130 @@ section {
   transition: opacity 0.3s;
 }
 
-/* MEDIA QUERIES (unchanged, but adjusted for new styles) */
+/* ————————————————————————————
+   OVERLAY STYLE.CSS RULES
+   per nav, hero e accent (desktop)
+   ———————————————————————————— */
 
-@media (max-width: 1400px) {
-  .services-grid {
-    padding-right: 0%;
-    padding-left: 15%;
-    width: 100%;
-    margin: 0;
-  }
-
-  .navbar-container {
-    padding-right: 20%;
-  }
+/* NAVBAR: sempre visibile, full-width rispetto al contenuto */
+.navbar {
+  left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+}
+.nav-menu {
+  display: flex;               /* style.css: menu orizzontale */
+  align-items: center;
+  gap: 1rem;                   /* spazio tra link */
 }
 
-@media (max-width: 1024px) {
-  /* Nascondi la sidebar */
-  .sidebar {
-    display: none !important;
-  }
+/* HERO SECTION: min-height, layout flex, padding da style.css */
+.hero-section {
+  padding: calc(var(--spacing-lg) * 2) 0;
+  min-height: var(--min-section-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+}
+.hero-left {
+  flex: 1;
+  max-width: 50%;
+  padding-bottom: 20%;
+}
+.hero-title {
+  font-size: 4rem;   /* dimensione grande style.css */
+  line-height: 1.17;
+}
+.hero-subtitle {
+  font-size: 1.5rem;   /* dimensione grande style.css */
+  margin-bottom: var(--spacing-md);
+}
+.hero-animation {
+  display: block;    /* assicurati che la GIF compaia */
+}
 
-  /* Aggiorna il margin-left delle sezioni */
+/* ACCENT SECTION: testo right-aligned, clamp sui font-size */
+.accent-title {
+  font-size: clamp(1rem, 3vw, 3rem);
+  padding-right: 10%;
+  text-align: right;
+}
+.accent-text {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  padding-right: 10%;
+  text-align: right;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Tablet grandi e desktop piccoli (max-width: 1024px) */
+@media (max-width: 1024px) {
+
   section {
     margin-left: 0;
   }
 
-  /* Hero section */
-  .hero-container {
+  /* NAVBAR */
+  .navbar-container {
+    justify-content: flex-start !important;
+    padding: 0 var(--spacing-md); /* o il padding che preferisci ai lati */
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: flex-start !important;
+    gap: 1rem;               /* spazio tra i link */
+    margin-left: var(--spacing-lg); /* spazio minimo dal brand */
+  }
+
+  /* HERO */
+   .hero-container {
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    align-items: center;      /* già presente ma lo ribadiamo */
+    padding: 0;
   }
 
+  /* Assicuriamoci che .hero-left contenga tutto centrato */
   .hero-left {
-    max-width: 80%;
-    padding-left: 5%;
-    padding-top: 5%;
-    text-align: left;
+    padding: 0;               /* togliamo ogni padding asimmetrico */
+    margin: 0 auto;           /* centro l’intero box */
+    text-align: center;       /* punteggia a centro tutti i figli */
+    max-width: 90%;           /* per non occupare tutta la larghezza */
   }
 
-  .hero-title {
-    font-size: 5rem;
-    text-align: left;
-  }
-
+  /* restringiamo il paragrafo per non fare righe troppo lunghe */
   .hero-subtitle {
-    font-size: 2rem;
-    text-align: left;
-    margin: 0 0 0.9375rem 0;
+    margin: 0 auto var(--spacing-md);
+    max-width: 600px;
+  }
+
+  /* il bottone diventa block e si centra */
+  .hero-left .button {
+    float: none !important;  /* rimuove il float:left di .button */
+    display: inline-block;   /* per permettere margin auto */
+    margin: var(--spacing-md) auto 0 !important;
+  }
+
+  .hero-title,
+  .hero-subtitle {
+    text-align: center;       /* sicuro che il testo sia centrato */
   }
 
   .hero-animation {
-    padding-top: 10%;
-    display: block;
-    order: 0;
-    max-width: 100%;
-    width: 100%;
-  }
+    display: block;           /* mostra la GIF */
+    width: auto;
+    max-width: 100%;           /* o 100%, a seconda della resa */
+    padding-left: 10%;
+}
 
-  .accent-section {
-    height: 100vh;
-  }
 
-  .accent-title {
-    font-size: 5rem;
-    padding-right: 5%;
-  }
-
-  .accent-text {
-    font-size: 2rem;
-    padding-right: 5%;
-  }
-
-  /* Neural animation */
+  /* NEURAL CANVAS */
   #neural-center {
     position: absolute;
     top: 0%;
@@ -941,108 +996,125 @@ section {
     width: 50%;
     height: 100%;
     opacity: 0.4;
-    z-index: 1;
     pointer-events: none;
     mix-blend-mode: screen;
     display: block;
   }
 
-  /* Navbar */
-  .navbar {
-    left: 0;
-    width: 100%;
+  /* ACCENT */
+  .accent-title {
+    font-size: 4rem !important;  /* dimensione ottimale su tablet */
+    text-align: right !important;
+    padding-right: 10% !important;
+    max-width: 90%;
+  }
+  .accent-text {
+    font-size: 2rem !important;
+    text-align: right !important;
+    padding-left: 0 !important;
+    padding-right: 10% !important;
+    max-width: 90%;
   }
 
-  .nav-menu {
-    display: none;
+  /* SECTION & BUTTON SIZES */
+  .section-title,
+  .section-title-dark,
+  .accent-title,
+  .get-title {
+    font-size: 1.8rem;
+  }
+  .button {
+    font-size: 0.8rem;
+    padding: 0.625rem 1.25rem;
+  }
+  .icon {
+    font-size: 1.1rem;
   }
 
-  .get-section {
-    background-image: url('../images/bg1.png');
+  .get-text {
+    font-size: 1.1rem !important;  /* mobile: da 1rem → 1.1rem */
   }
 
-  .services-grid {
-    padding-right: 5%;
-    padding-left: 10%;
-    width: 100%;
-    margin: 0;
-  }
-
-  .service-image-container {
-    width: 40%;
-  }
-}
-
-@media (max-width: 900px) {
-  .hero-title {
-    font-size: 4rem;
-    text-align: left;
-  }
-
-  .hero-subtitle {
-    font-size: 2rem;
-    text-align: left;
-    margin: 0 0 0.9375rem 0;
-  }
-
-
-/* Fallback or global override */
-.services-grid {
-  padding-right: 5%;
-  padding-left: 5%;
-  width: 100%;
-  margin: 0;
+ .get-section{
+background-image: url('../images/bg1.png');
 }
 
 
-.service-description {
-  font-size: 1rem;
-  color: var(--text-dark);
-  line-height: 1.6;
+  /* FOOTER */
+  .minimal-footer {
+    padding: 0.9375rem 0.9375rem;
+    font-size: 0.7rem;
+    text-align: center;
+  }
 }
-}
+
 
 /* smartphone (max-width: 600px) */
 @media (max-width: 600px) {
+
+
+  /* NASCONDI SIDEBAR */
+  .sidebar {
+    display: none !important;
+  }
+
+  /* RIPRISTINA MARGINI */
+  section {
+    margin-left: 0 !important;
+  }
+
+.navbar {
+    left: 0 !important;
+    width: 100% !important;
+  }
+
+  .navbar-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 1rem !important;   /* o il padding orizzontale che preferisci */
+    justify-content: space-between; /* assicura che brand e flag stiano agli estremi */
+  }
+  /* Se vuoi ridurre il padding interno dei link */
+  .nav-menu {
+display: none;
+  }
+
+
+
   .hero-title {
-    font-size: 3rem;
+    font-size: 2rem !important; /* Mantieni come richiesto */
     text-align: left;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 1rem !important;
     text-align: left;
-    margin: 0 0 0.9375rem 0;
+    margin: 0 0 0.9375rem 0; /* 15px in rem */
   }
 
-  .hero-animation {
-    padding-top: 20%;
-    display: block;
-    order: 0;
-    max-width: 100%;
-    width: 100%;
-  }
 
-  #gif-output {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: none;
-  }
 
-  .accent-section {
-    height: 30vh;
-  }
+#gif-output {
+padding-top: 10%;
+  width: 80%; 
+  height: auto; /* Mantiene le proporzioni della GIF */
+  object-fit: cover; /* O 'contain' se preferisci vedere tutta la GIF */
+}
+
+ 
+  .accent-section{
+   height: 100vh;
+}
 
   .accent-title {
-    font-size: 2rem;
-    padding-right: 5%;
-  }
-
-  .accent-text {
-    font-size: 1rem;
-    padding-right: 5%;
-  }
+    font-size: 3rem !important; 
+    padding-right: 5%
+   }
+.accent-text {
+    font-size: 1rem !important; 
+    padding-right: 5%   
+}
 
   #neural-center {
     position: absolute;
@@ -1052,16 +1124,18 @@ section {
     width: 100%;
     height: 100%;
     opacity: 0.4;
-  }
 
-  .get-section {
+  }
+.get-section {
     padding: var(--spacing-lg) 0;
-    padding-left: 1rem;
+    padding-left: 1rem;       /* Padding orizzontale ridotto */
     padding-right: 1rem;
     background-image: url('../images/bg2.png');
-    background-position: top center;
+
+    background-position: top center; /* Può risultare migliore su smartphone */
   }
 
+  /* Adattamento della griglia */
   .get-grid {
     padding: 0 1rem;
     max-width: 100%;
@@ -1069,31 +1143,64 @@ section {
     margin: 0 auto;
   }
 
+  /* Impostazione degli item in colonna e centrati */
   .get-item {
-    flex-direction: column;
+    flex-direction: column;    /* Disposizione verticale */
     align-items: center;
-    width: 100%;
+    width: 100%;               /* Usa tutta la larghezza disponibile */
     padding: var(--spacing-md);
-    padding-left: 0;
-    gap: 1rem;
+    padding-left: 0;           /* Rimuove il padding a sinistra */
+    gap: 1rem;                 /* Leggera riduzione del gap */
   }
 
+  /* Forza l'orientamento verticale per entrambi i casi (odd e even) */
   .get-item:nth-child(odd),
   .get-item:nth-child(even) {
     flex-direction: column;
   }
 
+  /* Centrare il contenuto e regolare il padding interno */
   .get-content {
     text-align: center;
     padding: var(--spacing-md) 1rem;
     max-width: 100%;
   }
 
+  /* Centrare titolo e descrizione */
   .get-title-container {
     justify-content: center;
   }
 
-  .title-line {
-    display: none;
-  }
+.title-line{
+display:none;
 }
+
+
+.services-section .service-item {
+  display: flex !important;         /* assicurati che sia flex */
+  flex-direction: column !important;/* impila testo, poi immagine */
+  align-items: center !important;   /* centra orizzontalmente */
+  text-align: center !important;    /* centra anche i paragrafi */
+}
+
+/* Spazio tra testo e immagine */
+.services-section .service-text-container {
+  margin-bottom: var(--spacing-md) !important;
+}
+
+/* Immagine full-width sotto il testo */
+.services-section .service-image-container {
+  width: 100% !important;
+  margin: 0 !important;
+}
+.services-section .service-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+}
+
+

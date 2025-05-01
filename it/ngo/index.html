@@ -2,6 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clarity | NGOs division</title>
   <meta name="description" content="Servizi di ricerca personalizzata per ONG, associazioni e progetti sociali. Ottimizza l'impatto delle tue iniziative con dati evidence-based, survey mirate e valutazioni comportamentali."/>
   <meta name="keywords" content="ricerca terzo settore, ONG, impatto sociale, survey donatori, aderenza sociale, ricerca qualitativa, valutazione progetti sociali"/>
@@ -373,7 +374,7 @@
 
     const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
           const sectionId = entry.target.getAttribute('id');
           sectionLabels.forEach(label => {
             label.classList.remove('visible');
@@ -386,7 +387,7 @@
           }
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
     sections.forEach(section => {
       sectionObserver.observe(section);

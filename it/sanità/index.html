@@ -2,6 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clarity | Healthcare division</title>
   <meta name="description" content="Ricerca quantitativa e sperimentale per ospedali, cliniche e professionisti sanitari. Servizi personalizzati per migliorare esiti clinici e processi decisionali con dati evidence-based."/>
   <meta name="keywords" content="ricerca sanità, usabilità dispositivi medici, aderenza terapeutica, UX sanità, survey pazienti, analisi dati clinici, decisioni evidence-based"/>
@@ -374,7 +375,7 @@
 
     const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
           const sectionId = entry.target.getAttribute('id');
           sectionLabels.forEach(label => {
             label.classList.remove('visible');
@@ -387,7 +388,7 @@
           }
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
     sections.forEach(section => {
       sectionObserver.observe(section);

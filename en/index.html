@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clarity | People Analytics Services</title>
   <meta name="description" content="Expert consulting services in quantitative and qualitative research. Obtain reliable data, insights, and evidence-based decisions."/>
   <meta property="og:title" content="Clarity | SGet your people"/>
@@ -396,7 +397,7 @@ if (getSection) {
 
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
         const sectionId = entry.target.getAttribute('id');
         // Hide all labels
         sectionLabels.forEach(label => {
@@ -411,7 +412,7 @@ if (getSection) {
         }
       }
     });
-  }, { threshold: 0.3 }); // Set threshold to 30%
+  }, { threshold: 0.2 }); // Set threshold to 30%
 
   sections.forEach(section => {
     sectionObserver.observe(section);

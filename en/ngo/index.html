@@ -401,7 +401,7 @@
 
     const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
           const sectionId = entry.target.getAttribute('id');
           sectionLabels.forEach(label => {
             label.classList.remove('visible');
@@ -414,7 +414,7 @@
           }
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
     sections.forEach(section => {
       sectionObserver.observe(section);
