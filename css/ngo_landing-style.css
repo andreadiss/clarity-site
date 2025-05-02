@@ -349,7 +349,7 @@ section {
 }
 
 #gif-output {
-  width: 30%; /* O usa una larghezza fissa se preferisci */
+  width: 50%; /* O usa una larghezza fissa se preferisci */
   height: auto; /* Mantiene le proporzioni della GIF */
   object-fit: cover; /* O 'contain' se preferisci vedere tutta la GIF */
 }
