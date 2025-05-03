@@ -925,6 +925,22 @@ section {
 
 
 /* MEDIA QUERIES */
+@media (max-width: 1400px){
+  /* NAVBAR */
+  .navbar-container {
+    justify-content: flex-start !important;
+    padding: 0 var(--spacing-md); /* o il padding che preferisci ai lati */
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: flex-start !important;
+    gap: 0.1rem;               /* spazio tra i link */
+    margin-left: var(--spacing-lg); /* spazio minimo dal brand */
+  }
+
+}
+
 
 /* Tablet grandi e desktop piccoli (max-width: 1024px) */
 @media (max-width: 1024px) {
@@ -961,11 +977,16 @@ section {
     max-width: 90%;           /* per non occupare tutta la larghezza */
   }
 
-  /* restringiamo il paragrafo per non fare righe troppo lunghe */
+  .hero-title {
+    text-align: center !important;
+  }
+
   .hero-subtitle {
     margin: 0 auto var(--spacing-md);
     max-width: 600px;
+    text-align: center !important;
   }
+
 
   /* il bottone diventa block e si centra */
   .hero-left .button {

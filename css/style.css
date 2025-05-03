@@ -325,7 +325,7 @@ padding-bottom: 20%;
 }
 
 .hero-subtitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1.7;
   max-width: 800px;
   text-align: left;
@@ -437,7 +437,7 @@ padding-bottom: 20%;
 }
 
 .accent-text {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.8rem, 2.5vw, 1.5rem);
   line-height: 1.7;
   max-width: 80%;
   color: rgba(255, 255, 255, 0.85);
@@ -999,13 +999,7 @@ padding-bottom: 20%;
 
 /* MEDIA QUERIES */
 
-/* Tablet grandi e desktop piccoli (max-width: 1024px) */
-@media (max-width: 1024px) {
-
-  section {
-    margin-left: 0;
-  }
-
+@media (max-width: 1400px){
   /* NAVBAR */
   .navbar-container {
     justify-content: flex-start !important;
@@ -1018,6 +1012,17 @@ padding-bottom: 20%;
     gap: 0.1rem;               /* spazio tra i link */
     margin-left: var(--spacing-lg); /* spazio minimo dal brand */
   }
+
+}
+
+
+/* Tablet grandi e desktop piccoli (max-width: 1024px) */
+@media (max-width: 1024px) {
+
+  section {
+    margin-left: 0;
+  }
+
 
   /* HERO */
    .hero-container {
@@ -1034,10 +1039,14 @@ padding-bottom: 20%;
     max-width: 90%;           /* per non occupare tutta la larghezza */
   }
 
-  /* restringiamo il paragrafo per non fare righe troppo lunghe */
+  .hero-title {
+    text-align: center !important;
+  }
+
   .hero-subtitle {
     margin: 0 auto var(--spacing-md);
     max-width: 600px;
+    text-align: center !important;
   }
 
   /* il bottone diventa block e si centra */
