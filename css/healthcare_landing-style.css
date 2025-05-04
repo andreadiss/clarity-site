@@ -342,17 +342,19 @@ section {
 
 .hero-animation {
   background: transparent;
-  padding-top: 5%;
-  padding-bottom: 0%;
+  padding-top: 0%;
+  padding-bottom: 20%;
   padding-right: 5%;
   margin-left: 0;
 }
 
 #gif-output {
-  width: 50%; /* O usa una larghezza fissa se preferisci */
+  width: 40%; /* O usa una larghezza fissa se preferisci */
   height: auto; /* Mantiene le proporzioni della GIF */
-  object-fit: cover; /* O 'contain' se preferisci vedere tutta la GIF */
+  object-fit: contain; /* O 'contain' se preferisci vedere tutta la GIF */
 }
+
+
 
 
 /* Bottone nella Hero Section */

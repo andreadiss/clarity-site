@@ -20,116 +20,95 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   }
 
-// --- Neural Network Animation ---
-const canvas = document.getElementById('neural-center');
-if (canvas) {
-  const ctx = canvas.getContext('2d');
+  /* ---- Intersection Observer ---- */
+  const canvas = document.getElementById('neural-center');
+  if (!canvas) return;
 
-  // Funzione per sincronizzare la dimensione interna del canvas con lo stile CSS
-  function resizeCanvas() {
-    const dpr = window.devicePixelRatio || 1;
-    // Imposta le dimensioni interne basate sulle dimensioni CSS (offsetWidth/offsetHeight)
-    canvas.width = canvas.offsetWidth * dpr;
-    canvas.height = canvas.offsetHeight * dpr;
-    // Imposta il transform del contesto per gestire correttamente il scaling
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
+  const startAnimation = () => {
+    /* Evita di far partire due volte */
+    if (canvas.classList.contains('animate')) return;
+    canvas.classList.add('animate');
 
-  // Definiamo la classe Node per rappresentare un punto della rete
-  class Node {
-    constructor(x, y) {
-      this.x = x;
-      this.y = y;
-      this.vx = (Math.random() - 0.5) * 1.2;
-      this.vy = (Math.random() - 0.5) * 1.2;
-      this.radius = Math.random() * 2 + 1;
-      this.life = 180 + Math.random() * 120;
+    const ctx = canvas.getContext('2d');
+
+    /* --- resize helper --- */
+    function resizeCanvas(){
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width  = canvas.offsetWidth  * dpr;
+      canvas.height = canvas.offsetHeight * dpr;
+      ctx.setTransform(dpr,0,0,dpr,0,0);
     }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-    update() {
-      this.x += this.vx;
-      this.y += this.vy;
-      this.life -= 0.2;
-      this.vx *= 0.96;
-      this.vy *= 0.96;
-      if (Math.random() > 0.9) {
-        this.vx += (Math.random() - 0.5) * 0.3;
-        this.vy += (Math.random() - 0.5) * 0.3;
+    /* --- Node class --- */
+    class Node{
+      constructor(x,y){
+        this.x = x; this.y = y;
+        this.vx = (Math.random()-0.5)*1.2;
+        this.vy = (Math.random()-0.5)*1.2;
+        this.radius = Math.random()*2+1;
+        this.life = 180+Math.random()*120;
+      }
+      update(){
+        this.x += this.vx; this.y += this.vy; this.life -= .2;
+        this.vx *= .96; this.vy *= .96;
+        if(Math.random()>.9){ this.vx += (Math.random()-.5)*.3; this.vy += (Math.random()-.5)*.3; }
+      }
+      draw(){
+        ctx.beginPath();
+        ctx.arc(this.x,this.y,this.radius,0,Math.PI*2);
+        ctx.fillStyle='rgba(255,255,255,.7)'; ctx.fill();
       }
     }
 
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
-      ctx.fill();
-    }
-  }
-
-  let nodes = [];
-  const maxNodes = 150;
-
-  // Funzione per generare un nuovo nodo relativo al centro (0,0)
-  function spawnNode() {
-    if (nodes.length < maxNodes) {
-      const angle = Math.random() * Math.PI * 2;
-      const radius = Math.random() * 300; // Modifica questo valore in base all'area desiderata
-      // Poiché stiamo disegnando con l'origine traslata, spawniamo il nodo con coordinate relative al centro
-      nodes.push(new Node(Math.cos(angle) * radius, Math.sin(angle) * radius));
-    }
-  }
-
-  // Funzione per disegnare le connessioni tra nodi
-  function connectNodes() {
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const dx = nodes[i].x - nodes[j].x;
-        const dy = nodes[i].y - nodes[j].y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < 100) {
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(255, 255, 255, ${1 - distance / 100})`;
-          ctx.lineWidth = 0.5;
-          ctx.moveTo(nodes[i].x, nodes[i].y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.stroke();
+    const nodes=[]; const maxNodes=150;
+    const spawnNode=()=>{
+      if(nodes.length<maxNodes){
+        const a=Math.random()*Math.PI*2, r=Math.random()*300;
+        nodes.push(new Node(Math.cos(a)*r,Math.sin(a)*r));
+      }
+    };
+    const connect=()=>{
+      for(let i=0;i<nodes.length;i++){
+        for(let j=i+1;j<nodes.length;j++){
+          const dx=nodes[i].x-nodes[j].x, dy=nodes[i].y-nodes[j].y;
+          const d=Math.hypot(dx,dy);
+          if(d<100){
+            ctx.beginPath();
+            ctx.strokeStyle=`rgba(255,255,255,${1-d/100})`;
+            ctx.lineWidth=.5;
+            ctx.moveTo(nodes[i].x,nodes[i].y); ctx.lineTo(nodes[j].x,nodes[j].y); ctx.stroke();
+          }
         }
       }
+    };
+
+    function animate(){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      ctx.save();
+      ctx.translate(canvas.offsetWidth/2,canvas.offsetHeight/2);
+
+      if(Math.random()>.4) spawnNode();
+      for(let i=nodes.length-1;i>=0;i--){
+        nodes[i].update(); nodes[i].draw();
+        if(nodes[i].life<=0) nodes.splice(i,1);
+      }
+      connect(); ctx.restore();
+      requestAnimationFrame(animate);
     }
+    animate();            // avvia effettivamente il loop
+  };
+
+  /* ---- Observer che guarda la sezione Accent ---- */
+  const accentSection = document.querySelector('.accent-section');
+  if(accentSection){
+    const observer = new IntersectionObserver(entries=>{
+      if(entries[0].isIntersecting){ startAnimation(); observer.disconnect(); }
+    }, {threshold:0.4});
+    observer.observe(accentSection);
   }
 
-  // Funzione di animazione
-  function animate() {
-    // Pulisce l'intero canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    ctx.save();
-    // Trasla il contesto in modo che l'origine sia al centro VISIBILE del canvas.
-    // Si usa canvas.offsetWidth e canvas.offsetHeight (le dimensioni in CSS pixels)
-    ctx.translate(canvas.offsetWidth / 2, canvas.offsetHeight / 2);
-
-    // Ogni frame genera nuovi nodi (con probabilità, se non si è raggiunto il numero massimo)
-    if (Math.random() > 0.4) spawnNode();
-
-    // Aggiorna e disegna i nodi esistenti
-    for (let i = nodes.length - 1; i >= 0; i--) {
-      nodes[i].update();
-      nodes[i].draw();
-      if (nodes[i].life <= 0) nodes.splice(i, 1);
-    }
-
-    // Disegna le connessioni tra i nodi
-    connectNodes();
-    ctx.restore();
-    
-    requestAnimationFrame(animate);
-  }
-
-  // Avvia l'animazione
-  animate();
-}
 
 // === ASCII HERO ANIMATION ===
 let current = 0;

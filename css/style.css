@@ -29,40 +29,43 @@ html {
 
 
 /* FONT FACES */
+
 @font-face {
   font-family: 'Roboto';
-  src: url('../css/fonts/Roboto-Regular.ttf') format('truetype');
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
+
 @font-face {
   font-family: 'Roboto';
-  src: url('../css/fonts/Roboto-Bold.ttf') format('truetype');
+  src: url('../fonts/Roboto-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Mulish';
-  src: url('../css/fonts/Mulish-Regular.ttf') format('truetype');
+  src: url('../fonts/Mulish-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Mulish';
-  src: url('../css/fonts/Mulish-SemiBold.ttf') format('truetype');
+  src: url('../fonts/Mulish-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Mulish';
-  src: url('../css/fonts/Mulish-Bold.ttf') format('truetype');
+  src: url('../fonts/Mulish-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
+
 
 /* BASE STYLES */
 body {
