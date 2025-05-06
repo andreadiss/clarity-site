@@ -83,6 +83,7 @@
       <div class="label hidden" data-section="how-it-works-section">HOW IT WORKS</div>
       <div class="label hidden" data-section="differentiators">APPROACH</div>
       <div class="label hidden" data-section="services">SERVICES</div>
+      <div class="label hidden" data-section="survey-section">SERVICES</div>
     </div>
     <div class="social-icons">
       <a href="https://www.linkedin.com/company/clarity-research" target="_blank" class="icon">
@@ -140,49 +141,6 @@
   </p>
   <canvas id="neural-center"></canvas>
 </section>
-
-
-  <!-- DIFFERENTIATORS SECTION -->
-  <section class="get-section" id="differentiators">
-    <div class="get-grid">
-      <div class="get-item" id="get-ricerca-affidabile">
-        <div class="get-content">
-          <div class="get-title-container">
-            <h3 class="get-title"><span class="highlight">Reliable</span> research</h3>
-            <hr class="title-line">
-          </div>
-          <p class="get-text"><span class="highlight">We apply proven scientific methods to deliver accurate and repeatable results you can truly rely on.</span> Our team includes researchers from top universities and R&D departments.</p>
-        </div>
-      </div>
-      <div class="get-item" id="get-approcci-innovativi">
-        <div class="get-content">
-          <div class="get-title-container">
-            <hr class="title-line">
-            <h3 class="get-title"><span class="highlight">Innovative</span> approaches</h3>
-          </div>
-          <p class="get-text"><span class="highlight">Research on human behavior and attitudes requires expertise in theoretical models, soft skills, and advanced technologies.</span> We use behavioral tasks, predictive analytics, and implicit measures to uncover what truly drives people.</p>
-        </div>
-      </div>
-      <div class="get-item" id="get-soluzioni-personalizzate">
-        <div class="get-content">
-          <div class="get-title-container">
-            <h3 class="get-title"><span class="highlight">Tailored</span> solutions</h3>
-            <hr class="title-line">
-          </div>
-          <p class="get-text"><span class="highlight">Each project is custom-designed around your goals: we listen to your context, analyze your audience, and guide you with clear data.</span> We don’t offer pre-packaged solutions; instead, we work with you to define key questions, select the best tools, and interpret results in a practical way.</p>
-        </div>
-      </div>
-      <div class="get-item" id="get-risultati-comprensibili">
-        <div class="get-content">
-          <div class="get-title-container">
-            <hr class="title-line">
-            <h3 class="get-title"><span class="highlight">Accessible</span> results</h3>
-          </div>
-          <p class="get-text"><span class="highlight">Data shouldn’t be intimidating. We deliver results that are easy to understand and share across your team or organization.</span> We turn complex numbers into clear, actionable insights through visual reports and storytelling that make data accessible—even for non-technical stakeholders.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
 <!-- SERVICES SECTION -->
 <section class="services-section" id="services">
@@ -264,6 +222,122 @@
     </div>
   </div>
 </section>
+
+<!-- WIDGET -->
+<section id="survey-section" class="section section--survey">
+  <div class="survey-container">
+    <div class="survey">
+      <header>
+        <h2>10 seconds to discover which services are right for you</h2>
+      </header>
+      <div class="body">
+
+        <div class="question">
+          <label for="q1">1. Do you use digital technologies (websites/apps/ecommerce) to communicate with customers and launch new products?</label>
+          <div class="switch">
+            <input type="checkbox" id="q1"><span class="slider"></span>
+          </div>
+        </div>
+
+        <div class="question">
+          <label for="q2">2. Do you regularly collect digital data (sales, visits, clicks) to optimize processes and make operational decisions on your digital products?</label>
+          <div class="switch">
+            <input type="checkbox" id="q2"><span class="slider"></span>
+          </div>
+        </div>
+
+        <div class="question">
+          <label for="q3">3. Have you ever measured the usability of your website/app/digital product with real users by tracking task success rates and completion times?</label>
+          <div class="switch">
+            <input type="checkbox" id="q3"><span class="slider"></span>
+          </div>
+        </div>
+
+        <div class="question">
+          <label for="q4">4. Have you ever conducted targeted interviews or surveys to understand your customer needs, motivations, expectations, and pain points for current or future features of your products?</label>
+          <div class="switch">
+            <input type="checkbox" id="q4"><span class="slider"></span>
+          </div>
+        </div>
+
+        <div class="question">
+          <label for="q5">5. Have you ever segmented your customers using predictive clickstream models to forecast the success of future features among your users?</label>
+          <div class="switch">
+            <input type="checkbox" id="q5"><span class="slider"></span>
+          </div>
+        </div>
+
+        <div class="question">
+          <label for="q6">6. Have you ever run A/B tests between different versions of your products and monitored KPIs (conversion rate, retention, NPS) to optimize the funnel and increase loyalty?</label>
+          <div class="switch">
+            <input type="checkbox" id="q6"><span class="slider"></span>
+          </div>
+        </div>
+
+        <div class="question">
+          <label for="q7">7. Do you regularly train your team in basic user research to boost the digital maturity of your products?</label>
+          <div class="switch">
+            <input type="checkbox" id="q7"><span class="slider"></span>
+          </div>
+        </div>
+
+        <button class="btn" id="discover-btn">Discover the most suitable offer</button>
+
+        <div class="result" id="result-box">
+          <p>We recommend the following packages:</p>
+          <ul id="result-list"></ul>
+          <div class="none" id="none-msg">Congratulations! You already have everything in place 🎉</div>
+          <div class="contact">Contact us to <a href="#contact">get more information</a></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- DIFFERENTIATORS SECTION -->
+  <section class="get-section" id="differentiators">
+    <div class="get-grid">
+      <div class="get-item" id="get-ricerca-affidabile">
+        <div class="get-content">
+          <div class="get-title-container">
+            <h3 class="get-title"><span class="highlight">Reliable</span> research</h3>
+            <hr class="title-line">
+          </div>
+          <p class="get-text"><span class="highlight">We apply proven scientific methods to deliver accurate and repeatable results you can truly rely on.</span> Our team includes researchers from top universities and R&D departments.</p>
+        </div>
+      </div>
+      <div class="get-item" id="get-approcci-innovativi">
+        <div class="get-content">
+          <div class="get-title-container">
+            <hr class="title-line">
+            <h3 class="get-title"><span class="highlight">Innovative</span> approaches</h3>
+          </div>
+          <p class="get-text"><span class="highlight">Research on human behavior and attitudes requires expertise in theoretical models, soft skills, and advanced technologies.</span> We use behavioral tasks, predictive analytics, and implicit measures to uncover what truly drives people.</p>
+        </div>
+      </div>
+      <div class="get-item" id="get-soluzioni-personalizzate">
+        <div class="get-content">
+          <div class="get-title-container">
+            <h3 class="get-title"><span class="highlight">Tailored</span> solutions</h3>
+            <hr class="title-line">
+          </div>
+          <p class="get-text"><span class="highlight">Each project is custom-designed around your goals: we listen to your context, analyze your audience, and guide you with clear data.</span> We don’t offer pre-packaged solutions; instead, we work with you to define key questions, select the best tools, and interpret results in a practical way.</p>
+        </div>
+      </div>
+      <div class="get-item" id="get-risultati-comprensibili">
+        <div class="get-content">
+          <div class="get-title-container">
+            <hr class="title-line">
+            <h3 class="get-title"><span class="highlight">Accessible</span> results</h3>
+          </div>
+          <p class="get-text"><span class="highlight">Data shouldn’t be intimidating. We deliver results that are easy to understand and share across your team or organization.</span> We turn complex numbers into clear, actionable insights through visual reports and storytelling that make data accessible—even for non-technical stakeholders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- FOOTER -->
   <footer class="minimal-footer" id="contact">
@@ -407,6 +481,34 @@
       sectionObserver.observe(section);
     });
   });
+
+ <!-- WIDGET -->
+  const mapping = {
+    q3: "UX Starter",
+    q4: "Generative Research",
+    q5: "Deep Research",
+    q6: "Loyalty Booster",
+    q7: "Data Guidance & Workshops"
+  };
+  document.getElementById("discover-btn").addEventListener("click", () => {
+    const resultList = document.getElementById("result-list");
+    resultList.innerHTML = "";
+    let count = 0;
+    Object.keys(mapping).forEach(qId => {
+      if (!document.getElementById(qId).checked) {
+        const li = document.createElement("li");
+        li.textContent = mapping[qId];
+        resultList.appendChild(li);
+        count++;
+      }
+    });
+    const box = document.getElementById("result-box");
+    const none = document.getElementById("none-msg");
+    box.style.display = 'block';
+    none.style.display = count ? 'none' : 'block';
+    box.scrollIntoView({ behavior: "smooth" });
+  });
+
   </script>
 
 
