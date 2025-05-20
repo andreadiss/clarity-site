@@ -242,28 +242,35 @@ Monitoriamo soddisfazione e fedeltà, individuiamo cause di abbandono e ti forni
         </div>
 
         <div class="question">
-          <label for="q4">4. Hai mai condotto interviste o indagini mirate per capire bisogni, motivazioni, aspettative, e pain-point dei clienti su feature attuali o future dei vostri prodotti?</label>
+          <label for="q4">4. Hai mai testato diverse versioni dei vostri prodotti con utenti reali, per sapere in anticipo su quali features puntare? <label>
+          <div class="switch">
+            <input type="checkbox" id="q3"><span class="slider"></span>
+          </div>
+        </div>
+
+        <div class="question">
+          <label for="q5">5. Hai mai condotto interviste o indagini mirate per capire bisogni, motivazioni, aspettative, e pain-point dei clienti su feature attuali o future dei vostri prodotti?</label>
           <div class="switch">
             <input type="checkbox" id="q4"><span class="slider"></span>
           </div>
         </div>
 
         <div class="question">
-          <label for="q5">5. Hai mai segmentato i clienti usando modelli predittivi per prevedere il successo di feature future tra i vostri utenti?</label>
+          <label for="q6">6. Hai mai segmentato i clienti usando modelli predittivi per prevedere il successo di feature future tra i vostri utenti?</label>
           <div class="switch">
             <input type="checkbox" id="q5"><span class="slider"></span>
           </div>
         </div>
 
         <div class="question">
-          <label for="q6">6. Monitori KPI in relazione ai tuoi utenti (conversion rate, retention, NPS) per ottimizzare il funnel e aumentare la loyalty?</label>
+          <label for="q7">7. Monitori KPI in relazione ai tuoi utenti (conversion rate, retention, NPS) per ottimizzare il funnel e aumentare la loyalty?</label>
           <div class="switch">
             <input type="checkbox" id="q6"><span class="slider"></span>
           </div>
         </div>
 
         <div class="question">
-          <label for="q7">7. Formi con regolarità il team sulla ricerca utenti di base per aumentare la tua digitalizzazione dei vostri prodotti?</label>
+          <label for="q8">8. Formi con regolarità il team sulla ricerca utenti di base per aumentare la tua digitalizzazione dei vostri prodotti?</label>
           <div class="switch">
             <input type="checkbox" id="q7"><span class="slider"></span>
           </div>
@@ -475,9 +482,10 @@ Monitoriamo soddisfazione e fedeltà, individuiamo cause di abbandono e ti forni
   const mapping = {
     q3: "UX Starter",
     q4: "Generative Research",
-    q5: "Deep Research",
-    q6: "Loyalty Booster",
-    q7: "Data Guidance & Workshops"
+    q5: "Generative Research",
+    q6: "Deep Research",
+    q7: "Loyalty Booster",
+    q8: "Data Guidance & Workshops"
   };
   document.getElementById("discover-btn").addEventListener("click", () => {
     const resultList = document.getElementById("result-list");
