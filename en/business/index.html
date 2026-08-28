@@ -23,6 +23,7 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="../../css/business_landing-style.css">
+  <link rel="stylesheet" href="../../css/ux-fixes.css">
 
   <!-- Structured Data -->
 <script type="application/ld+json">
@@ -99,9 +100,7 @@
 
   <!-- Language Switch -->
   <div class="language-toggle">
-    <a href="../../it/business/index.html" title="Italiano" hreflang="it" lang="it" aria-label="Italiano">
-      <img src="../../images/ita.png" alt="Italiano" class="flag">
-    </a>
+    <a class="language-link" href="../../it/business/index.html" title="Italiano" hreflang="it" lang="it" aria-label="Visualizza questa pagina in italiano">IT</a>
   </div>
 
   <!-- NAVBAR -->
@@ -110,7 +109,7 @@
       <a href="../index.html" class="navbar-brand">Clarity</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open menu"><span aria-hidden="true">☰</span></button>
       <nav class="nav-menu" id="primary-navigation" aria-label="Main navigation">
-        <a href="#home" class="nav-link">Home</a>
+        <a href="../index.html" class="nav-link">Home</a>
         <a href="../healthcare/index.html" class="nav-link">Healthcare</a>
         <a href="../ngo/index.html" class="nav-link">Nonprofits</a>
         <a href="#differentiators" class="nav-link">Why Us</a>
@@ -130,7 +129,7 @@
         We provide services that help companies gather and interpret data on their users’ real-world behavior.
       </p>
       <a href="#contact" class="button hero-button">
-        <span class="button-text">Book a free call</span>
+        <span class="button-text">Tell us about your project</span>
       </a>
     </div>
     <video id="gif-output" class="hero-animation" autoplay muted loop playsinline preload="metadata" poster="../../images/business_hero-poster.webp" aria-hidden="true">
@@ -226,79 +225,40 @@
   <div class="survey-container">
     <div class="survey">
       <header>
-        <h2>10 seconds to find out which services suit you best</h2>
+        <h2>What outcomes do you want to achieve?</h2>
       </header>
       <div class="body">
+        <p class="assessment-intro">Select one or more goals. We will show the most relevant services without turning a few answers into an automated diagnosis.</p>
+        <fieldset class="assessment-options">
+          <legend class="visually-hidden">Project goals</legend>
+          <label class="assessment-option" for="q1">
+            <input type="checkbox" id="q1">
+            <span><strong>Improve a website, app or digital product</strong><small>Evaluate usability, journeys and alternative versions with real users.</small></span>
+          </label>
+          <label class="assessment-option" for="q2">
+            <input type="checkbox" id="q2">
+            <span><strong>Understand needs and motivations</strong><small>Explore behavior, expectations and purchasing barriers.</small></span>
+          </label>
+          <label class="assessment-option" for="q3">
+            <input type="checkbox" id="q3">
+            <span><strong>Explore perceptions and positioning</strong><small>Analyze messaging, sentiment and implicit associations.</small></span>
+          </label>
+          <label class="assessment-option" for="q4">
+            <input type="checkbox" id="q4">
+            <span><strong>Increase satisfaction and loyalty</strong><small>Identify churn drivers and opportunities to improve retention and NPS.</small></span>
+          </label>
+          <label class="assessment-option" for="q5">
+            <input type="checkbox" id="q5">
+            <span><strong>Strengthen the team’s research skills</strong><small>Bring methods, research tools and decision support into the organization.</small></span>
+          </label>
+        </fieldset>
+        <button type="button" class="btn" id="discover-btn">See relevant services</button>
 
-        <div class="question">
-          <label for="q1">1. Do you use digital technologies (website/apps/e-commerce) to communicate with customers and launch new products?</label>
-          <div class="switch">
-            <input type="checkbox" id="q1"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q2">2. Do you regularly collect operational data (sales, visits, clicks) to optimise processes and operational decisions for your digital products?</label>
-          <div class="switch">
-            <input type="checkbox" id="q2"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q3">3. Have you ever measured how intuitive your website/app/digital product is with real users or compared the success of different versions of your products?</label>
-          <div class="switch">
-            <input type="checkbox" id="q3"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q4">4. Have you ever compared different versions of your products, planning in advance your marketing campaign?</label>
-          <div class="switch">
-            <input type="checkbox" id="q4"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q5">5. Have you ever conducted interviews or targeted surveys to understand customers’ needs, motivations, expectations, and pain points about current or future features?</label>
-          <div class="switch">
-            <input type="checkbox" id="q5"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q6">6. Have you ever segmented customers using predictive models to forecast the success of future features among your users?</label>
-          <div class="switch">
-            <input type="checkbox" id="q6"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q7">7. Do you monitor user-related KPIs (conversion rate, retention, NPS) to optimise the funnel and increase loyalty?</label>
-          <div class="switch">
-            <input type="checkbox" id="q7"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q8">8. Do you regularly train your team on basic user research to boost the digitalisation of your products?</label>
-          <div class="switch">
-            <input type="checkbox" id="q8"><span class="slider"></span>
-          </div>
-        </div>
-
-        <button class="btn" id="discover-btn">Discover your best package</button>
-
-        <div class="result" id="result-box">
-          <p>We recommend the following packages:</p>
+        <div class="result" id="result-box" role="status" aria-live="polite" tabindex="-1" hidden>
+          <p id="result-title">For your goals, we suggest:</p>
           <ul id="result-list"></ul>
-          <div class="none" id="none-msg">
-            Congratulations! 🎉 Contact us to <a href="#contact">get more information</a>
-          </div>
-          <div class="contact">
-            Contact us to <a href="#contact">get more information</a>
-          </div>
+          <p class="result-contact"><a href="#contact">Tell us about the context</a> so we can validate the most useful approach together.</p>
         </div>
-
       </div>
     </div>
   </div>
@@ -354,7 +314,8 @@
   <footer class="minimal-footer" id="contact">
     <div class="contact-form-container">
       <form class="contact-form" action="https://formspree.io/f/xwpovold" method="POST">
-        <h3>Do not postpone your next decision: book a call now.</h3>
+        <h3>Tell us which business decision you want to address.</h3>
+        <p class="form-expectation">Share a few details and we will contact you by email to define the next step.</p>
         <label class="visually-hidden" for="contact-name">Name</label>
         <input id="contact-name" type="text" name="name" autocomplete="name" placeholder="Your name" required>
         <label class="visually-hidden" for="contact-email">Email</label>
@@ -363,7 +324,7 @@
         <textarea id="contact-message" name="message" placeholder="Your message" required></textarea>
         <p class="privacy-notice">By submitting this form, you acknowledge that you have read the <a href="/en/privacy/">privacy notice</a>.</p>
         <button type="submit" class="button">
-          <span class="button-text">Send</span>
+          <span class="button-text">Request a conversation</span>
         </button>
       </form>
     </div>
@@ -500,29 +461,30 @@
 
  <!-- WIDGET -->
   const mapping = {
-    q3: "UX Starter",
-    q4: "Generative Research",
-    q5: "Generative Research",
-    q6: "Deep Research",
-    q7: "Loyalty Booster",
-    q8: "Data Guidance & Workshops"
+    q1: "UX Starter",
+    q2: "Generative Research",
+    q3: "Deep Research",
+    q4: "Loyalty Booster",
+    q5: "Data Guidance & Workshops"
   };
   document.getElementById("discover-btn").addEventListener("click", () => {
     const resultList = document.getElementById("result-list");
     resultList.innerHTML = "";
-    let count = 0;
-    Object.keys(mapping).forEach(qId => {
-      if (!document.getElementById(qId).checked) {
+    const selected = Object.keys(mapping).filter(qId => document.getElementById(qId).checked);
+    const title = document.getElementById("result-title");
+    if (selected.length) {
+      title.textContent = "For your goals, we suggest:";
+      selected.forEach(qId => {
         const li = document.createElement("li");
         li.textContent = mapping[qId];
         resultList.appendChild(li);
-        count++;
-      }
-    });
+      });
+    } else {
+      title.textContent = "Select at least one goal to receive a suggestion.";
+    }
     const box = document.getElementById("result-box");
-    const none = document.getElementById("none-msg");
-    box.style.display = 'block';
-    none.style.display = count ? 'none' : 'block';
+    box.hidden = false;
+    box.focus({ preventScroll: true });
     box.scrollIntoView({ behavior: "smooth" });
   });
 
