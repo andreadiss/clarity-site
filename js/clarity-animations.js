@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const maxNodes = 90;
   let animationFrame = null;
   let active = false;
+  let isCanvasVisible = false;
 
   const resizeCanvas = () => {
     const ratio = Math.min(window.devicePixelRatio || 1, 2);
@@ -111,10 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', resizeCanvas, { passive: true });
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) stop();
+    else if (isCanvasVisible) start();
   });
 
   const canvasObserver = new IntersectionObserver((entries) => {
-    if (entries.some((entry) => entry.isIntersecting)) start();
+    isCanvasVisible = entries.some((entry) => entry.isIntersecting);
+    if (isCanvasVisible) start();
     else stop();
   }, { threshold: 0.1 });
   canvasObserver.observe(canvas);
