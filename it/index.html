@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clarity | People analytics services</title>
   <meta name="description" content="Servizi di consulenza specializzata in ricerca quantitativa e qualitativa. Ottieni dati affidabili, approfondimenti e decisioni evidence-based."/>
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#1e40af">
+  <link rel="canonical" href="https://claritylab.cloud/it/">
   <meta property="og:title" content="Clarity | Vedi le persone di cui ti occupi in modo più chiaro"/>
   <meta property="og:description" content="Comprendi le persone di cui ti occupi attraverso i dati e aumenta la fiducia nelle tue decisioni."/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <!-- SEO -->
   <link rel="alternate" hreflang="en" href="https://claritylab.cloud/en/"/>
   <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/"/>
+  <link rel="alternate" hreflang="x-default" href="https://claritylab.cloud/en/">
 
   <!-- Font Awesome per icone -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -75,6 +77,7 @@
 
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Vai al contenuto principale</a>
   <!-- Sidebar verticale -->
 <div class="sidebar">
   <div class="section-labels">
@@ -86,18 +89,18 @@
     <div class="label hidden" data-section="services-section">SERVICES</div>
   </div>
   <div class="social-icons">
-    <a href="https://www.linkedin.com/company/claritylabresearch" target="_blank" class="icon">
-      <i class="fab fa-linkedin"></i>
+    <a href="https://www.linkedin.com/company/claritylabresearch" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Clarity su LinkedIn (si apre in una nuova scheda)">
+      <span aria-hidden="true">in</span>
     </a>
-    <a href="#contact" class="icon">
-      <i class="fas fa-envelope"></i>
+    <a href="#contact" class="icon" aria-label="Vai al modulo di contatto">
+      <span aria-hidden="true">✉</span>
     </a>
   </div>
 </div>
 
   <!-- Language Switch -->
   <div class="language-toggle">
-    <a href="../en/index.html" title="English">
+    <a href="../en/index.html" title="English" hreflang="en" lang="en" aria-label="English">
       <img src="../images/eng.png" alt="English" class="flag">
     </a>
   </div>
@@ -106,7 +109,8 @@
   <header class="navbar">
     <div class="navbar-container">
       <a href="../index.html" class="navbar-brand">Clarity</a>
-      <nav class="nav-menu">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Apri il menu"><span aria-hidden="true">☰</span></button>
+      <nav class="nav-menu" id="primary-navigation" aria-label="Navigazione principale">
         <a href="#home" class="nav-link">Home</a>
         <a href="../it/business/index.html" class="nav-link">Aziende</a>
         <a href="../it/sanità/index.html" class="nav-link">Sanità</a>
@@ -116,6 +120,8 @@
       </nav>
     </div>
   </header>
+
+  <main id="main-content">
 
   <!-- HERO SECTION -->
   <section class="hero-section" id="home">
@@ -127,7 +133,9 @@
         </p>
         <a href="#contact" class="button hero-button"><span class="button-text">Prenota una call gratuita</span></a>
       </div>
-	<img id="gif-output" class="hero-animation" src="../images/anim.gif" alt="Animazione">
+	<video id="gif-output" class="hero-animation" autoplay muted loop playsinline preload="metadata" poster="../images/anim-poster.webp" aria-hidden="true">
+      <source src="../images/anim.mp4" type="video/mp4">
+    </video>
     </div>
   </section>
 
@@ -135,7 +143,7 @@
   <section class="accent-section" id="solutions">
     <h2 class="accent-title">Capire prima di agire</h2>
     <p class="accent-text">Mettiamo ricerca qualitativa, analisi quantitativa e sperimentazione rapida al servizio di chi produce, vende o innova. Ti aiutiamo a comprendere meglio le persone.</p>
-    <canvas id="neural-center"></canvas>
+    <canvas id="neural-center" aria-hidden="true"></canvas>
   </section>
 
   <!-- OFFER SECTION -->
@@ -144,7 +152,7 @@
     <div class="offer-grid">
       <div class="offer-item">
         <div class="offer-visual-wrapper">
-          <img class="offer-item-image" src="../images/business_r.png" alt="Business">
+          <img loading="lazy" decoding="async" class="offer-item-image" src="../images/business_r.webp" alt="Business">
         </div>
         <h3 class="offer-item-title">Business</h3>
         <p class="offer-item-text">Comprendi i tuoi utenti e migliora la loro esperienza per una digitalizzazione efficace.</p>
@@ -152,7 +160,7 @@
       </div>
       <div class="offer-item">
         <div class="offer-visual-wrapper">
-          <img class="offer-item-image" src="../images/healthcare_r.png" alt="Sanità">
+          <img loading="lazy" decoding="async" class="offer-item-image" src="../images/healthcare_r.webp" alt="Sanità">
         </div>
         <h3 class="offer-item-title">Sanità</h3>
         <p class="offer-item-text">Ottieni insight su pazienti e operatori sanitari per migliorare aderenza, soddisfazione e risultati clinici.</p>
@@ -160,7 +168,7 @@
       </div>
       <div class="offer-item">
         <div class="offer-visual-wrapper">
-          <img class="offer-item-image" src="../images/ngo_r.png" alt="Terzo Settore">
+          <img loading="lazy" decoding="async" class="offer-item-image" src="../images/ngo_r.webp" alt="Terzo Settore">
         </div>
         <h3 class="offer-item-title">Terzo Settore</h3>
         <p class="offer-item-text">Valida le tue iniziative e comprendi bisogni e comportamenti di donatori, volontari e beneficiari.</p>
@@ -176,7 +184,7 @@
       <div class="step">
         <div class="step-number-wrapper">
           <div class="step-number">01</div>
-          <img src="../images/step1.gif" alt="Animation Step 1" class="step-gif">
+          <img src="../images/step1-poster.webp" alt="Animation Step 1" class="step-gif" loading="lazy" decoding="async">
         </div>
         <h3 class="step-title">Ascolto</h3>
         <p class="step-text">Raccolta dati mirata secondo le tue esigenze.</p>
@@ -184,7 +192,7 @@
       <div class="step">
         <div class="step-number-wrapper">
           <div class="step-number">02</div>
-          <img src="../images/step1.gif" alt="Animation Step 1" class="step-gif">
+          <img src="../images/step1-poster.webp" alt="Animation Step 1" class="step-gif" loading="lazy" decoding="async">
         </div>
         <h3 class="step-title">Analisi</h3>
         <p class="step-text">Modelli statistici e strumenti di visualizzazione per trovare pattern utili.</p>
@@ -192,7 +200,7 @@
       <div class="step">
         <div class="step-number-wrapper">
           <div class="step-number">03</div>
-          <img src="../images/step1.gif" alt="Animation Step 1" class="step-gif">
+          <img src="../images/step1-poster.webp" alt="Animation Step 1" class="step-gif" loading="lazy" decoding="async">
         </div>
         <h3 class="step-title">Azione</h3>
         <p class="step-text">Raccomandazioni pratiche, chiare e facili da mettere a budget.</p>
@@ -248,7 +256,7 @@
     <div class="services-grid">
       <div class="service-item">
         <div class="service-icon-container">
-          <img src="../images/prod_1.png" alt="Questionari e survey" class="service-icon">
+          <img loading="lazy" decoding="async" src="../images/prod_1.webp" alt="Questionari e survey" class="service-icon">
         </div>
         <div class="service-text-container">
           <h3 class="service-title">Questionari & Surveys</h3>
@@ -257,7 +265,7 @@
       </div>
       <div class="service-item">
         <div class="service-icon-container">
-          <img src="../images/prod_1.png" alt="Ricerche comportamentali" class="service-icon">
+          <img loading="lazy" decoding="async" src="../images/prod_1.webp" alt="Ricerche comportamentali" class="service-icon">
         </div>
         <div class="service-text-container">
           <h3 class="service-title">Ricerca comportamentale & Deep Research</h3>
@@ -266,7 +274,7 @@
       </div>
       <div class="service-item">
         <div class="service-icon-container">
-          <img src="../images/prod_1.png" alt="Analisi dei dati" class="service-icon">
+          <img loading="lazy" decoding="async" src="../images/prod_1.webp" alt="Analisi dei dati" class="service-icon">
         </div>
         <div class="service-text-container">
           <h3 class="service-title">Data analytics</h3>
@@ -275,7 +283,7 @@
       </div>
       <div class="service-item">
         <div class="service-icon-container">
-          <img src="../images/prod_1.png" alt="Specializzazione settoriale" class="service-icon">
+          <img loading="lazy" decoding="async" src="../images/prod_1.webp" alt="Specializzazione settoriale" class="service-icon">
         </div>
         <div class="service-text-container">
           <h3 class="service-title">Specializzazione settoriale</h3>
@@ -284,7 +292,7 @@
       </div>
       <div class="service-item">
         <div class="service-icon-container">
-          <img src="../images/prod_1.png" alt="Formazione" class="service-icon">
+          <img loading="lazy" decoding="async" src="../images/prod_1.webp" alt="Formazione" class="service-icon">
         </div>
         <div class="service-text-container">
           <h3 class="service-title">Formazione & Workshops</h3>
@@ -293,7 +301,7 @@
       </div>
       <div class="service-item">
         <div class="service-icon-container">
-          <img src="../images/prod_1.png" alt="Supporto continuo" class="service-icon">
+          <img loading="lazy" decoding="async" src="../images/prod_1.webp" alt="Supporto continuo" class="service-icon">
         </div>
         <div class="service-text-container">
           <h3 class="service-title">Supporto continuo & Data Strategy</h3>
@@ -302,21 +310,27 @@
       </div>
     </div>
   </section>
+  </main>
 
   <footer class="minimal-footer" id="contact">
     <div class="contact-form-container">
       <form class="contact-form" action="https://formspree.io/f/xwpovold" method="POST">
         <h3>Non rimandare la prossima scelta: parliamone oggi stesso.</h3>
-        <input type="text" name="name" placeholder="Il tuo nome" required>
-        <input type="email" name="email" placeholder="La tua email" required>
-        <textarea name="message" placeholder="Il tuo messaggio" required></textarea>
+        <label class="visually-hidden" for="contact-name">Nome</label>
+        <input id="contact-name" type="text" name="name" autocomplete="name" placeholder="Il tuo nome" required>
+        <label class="visually-hidden" for="contact-email">Email</label>
+        <input id="contact-email" type="email" name="email" autocomplete="email" placeholder="La tua email" required>
+        <label class="visually-hidden" for="contact-message">Messaggio</label>
+        <textarea id="contact-message" name="message" placeholder="Il tuo messaggio" required></textarea>
+        <p class="privacy-notice">Inviando il modulo dichiari di aver letto l'<a href="/it/privacy/">informativa privacy</a>.</p>
         <button type="submit" class="button">
           <span class="button-text">Invia</span>
         </button>
       </form>
     </div>
-    <p>© 2025 Clarity. Tutti i diritti riservati.</p>
+    <p>© 2026 Clarity. Tutti i diritti riservati.</p>
     <p>Email: claritylabresearch@gmail.com</p>
+    <p><a href="/it/privacy/">Privacy</a></p>
   </footer>
 
   <!-- SCRIPT ANIMAZIONE SCROLL -->
@@ -429,8 +443,7 @@ if (getSection) {
 
   <!-- JS -->
   <script src="../js/clarity-animations.js"></script>
-  <script src="../js/offer-ascii-transition.js"></script>
-  <script src="../js/ascii-steps-on-scroll.js"></script>
+  <script src="../js/site-ui.js"></script>
 
 </body>
 </html>

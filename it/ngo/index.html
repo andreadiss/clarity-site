@@ -5,15 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clarity | Social impact division</title>
   <meta name="description" content="Servizi di ricerca personalizzata per enti del terzo settore, ONG e progetti sociali. Ottimizza l'impatto delle tue iniziative con dati evidence-based, survey mirate e valutazioni comportamentali."/>
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#1e40af">
+  <link rel="canonical" href="https://claritylab.cloud/it/ngo/">
   <meta name="keywords" content="ricerca, terzo settore, ONG, impatto sociale, survey, donatori, questionari, digitalizzazione, ricerca qualitativa, valutazione progetti sociali"/>
   <meta name="author" content="Clarity Research"/>
 
   <!-- SEO -->
-  <link rel="alternate" hreflang="en" href="https://claritylab.cloud/en/ngo/index.html"/>
-  <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/ngo/index.html"/>
+  <link rel="alternate" hreflang="en" href="https://claritylab.cloud/en/ngo/">
+  <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/ngo/">
+  <link rel="alternate" hreflang="x-default" href="https://claritylab.cloud/en/ngo/">
 
   <!-- Font Awesome per icone -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
@@ -71,6 +74,7 @@
 
 </head>
 <body class="ong">
+  <a class="skip-link" href="#main-content">Vai al contenuto principale</a>
   <!-- Sidebar verticale -->
   <div class="sidebar">
     <div class="section-labels">
@@ -82,19 +86,19 @@
       <div class="label hidden" data-section="services">SERVICES</div>
     </div>
     <div class="social-icons">
-      <a href="https://www.linkedin.com/company/claritylabresearch" target="_blank" class="icon">
-        <i class="fab fa-linkedin"></i>
+      <a href="https://www.linkedin.com/company/claritylabresearch" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Clarity su LinkedIn (si apre in una nuova scheda)">
+        <span aria-hidden="true">in</span>
       </a>
-      <a href="#contact" class="icon">
-        <i class="fas fa-envelope"></i>
+      <a href="#contact" class="icon" aria-label="Vai al modulo di contatto">
+        <span aria-hidden="true">✉</span>
       </a>
     </div>
   </div>
 
   <!-- Language Switch -->
   <div class="language-toggle">
-    <a href="../../en/ngo/index.html" title="English">
-      <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+    <a href="../../en/ngo/index.html" title="English" hreflang="en" lang="en" aria-label="English">
+      <img src="../../images/eng.png"
            alt="English" class="flag">
     </a>
   </div>
@@ -102,7 +106,8 @@
   <header class="navbar">
     <div class="navbar-container">
       <a href="../index.html" class="navbar-brand">Clarity</a>
-      <nav class="nav-menu">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Apri il menu"><span aria-hidden="true">☰</span></button>
+      <nav class="nav-menu" id="primary-navigation" aria-label="Navigazione principale">
         <a href="#home" class="nav-link">Home</a>
         <a href="../business/index.html" class="nav-link">Aziende</a>
         <a href="../sanità/index.html" class="nav-link">Sanità</a>
@@ -111,6 +116,8 @@
       </nav>
     </div>
   </header>
+
+  <main id="main-content">
 
   <!-- HERO SECTION -->
   <section class="hero-section" id="home">
@@ -122,7 +129,9 @@
         </p>
         <a href="#contact" class="button hero-button"><span class="button-text">Prenota una call gratuita</span></a>
       </div>
-      <img id="gif-output" class="hero-animation" src="../../images/ngo_hero.gif" alt="Animazione sociale">
+      <video id="gif-output" class="hero-animation" autoplay muted loop playsinline preload="metadata" poster="../../images/ngo_hero-poster.webp" aria-hidden="true">
+      <source src="../../images/ngo_hero.mp4" type="video/mp4">
+    </video>
     </div>
   </section>
 
@@ -132,7 +141,7 @@
     <p class="accent-text">
        Supportiamo enti del terzo settore con questionari e sondaggi, pianificazione di progetti e analisi dei dati, trasformando le informazioni raccolte in risposte chiare da usare per coinvolgere donatori e volontari, creare contenuti per le campagne di fundraising, prevedere il successo di nuove campagne, dimostrare l’efficacia dei tuoi interventi e ottenere più fondi. Offriamo soluzioni evidence-based per il terzo settore.
     </p>
-    <canvas id="neural-center"></canvas>
+    <canvas id="neural-center" aria-hidden="true"></canvas>
   </section>
 
   <!-- SERVICES SECTION -->
@@ -150,7 +159,7 @@
        </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv2.png" alt="Ricerca esplorativa" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv2.webp" alt="Ricerca esplorativa" class="service-image">
       </div>
     </div>
 
@@ -164,7 +173,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv3.png" alt="Valutazione d’impatto" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv3.webp" alt="Valutazione d’impatto" class="service-image">
       </div>
     </div>
 
@@ -179,7 +188,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv1.png" alt="Analisi dei donatori" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv1.webp" alt="Analisi dei donatori" class="service-image">
       </div>
     </div>
 
@@ -194,7 +203,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv4.png" alt="Engagement e retention" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv4.webp" alt="Engagement e retention" class="service-image">
       </div>
     </div>
 
@@ -208,7 +217,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv5.png" alt="Supporto metodologico" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv5.webp" alt="Supporto metodologico" class="service-image">
       </div>
     </div>
 
@@ -262,20 +271,27 @@
 
 
   <!-- FOOTER / CONTACT FORM -->
+  </main>
+
   <footer class="minimal-footer" id="contact">
     <div class="contact-form-container">
       <form class="contact-form" action="https://formspree.io/f/xwpovold" method="POST">
         <h3>Hai bisogno di dati per migliorare il tuo impatto sociale?</h3>
-        <input type="text" name="name" placeholder="Il tuo nome" required>
-        <input type="email" name="email" placeholder="La tua email" required>
-        <textarea name="message" placeholder="Il tuo messaggio" required></textarea>
+        <label class="visually-hidden" for="contact-name">Nome</label>
+        <input id="contact-name" type="text" name="name" autocomplete="name" placeholder="Il tuo nome" required>
+        <label class="visually-hidden" for="contact-email">Email</label>
+        <input id="contact-email" type="email" name="email" autocomplete="email" placeholder="La tua email" required>
+        <label class="visually-hidden" for="contact-message">Messaggio</label>
+        <textarea id="contact-message" name="message" placeholder="Il tuo messaggio" required></textarea>
+        <p class="privacy-notice">Inviando il modulo dichiari di aver letto l'<a href="/it/privacy/">informativa privacy</a>.</p>
         <button type="submit" class="button">
           <span class="button-text">Invia</span>
         </button>
       </form>
     </div>
-    <p>© 2025 Clarity. Tutti i diritti riservati.</p>
+    <p>© 2026 Clarity. Tutti i diritti riservati.</p>
     <p>Email: claritylabresearch@gmail.com</p>
+    <p><a href="/it/privacy/">Privacy</a></p>
   </footer>
 
   <!-- SCRIPT ANIMAZIONE SCROLL -->
@@ -403,7 +419,6 @@
 
   <!-- JS -->
   <script src="../../js/clarity-animations.js"></script>
-  <script src="../../js/offer-ascii-transition.js"></script>
-  <script src="../../js/ascii-steps-on-scroll.js"></script>
+  <script src="../../js/site-ui.js"></script>
 </body>
 </html>
