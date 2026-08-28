@@ -23,6 +23,7 @@
 
   <!-- Stylesheet (same template used for Business/Healthcare) -->
 <link rel="stylesheet" href="../../css/ngo_landing-style.css">
+<link rel="stylesheet" href="../../css/ux-fixes.css">
 
 <script type="application/ld+json">
 {
@@ -96,9 +97,7 @@
 
   <!-- Language Switch -->
   <div class="language-toggle">
-    <a href="../../it/ngo/index.html" title="Italiano" hreflang="it" lang="it" aria-label="Italiano">
-      <img src="../../images/ita.png" alt="Italiano" class="flag" style="width:32px; height:32px; border-radius:50%;">
-    </a>
+    <a class="language-link" href="../../it/ngo/index.html" title="Italiano" hreflang="it" lang="it" aria-label="Visualizza questa pagina in italiano">IT</a>
   </div>
 
   <!-- Navbar -->
@@ -107,12 +106,12 @@
       <a href="../index.html" class="navbar-brand">Clarity</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open menu"><span aria-hidden="true">☰</span></button>
       <nav class="nav-menu" id="primary-navigation" aria-label="Main navigation">
-        <a href="#home" class="nav-link">Home</a>
+        <a href="../index.html" class="nav-link">Home</a>
         <a href="../business/index.html" class="nav-link">Business</a>
         <a href="../healthcare/index.html" class="nav-link">Healthcare</a>
         <a href="#differentiators" class="nav-link">Why Clarity</a>
 
-        <a href="#contact" class="button"><span class="button-text">Get Started</span></a>
+        <a href="#contact" class="button"><span class="button-text">Let’s talk</span></a>
       </nav>
     </div>
   </header>
@@ -127,7 +126,7 @@
       <p class="hero-subtitle">
         We provide services that help non-profit organisations collect and interpret data, so they can identify and prioritise actions that maximise the positive impact of their work.
       </p>
-      <a href="#contact" class="button hero-button"><span class="button-text">Book a free call</span></a>
+      <a href="#contact" class="button hero-button"><span class="button-text">Tell us about your project</span></a>
     </div>
     <video id="gif-output" class="hero-animation" autoplay muted loop playsinline preload="metadata" poster="../../images/ngo_hero-poster.webp" aria-hidden="true">
       <source src="../../images/ngo_hero.mp4" type="video/mp4">
@@ -266,7 +265,8 @@
   <footer class="minimal-footer" id="contact">
     <div class="contact-form-container">
       <form class="contact-form" action="https://formspree.io/f/xwpovold" method="POST">
-        <h3>Need data to improve your social impact?</h3>
+        <h3>Tell us which social impact you want to understand or demonstrate.</h3>
+        <p class="form-expectation">Share a few details and we will contact you by email to define the next step.</p>
         <label class="visually-hidden" for="contact-name">Name</label>
         <input id="contact-name" type="text" name="name" autocomplete="name" placeholder="Your name" required>
         <label class="visually-hidden" for="contact-email">Email</label>
@@ -275,7 +275,7 @@
         <textarea id="contact-message" name="message" placeholder="Your message" required></textarea>
         <p class="privacy-notice">By submitting this form, you acknowledge that you have read the <a href="/en/privacy/">privacy notice</a>.</p>
         <button type="submit" class="button">
-          <span class="button-text">Send</span>
+          <span class="button-text">Request a conversation</span>
         </button>
       </form>
     </div>
