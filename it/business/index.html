@@ -24,6 +24,7 @@
 <link rel="shortcut icon" href="../../favicon/favicon.ico">
   <!-- Stylesheet -->
   <link rel="stylesheet" href="../../css/business_landing-style.css">
+  <link rel="stylesheet" href="../../css/ux-fixes.css">
 
   <!-- Structured Data -->
 <script type="application/ld+json">
@@ -99,9 +100,7 @@
 
   <!-- Language Switch -->
   <div class="language-toggle">
-    <a href="../../en/business/index.html" title="English" hreflang="en" lang="en" aria-label="English">
-      <img src="../../images/eng.png" alt="English" class="flag">
-    </a>
+    <a class="language-link" href="../../en/business/index.html" title="English" hreflang="en" lang="en" aria-label="View this page in English">EN</a>
   </div>
 
   <!-- NAVBAR -->
@@ -110,12 +109,12 @@
       <a href="../index.html" class="navbar-brand">Clarity</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Apri il menu"><span aria-hidden="true">☰</span></button>
       <nav class="nav-menu" id="primary-navigation" aria-label="Navigazione principale">
-        <a href="#home" class="nav-link">Home</a>
+        <a href="../index.html" class="nav-link">Home</a>
         <a href="../sanità/index.html" class="nav-link">Sanità</a>
         <a href="../ngo/index.html" class="nav-link">Terzo settore</a>
         <a href="#differentiators" class="nav-link">Perché Noi</a>
 
-        <a href="#contact" class="button"><span class="button-text">Iniziamo</span></a>
+        <a href="#contact" class="button"><span class="button-text">Parliamone</span></a>
       </nav>
     </div>
   </header>
@@ -130,7 +129,7 @@
         <p class="hero-subtitle">
          Forniamo servizi che aiutano le aziende a raccogliere e interpretare dati sul comportamento reale dei loro utenti.
         </p>
-        <a href="#contact" class="button hero-button"><span class="button-text">Prenota una call gratuita</span></a>
+        <a href="#contact" class="button hero-button"><span class="button-text">Raccontaci il tuo progetto</span></a>
 	</div>
 	<video id="gif-output" class="hero-animation" autoplay muted loop playsinline preload="metadata" poster="../../images/business_hero-poster.webp" aria-hidden="true">
       <source src="../../images/business_hero.mp4" type="video/mp4">
@@ -149,15 +148,14 @@
 
   <!-- SERVICES SECTION -->
 <section class="services-section" id="services">
-  <h2 class="section-title-dark">CLARITY LAB SERVICES</h2>
+  <h2 class="section-title-dark">Servizi Clarity Lab</h2>
   <div class="services-grid">
     <div class="service-item">
       <div class="service-text-container">
         <h3 class="service-title">UX Starter</h3>
         <p class="service-subtitle">Rendi il tuo sito o la tua app più intuitivi</p>
         <p class="service-description">
-          Conduciamo test di usabilità (remoti e in presenza) per il tuo sito o app. Testiamo con utenti reali diverse versioni dei tuoi prodotti e usiamo ML per predire l'efficacia delle 
-di diverse features. Consegniamo report, infografiche e piani d’azione pronti per essere implementati.
+          Conduciamo test di usabilità, da remoto e in presenza, per il tuo sito o la tua app. Confrontiamo con utenti reali diverse versioni dei prodotti e usiamo modelli predittivi per stimare l'efficacia delle funzionalità. Consegniamo report, infografiche e piani d’azione pronti da implementare.
         </p>
       </div>
       <div class="service-image-container">
@@ -169,7 +167,7 @@ di diverse features. Consegniamo report, infografiche e piani d’azione pronti 
         <h3 class="service-title">Generative research</h3>
         <p class="service-subtitle">Conosci più a fondo i tuoi utenti</p>
         <p class="service-description">
-          Progettiamo questionari e sondaggi per raccogliere informazioni su comportmaenti, bisogni, motivazioni e freni d’acquisto di utenti reali.
+          Progettiamo questionari e sondaggi per raccogliere informazioni su comportamenti, bisogni, motivazioni e freni d’acquisto di utenti reali.
           Usiamo cluster analysis e ML per predire il successo del lancio di nuovi prodotti.
           Ti forniamo report e dashboard per l'accesso a tutte le tue informazioni.
         </p>
@@ -207,7 +205,7 @@ Monitoriamo soddisfazione e fedeltà, individuiamo cause di abbandono e ti forni
     </div>
     <div class="service-item">
       <div class="service-text-container">
-        <h3 class="service-title">Data Guidance & Workshops</h3>
+        <h3 class="service-title">Data Guidance e workshop</h3>
         <p class="service-subtitle">Prendi decisioni sicure grazie a un supporto esperto</p>
         <p class="service-description">
          Ti affianchiamo con analisi periodiche, coaching metodologico e workshops, così ogni scelta di prodotto o marketing è sostenuta dai dati e non dalle intuizioni.
@@ -220,80 +218,44 @@ Monitoriamo soddisfazione e fedeltà, individuiamo cause di abbandono e ti forni
   </div>
 </section>
 
-<!-- WIDGET CSS: mettilo nel <head> o subito prima del widget -->
 <section id="survey-section" class="section section--survey">
   <div class="survey-container">
     <div class="survey">
       <header>
-        <h2>10 secondi per capire quali servizi fanno per te</h2>
+        <h2>Quali risultati vuoi ottenere?</h2>
       </header>
       <div class="body">
+        <p class="assessment-intro">Seleziona uno o più obiettivi. Ti mostreremo i servizi più pertinenti, senza trasformare poche risposte in una diagnosi automatica.</p>
+        <fieldset class="assessment-options">
+          <legend class="visually-hidden">Obiettivi del progetto</legend>
+          <label class="assessment-option" for="q1">
+            <input type="checkbox" id="q1">
+            <span><strong>Migliorare sito, app o prodotto digitale</strong><small>Valutare usabilità, percorsi e versioni alternative con utenti reali.</small></span>
+          </label>
+          <label class="assessment-option" for="q2">
+            <input type="checkbox" id="q2">
+            <span><strong>Comprendere bisogni e motivazioni</strong><small>Esplorare comportamenti, aspettative e freni d’acquisto.</small></span>
+          </label>
+          <label class="assessment-option" for="q3">
+            <input type="checkbox" id="q3">
+            <span><strong>Approfondire percezioni e posizionamento</strong><small>Analizzare messaggi, sentiment e associazioni implicite.</small></span>
+          </label>
+          <label class="assessment-option" for="q4">
+            <input type="checkbox" id="q4">
+            <span><strong>Aumentare soddisfazione e fidelizzazione</strong><small>Individuare le cause di abbandono e le leve per migliorare retention e NPS.</small></span>
+          </label>
+          <label class="assessment-option" for="q5">
+            <input type="checkbox" id="q5">
+            <span><strong>Rafforzare le competenze del team</strong><small>Portare metodo, strumenti di ricerca e supporto nelle decisioni.</small></span>
+          </label>
+        </fieldset>
+        <button type="button" class="btn" id="discover-btn">Vedi i servizi pertinenti</button>
 
-        <div class="question">
-          <label for="q1">1. Usi tecnologie digitali (website/apps/ecommerce) per comunicare con i clienti e lanciare nuovi prodotti?</label>
-          <div class="switch">
-            <input type="checkbox" id="q1"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q2">2. Raccogli regolarmente dati operativi (vendite, accessi, click) per ottimizzare processi e decisioni operative sui vostri prodotti digitali?</label>
-          <div class="switch">
-            <input type="checkbox" id="q2"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q3">3. Hai mai misurato l’intuitività del vostro sito/app/prodotto digitale con utenti reali o  confrontato il successo di diverse versioni dei vostri prodotti?</label>
-          <div class="switch">
-            <input type="checkbox" id="q3"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q4">4. Hai mai testato diverse versioni dei vostri prodotti con utenti reali, per sapere in anticipo su quali feature puntare?</label>
-          <div class="switch">
-            <input type="checkbox" id="q4"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q5">5. Hai mai condotto interviste o indagini mirate per capire bisogni, motivazioni, aspettative, e pain-point dei clienti su feature attuali o future dei vostri prodotti?</label>
-          <div class="switch">
-            <input type="checkbox" id="q5"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q6">6. Hai mai segmentato i clienti usando modelli predittivi per prevedere il successo di feature future tra i vostri utenti?</label>
-          <div class="switch">
-            <input type="checkbox" id="q6"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q7">7. Monitori KPI in relazione ai tuoi utenti (conversion rate, retention, NPS) per ottimizzare il funnel e aumentare la loyalty?</label>
-          <div class="switch">
-            <input type="checkbox" id="q7"><span class="slider"></span>
-          </div>
-        </div>
-
-        <div class="question">
-          <label for="q8">8. Formi con regolarità il team sulla ricerca utenti di base per aumentare la tua digitalizzazione dei vostri prodotti?</label>
-          <div class="switch">
-            <input type="checkbox" id="q8"><span class="slider"></span>
-          </div>
-        </div>
-
-        <button class="btn" id="discover-btn">Scopri l’offerta più adatta</button>
-
-        <div class="result" id="result-box">
-          <p>Ti consigliamo i seguenti pacchetti:</p>
+        <div class="result" id="result-box" role="status" aria-live="polite" tabindex="-1" hidden>
+          <p id="result-title">Per i tuoi obiettivi suggeriamo:</p>
           <ul id="result-list"></ul>
-          <div class="none" id="none-msg">Complimenti!🎉 Contattaci per <a href="#contact">ricevere più informazioni</a></div>
-          <div class="contact">Contattaci per <a href="#contact">ricevere più informazioni</a></div>
+          <p class="result-contact"><a href="#contact">Raccontaci il contesto</a> per verificare insieme il percorso più utile.</p>
         </div>
-
       </div>
     </div>
   </div>
@@ -345,7 +307,8 @@ Monitoriamo soddisfazione e fedeltà, individuiamo cause di abbandono e ti forni
   <footer class="minimal-footer" id="contact">
     <div class="contact-form-container">
       <form class="contact-form" action="https://formspree.io/f/xwpovold" method="POST">
-        <h3>Non rimandare le tue decisioni: contattaci subito</h3>
+        <h3>Raccontaci la decisione di business che vuoi affrontare.</h3>
+        <p class="form-expectation">Lasciaci qualche dettaglio: ti ricontatteremo via email per definire il prossimo passo.</p>
         <label class="visually-hidden" for="contact-name">Nome</label>
         <input id="contact-name" type="text" name="name" autocomplete="name" placeholder="Il tuo nome" required>
         <label class="visually-hidden" for="contact-email">Email</label>
@@ -354,7 +317,7 @@ Monitoriamo soddisfazione e fedeltà, individuiamo cause di abbandono e ti forni
         <textarea id="contact-message" name="message" placeholder="Il tuo messaggio" required></textarea>
         <p class="privacy-notice">Inviando il modulo dichiari di aver letto l'<a href="/it/privacy/">informativa privacy</a>.</p>
         <button type="submit" class="button">
-          <span class="button-text">Invia</span>
+          <span class="button-text">Richiedi un confronto</span>
         </button>
       </form>
     </div>
@@ -492,29 +455,30 @@ Monitoriamo soddisfazione e fedeltà, individuiamo cause di abbandono e ti forni
 
  <!-- WIDGET -->
   const mapping = {
-    q3: "UX Starter",
-    q4: "Generative Research",
-    q5: "Generative Research",
-    q6: "Deep Research",
-    q7: "Loyalty Booster",
-    q8: "Data Guidance & Workshops"
+    q1: "UX Starter",
+    q2: "Generative Research",
+    q3: "Deep Research",
+    q4: "Loyalty Booster",
+    q5: "Data Guidance & Workshops"
   };
   document.getElementById("discover-btn").addEventListener("click", () => {
     const resultList = document.getElementById("result-list");
     resultList.innerHTML = "";
-    let count = 0;
-    Object.keys(mapping).forEach(qId => {
-      if (!document.getElementById(qId).checked) {
+    const selected = Object.keys(mapping).filter(qId => document.getElementById(qId).checked);
+    const title = document.getElementById("result-title");
+    if (selected.length) {
+      title.textContent = "Per i tuoi obiettivi suggeriamo:";
+      selected.forEach(qId => {
         const li = document.createElement("li");
         li.textContent = mapping[qId];
         resultList.appendChild(li);
-        count++;
-      }
-    });
+      });
+    } else {
+      title.textContent = "Seleziona almeno un obiettivo per ricevere un suggerimento.";
+    }
     const box = document.getElementById("result-box");
-    const none = document.getElementById("none-msg");
-    box.style.display = 'block';
-    none.style.display = count ? 'none' : 'block';
+    box.hidden = false;
+    box.focus({ preventScroll: true });
     box.scrollIntoView({ behavior: "smooth" });
   });
 
