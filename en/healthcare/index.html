@@ -5,15 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clarity | Healthcare Division</title>
   <meta name="description" content="Quantitative and experimental research for hospitals, clinics, and healthcare professionals. Customized services to improve clinical outcomes and decision-making with evidence-based data."/>
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#1e40af">
+  <link rel="canonical" href="https://claritylab.cloud/en/healthcare/">
   <meta name="keywords" content="healthcare research, medical device usability, treatment adherence, healthcare UX, patient surveys, clinical data analysis, evidence-based decisions"/>
   <meta name="author" content="Clarity Research"/>
 
   <!-- SEO -->
-  <link rel="alternate" hreflang="en" href="https://claritylab.cloud/en/healthcare/index.html"/>
-  <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/sanità/index.html"/>
-
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="alternate" hreflang="en" href="https://claritylab.cloud/en/healthcare/">
+  <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/sanit%C3%A0/">
+  <link rel="alternate" hreflang="x-default" href="https://claritylab.cloud/en/healthcare/">
 <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
@@ -22,6 +23,7 @@
 
   <!-- Stylesheet (same as Business template) -->
   <link rel="stylesheet" href="../../css/healthcare_landing-style.css">
+  <link rel="stylesheet" href="../../css/ux-fixes.css">
 
   <!-- Structured Data -->
 <script type="application/ld+json">
@@ -72,6 +74,7 @@
 
 </head>
 <body class="healthcare">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <!-- Vertical sidebar -->
   <div class="sidebar">
     <div class="section-labels">
@@ -83,36 +86,36 @@
       <div class="label hidden" data-section="services">SERVICES</div>
     </div>
     <div class="social-icons">
-      <a href="https://www.linkedin.com/company/claritylabresearch" target="_blank" class="icon">
-        <i class="fab fa-linkedin"></i>
+      <a href="https://www.linkedin.com/company/claritylabresearch" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Clarity on LinkedIn (opens in a new tab)">
+        <span aria-hidden="true">in</span>
       </a>
-      <a href="#contact" class="icon">
-        <i class="fas fa-envelope"></i>
+      <a href="#contact" class="icon" aria-label="Go to contact form">
+        <span aria-hidden="true">✉</span>
       </a>
     </div>
   </div>
 
 <!-- Language Switch -->
 <div class="language-toggle">
-  <a href="../../it/sanità/index.html" title="Italiano">
-    <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg"
-         alt="Italiano" class="flag">
-  </a>
+  <a class="language-link" href="../../it/sanità/index.html" title="Italiano" hreflang="it" lang="it" aria-label="Visualizza questa pagina in italiano">IT</a>
 </div>
 
   <header class="navbar">
     <div class="navbar-container">
       <a href="../index.html" class="navbar-brand">Clarity</a>
-      <nav class="nav-menu">
-        <a href="#home" class="nav-link">Home</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open menu"><span aria-hidden="true">☰</span></button>
+      <nav class="nav-menu" id="primary-navigation" aria-label="Main navigation">
+        <a href="../index.html" class="nav-link">Home</a>
         <a href="../business/index.html" class="nav-link">Companies</a>
         <a href="../ngo/index.html" class="nav-link">NGO</a>
         <a href="#differentiators" class="nav-link">Why Us</a>
 
-        <a href="#contact" class="button"><span class="button-text">Get Started</span></a>
+        <a href="#contact" class="button"><span class="button-text">Let’s talk</span></a>
       </nav>
     </div>
   </header>
+
+  <main id="main-content">
 
   <!-- HERO SECTION -->
 <section class="hero-section" id="home">
@@ -123,11 +126,13 @@
         Custom studies for hospitals and HealthTech companies: we uncover needs, test solutions, and guide decisions with rigorous data.
       </p>
       <a href="#contact" class="button hero-button">
-        <span class="button-text">Book a free call now</span>
+        <span class="button-text">Tell us about your project</span>
       </a>
     </div>
     <!-- Updated image for Healthcare division -->
-    <img id="gif-output" class="hero-animation" src="../../images/health_hero.gif" alt="Healthcare animation">
+    <video id="gif-output" class="hero-animation" autoplay muted loop playsinline preload="metadata" poster="../../images/health_hero-poster.webp" aria-hidden="true">
+      <source src="../../images/health_hero.mp4" type="video/mp4">
+    </video>
   </div>
 </section>
 
@@ -137,7 +142,7 @@
   <p class="accent-text">
     We design research for hospitals, research institutes, pharmaceutical companies, and healthcare professionals who need to evaluate interventions, optimise digital tools, and gather evidence for publications and funding.
   </p>
-  <canvas id="neural-center"></canvas>
+  <canvas id="neural-center" aria-hidden="true"></canvas>
 </section>
 
 <!-- SERVICES SECTION -->
@@ -157,7 +162,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv1.png" alt="MedUX Starter" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv1.webp" alt="MedUX Starter" class="service-image">
       </div>
     </div>
 
@@ -173,7 +178,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv2.png" alt="Clinical Research" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv2.webp" alt="Clinical Research" class="service-image">
       </div>
     </div>
 
@@ -189,7 +194,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv3.png" alt="Outcome Validation" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv3.webp" alt="Outcome Validation" class="service-image">
       </div>
     </div>
 
@@ -205,7 +210,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv4.png" alt="Adherence Booster" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv4.webp" alt="Adherence Booster" class="service-image">
       </div>
     </div>
 
@@ -221,7 +226,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv5.png" alt="Research Support" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv5.webp" alt="Research Support" class="service-image">
       </div>
     </div>
   </div>
@@ -274,20 +279,28 @@
 
 
   <!-- FOOTER / CONTACT FORM -->
+  </main>
+
   <footer class="minimal-footer" id="contact">
     <div class="contact-form-container">
       <form class="contact-form" action="https://formspree.io/f/xwpovold" method="POST">
-        <h3>Need data to improve your clinical activities?</h3>
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Your message" required></textarea>
+        <h3>Tell us which clinical or research need you want to explore.</h3>
+        <p class="form-expectation">Share a few details and we will contact you by email to define the next step.</p>
+        <label class="visually-hidden" for="contact-name">Name</label>
+        <input id="contact-name" type="text" name="name" autocomplete="name" placeholder="Your name" required>
+        <label class="visually-hidden" for="contact-email">Email</label>
+        <input id="contact-email" type="email" name="email" autocomplete="email" placeholder="Your email" required>
+        <label class="visually-hidden" for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" placeholder="Your message" required></textarea>
+        <p class="privacy-notice">By submitting this form, you acknowledge that you have read the <a href="/en/privacy/">privacy notice</a>.</p>
         <button type="submit" class="button">
-          <span class="button-text">Send</span>
+          <span class="button-text">Request a conversation</span>
         </button>
       </form>
     </div>
-    <p>© 2025 Clarity. All rights reserved.</p>
+    <p>© 2026 Clarity. All rights reserved.</p>
     <p>Email: claritylabresearch@gmail.com</p>
+    <p><a href="/en/privacy/">Privacy notice</a></p>
   </footer>
 
   <!-- Scroll & reveal animations -->
@@ -353,7 +366,6 @@
   </script>
 
   <script src="../../js/clarity-animations.js"></script>
-  <script src="../../js/offer-ascii-transition.js"></script>
-  <script src="../../js/ascii-steps-on-scroll.js"></script>
+  <script src="../../js/site-ui.js"></script>
 </body>
 </html>

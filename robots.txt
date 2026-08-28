@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /en/business/old/
+Disallow: /en/healthcare/old/
+Disallow: /en/ngo/old/
+Disallow: /it/business/old/
+Disallow: /it/ngo/old/
+Disallow: /it/old/
+Disallow: /it/sanit%C3%A0/old/
+
+Sitemap: https://claritylab.cloud/sitemap.xml

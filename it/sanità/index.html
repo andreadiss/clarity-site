@@ -5,15 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clarity | Healthcare division</title>
   <meta name="description" content="Ricerca quantitativa e sperimentale per ospedali, cliniche e professionisti sanitari. Servizi personalizzati per migliorare esiti clinici e processi decisionali con dati evidence-based."/>
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#1e40af">
+  <link rel="canonical" href="https://claritylab.cloud/it/sanit%C3%A0/">
   <meta name="keywords" content="ricerca sanità, usabilità dispositivi medici, aderenza terapeutica, UX sanità, survey pazienti, analisi dati clinici, decisioni evidence-based"/>
   <meta name="author" content="Clarity Research"/>
 
   <!-- SEO -->
-  <link rel="alternate" hreflang="en" href="https://claritylab.cloud/en/healthcare/index.html"/>
-  <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/sanità/index.html"/>
+  <link rel="alternate" hreflang="en" href="https://claritylab.cloud/en/healthcare/">
+  <link rel="alternate" hreflang="it" href="https://claritylab.cloud/it/sanit%C3%A0/">
+  <link rel="alternate" hreflang="x-default" href="https://claritylab.cloud/en/healthcare/">
 
   <!-- Font Awesome per icone -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
@@ -22,6 +25,7 @@
 
   <!-- Stylesheet (stesso del modello Business) -->
   <link rel="stylesheet" href="../../css/healthcare_landing-style.css">
+  <link rel="stylesheet" href="../../css/ux-fixes.css">
 
   <!-- Structured Data -->
 <script type="application/ld+json">
@@ -30,7 +34,7 @@
   "@type": "ProfessionalService",
   "name": "Clarity",
   "description": "Ricerca clinica Trieste: ricerca quantitativa e qualitativa",
-  "url": "https://claritylab.cloud/it/sanità/",
+  "url": "https://claritylab.cloud/it/sanit%C3%A0/",
   "logo": "https://claritylab.cloud/favicon/favicon.ico",
   "contactPoint": {
     "@type": "ContactPoint",
@@ -73,6 +77,7 @@
 
 </head>
 <body class="sanita">
+  <a class="skip-link" href="#main-content">Vai al contenuto principale</a>
    <!-- Sidebar verticale -->
   <div class="sidebar">
     <div class="section-labels">
@@ -84,34 +89,35 @@
       <div class="label hidden" data-section="services">SERVICES</div>
     </div>
     <div class="social-icons">
-      <a href="https://www.linkedin.com/company/claritylabresearch" target="_blank" class="icon">
-        <i class="fab fa-linkedin"></i>
+      <a href="https://www.linkedin.com/company/claritylabresearch" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Clarity su LinkedIn (si apre in una nuova scheda)">
+        <span aria-hidden="true">in</span>
       </a>
-      <a href="#contact" class="icon">
-        <i class="fas fa-envelope"></i>
+      <a href="#contact" class="icon" aria-label="Vai al modulo di contatto">
+        <span aria-hidden="true">✉</span>
       </a>
     </div>
   </div>
 
   <!-- Language Switch -->
   <div class="language-toggle">
-    <a href="../../en/healthcare/index.html" title="English">
-      <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English" class="flag">
-    </a>
+    <a class="language-link" href="../../en/healthcare/index.html" title="English" hreflang="en" lang="en" aria-label="View this page in English">EN</a>
   </div>
 
   <header class="navbar">
     <div class="navbar-container">
       <a href="../index.html" class="navbar-brand">Clarity</a>
-      <nav class="nav-menu">
-        <a href="#home" class="nav-link">Home</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Apri il menu"><span aria-hidden="true">☰</span></button>
+      <nav class="nav-menu" id="primary-navigation" aria-label="Navigazione principale">
+        <a href="../index.html" class="nav-link">Home</a>
         <a href="../business/index.html" class="nav-link">Aziende</a>
         <a href="../ngo/index.html" class="nav-link">Terzo settore</a>
         <a href="#differentiators" class="nav-link">Perché Noi</a>
-        <a href="#contact" class="button"><span class="button-text">Iniziamo</span></a>
+        <a href="#contact" class="button"><span class="button-text">Parliamone</span></a>
       </nav>
     </div>
   </header>
+
+  <main id="main-content">
 
   <!-- HERO SECTION (con contenuti Healthcare) -->
   <section class="hero-section" id="home">
@@ -121,10 +127,12 @@
         <p class="hero-subtitle">
           Studi personalizzati per ospedali e aziende HealthTech: comprendiamo i bisogni, testiamo soluzioni e guidiamo decisioni con dati rigorosi.
         </p>
-        <a href="#contact" class="button hero-button"><span class="button-text">Prenota ora una call gratuita</span></a>
+        <a href="#contact" class="button hero-button"><span class="button-text">Raccontaci il tuo progetto</span></a>
       </div>
       <!-- Ho aggiornato l'immagine per rispecchiare la divisione Healthcare -->
-      <img id="gif-output" class="hero-animation" src="../../images/health_hero.gif" alt="Animazione">
+      <video id="gif-output" class="hero-animation" autoplay muted loop playsinline preload="metadata" poster="../../images/health_hero-poster.webp" aria-hidden="true">
+      <source src="../../images/health_hero.mp4" type="video/mp4">
+    </video>
     </div>
   </section>
 
@@ -134,11 +142,11 @@
     <p class="accent-text">
       Progettiamo ricerche per ospedali, IRCCS, aziende farmaceutiche e professionisti sanitari che vogliono valutare l'efficacia di interventi, ottimizzare strumenti digitali e raccogliere evidenze a supporto di pubblicazioni e finanziamenti.
     </p>
-    <canvas id="neural-center"></canvas>
+    <canvas id="neural-center" aria-hidden="true"></canvas>
   </section>
 
 <section class="services-section" id="services">
-  <h2 class="section-title-dark">CLARITY LAB SERVICES</h2>
+  <h2 class="section-title-dark">Servizi Clarity Lab</h2>
 
   <div class="services-grid">
     <!-- Pacchetto 1 -->
@@ -153,7 +161,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv1.png" alt="MedUX Starter" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv1.webp" alt="MedUX Starter" class="service-image">
       </div>
     </div>
 
@@ -168,7 +176,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv2.png" alt="Patient Discovery" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv2.webp" alt="Patient Discovery" class="service-image">
       </div>
     </div>
 
@@ -184,7 +192,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv3.png" alt="Outcome Validator" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv3.webp" alt="Outcome Validator" class="service-image">
       </div>
     </div>
 
@@ -200,7 +208,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv4.png" alt="Adherence Booster" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv4.webp" alt="Adherence Booster" class="service-image">
       </div>
     </div>
 
@@ -216,7 +224,7 @@
         </p>
       </div>
       <div class="service-image-container">
-        <img src="../../images/serv5.png" alt="Research Navigator" class="service-image">
+        <img loading="lazy" decoding="async" src="../../images/serv5.webp" alt="Research Navigator" class="service-image">
       </div>
     </div>
   </div>
@@ -268,20 +276,28 @@
 
 
   <!-- FOOTER (inserito seguendo la struttura del modello, con contenuti Healthcare nel contact form) -->
+  </main>
+
   <footer class="minimal-footer" id="contact">
     <div class="contact-form-container">
       <form class="contact-form" action="https://formspree.io/f/xwpovold" method="POST">
-        <h3>Hai bisogno di dati per migliorare le tue attività cliniche?</h3>
-        <input type="text" name="name" placeholder="Il tuo nome" required>
-        <input type="email" name="email" placeholder="La tua email" required>
-        <textarea name="message" placeholder="Il tuo messaggio" required></textarea>
+        <h3>Raccontaci l’esigenza clinica o di ricerca che vuoi approfondire.</h3>
+        <p class="form-expectation">Lasciaci qualche dettaglio: ti ricontatteremo via email per definire il prossimo passo.</p>
+        <label class="visually-hidden" for="contact-name">Nome</label>
+        <input id="contact-name" type="text" name="name" autocomplete="name" placeholder="Il tuo nome" required>
+        <label class="visually-hidden" for="contact-email">Email</label>
+        <input id="contact-email" type="email" name="email" autocomplete="email" placeholder="La tua email" required>
+        <label class="visually-hidden" for="contact-message">Messaggio</label>
+        <textarea id="contact-message" name="message" placeholder="Il tuo messaggio" required></textarea>
+        <p class="privacy-notice">Inviando il modulo dichiari di aver letto l'<a href="/it/privacy/">informativa privacy</a>.</p>
         <button type="submit" class="button">
-          <span class="button-text">Invia</span>
+          <span class="button-text">Richiedi un confronto</span>
         </button>
       </form>
     </div>
-    <p>© 2025 Clarity. Tutti i diritti riservati.</p>
+    <p>© 2026 Clarity. Tutti i diritti riservati.</p>
     <p>Email: claritylabresearch@gmail.com</p>
+    <p><a href="/it/privacy/">Privacy</a></p>
   </footer>
 
   <!-- SCRIPT ANIMAZIONE SERVICES -->
@@ -411,7 +427,6 @@
 
   <!-- JS -->
   <script src="../../js/clarity-animations.js"></script>
-  <script src="../../js/offer-ascii-transition.js"></script>
-  <script src="../../js/ascii-steps-on-scroll.js"></script>
+  <script src="../../js/site-ui.js"></script>
 </body>
 </html>
